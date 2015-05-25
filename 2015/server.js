@@ -39,7 +39,7 @@ module.exports = {
     'objectLiteralShorthandMethods': true,
     'objectLiteralShorthandProperties': true,
     'octalLiterals': true,
-    'regexYFlag': true,
+    'regexUFlag': true,
     'regexYFlag': true,
     'restParams': true,
     'spread': true,
