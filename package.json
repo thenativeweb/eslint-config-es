@@ -1,0 +1,35 @@
+{
+  "name": "eslint-config-es",
+  "version": "0.0.0",
+  "description": "eslint-config-es contains strict ESLint configurations for ES5 and ES2015.",
+  "contributors": [
+    {
+      "name": "Golo Roden",
+      "email": "golo.roden@thenativeweb.io"
+    },
+    {
+      "name": "Matthias Wagler",
+      "email": "matthias.wagler@thenativeweb.io"
+    }
+  ],
+  "main": "5/server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {
+    "eslint": "*",
+    "eslint-plugin-mocha": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thenativeweb/eslint-config-es.git"
+  },
+  "keywords": [
+    "ecmascript",
+    "es5",
+    "es6",
+    "es2015",
+    "eslint",
+    "eslint-config"
+  ],
+  "license": "MIT"
+}
