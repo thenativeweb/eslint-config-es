@@ -1,4 +1,6 @@
-{
+'use strict';
+
+module.exports = {
   'plugins': [
     'mocha'
   ],
@@ -210,4 +212,4 @@
 
     'mocha/no-exclusive-tests': 2
   }
-}
+};
