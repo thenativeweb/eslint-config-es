@@ -14,7 +14,10 @@
   ],
   "main": "5/server.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "tourism": "0.19.0"
+  },
   "peerDependencies": {
     "eslint": "*",
     "eslint-plugin-mocha": "*"
