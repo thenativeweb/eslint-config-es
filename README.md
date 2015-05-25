@@ -8,7 +8,19 @@ eslint-config-es contains strict ESLint configurations for ES5 and ES2015.
 
 ## Quick Start
 
-...
+This module contains strict ESLint configurations for ES5 and ES2015, both for server and client development.
+
+To use one of those configurations, create a `.eslintrc` file in your project and use the `extends` keyword.
+
+```json
+{
+  "extends": "es/2015/server"
+}
+```
+
+Alternatively, you may also use `es/2015/client`, `es/5/server`, and `es/5/client`.
+
+If you want to override any rules, you can do so in your configuration file.
 
 ## Running the build
 
