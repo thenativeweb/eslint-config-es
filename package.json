@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-es",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "eslint-config-es contains strict ESLint configurations for ES5 and ES2015.",
   "contributors": [
     {
