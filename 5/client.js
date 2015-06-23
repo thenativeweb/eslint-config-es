@@ -155,6 +155,7 @@ module.exports = {
     'camelcase': 2,
     'comma-spacing': [ 2, { 'before': false, 'after': true } ],
     'comma-style': [ 2, 'last' ],
+    'computed-property-spacing': [2, 'never'],
     'consistent-this': [ 2, 'that' ],
     'eol-last': 2,
     'func-names': 0,
@@ -197,12 +198,13 @@ module.exports = {
     'space-infix-ops': [ 2, { 'int32Hint': false } ],
     'space-return-throw-case': 2,
     'space-unary-ops': [ 2, { 'words': true, 'nonwords': false } ],
-    'spaced-line-comment': [ 2, 'always' ],
+    'spaced-comment': [ 2, 'always' ],
     'wrap-regex': 0,
 
     'generator-star-spacing': [ 2, 'both' ],
     'no-var': 0,
     'object-shorthand': [ 2, 'never' ],
+    'prefer-const': 0,
 
     'max-depth': [ 0, 4 ],
     'max-len': [ 0, 80, 4 ],
