@@ -167,12 +167,12 @@ module.exports = {
     'key-spacing': [ 2, { 'beforeColon': false, 'afterColon': true }],
     'linebreak-style': [ 2, 'unix' ],
     'lines-around-comment': [ 2, {
-      'beforeBlockComment': true,
+      'beforeBlockComment': false,
       'afterBlockComment': false,
       'beforeLineComment': true,
       'afterLineComment': true,
       'allowBlockStart': true,
-      'allowBlockEnd': false
+      'allowBlockEnd': true
     }],
     'max-nested-callbacks': [ 0, 3 ],
     'new-cap': [ 2, { 'newIsCap': true, 'capIsNew': true }],
