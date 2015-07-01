@@ -169,7 +169,7 @@ module.exports = {
       'beforeBlockComment': false,
       'afterBlockComment': false,
       'beforeLineComment': true,
-      'afterLineComment': true,
+      'afterLineComment': false,
       'allowBlockStart': true,
       'allowBlockEnd': true
     }],
