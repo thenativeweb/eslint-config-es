@@ -163,7 +163,7 @@ module.exports = {
     'eol-last': 2,
     'func-names': 0,
     'func-style': [ 2, 'expression' ],
-    'indent': [2, 2, { 'indentSwitchCase': true }],
+    'indent': [2, 2, { 'SwitchCase': true, 'VariableDeclarator': 2 }],
     'key-spacing': [ 2, { 'beforeColon': false, 'afterColon': true }],
     'linebreak-style': [ 2, 'unix' ],
     'lines-around-comment': [ 2, {
