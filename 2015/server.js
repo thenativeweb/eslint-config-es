@@ -2,6 +2,7 @@
 
 module.exports = {
   'plugins': [
+    'extended',
     'mocha'
   ],
 
@@ -228,6 +229,8 @@ module.exports = {
     'max-statements': [ 0, 10 ],
     'no-bitwise': 0,
     'no-plusplus': 0,
+
+    'extended/consistent-err-names': [ 2, 'prefix' ],
 
     'mocha/no-exclusive-tests': 2
   }
