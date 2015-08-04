@@ -191,7 +191,6 @@ module.exports = {
     'no-trailing-spaces': [ 2, { 'skipBlankLines': false }],
     'no-underscore-dangle': 2,
     'no-unneeded-ternary': 2,
-    'no-wrap-func': 2,
     'object-curly-spacing': [2, 'always', {
       'objectsInObjects': false,
       'arraysInObjects': false
@@ -208,7 +207,6 @@ module.exports = {
     'space-after-keywords': [ 2, 'always' ],
     'space-before-blocks': [ 2, 'always' ],
     'space-before-function-paren': [ 2, { 'anonymous': 'always', 'named': 'always' }],
-    'space-in-brackets': [ 2, 'always', { 'singleValue': true, 'objectsInArrays': false, 'arraysInArrays': false, 'arraysInObjects': false, 'objectsInObjects': false, 'propertyName': false }],
     'space-in-parens': [ 2, 'never' ],
     'space-infix-ops': [ 2, { 'int32Hint': false }],
     'space-return-throw-case': 2,
