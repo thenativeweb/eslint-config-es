@@ -4,7 +4,10 @@ eslint-config-es contains strict ESLint configurations for ES5 and ES2015.
 
 ## Installation
 
-    $ npm install eslint-config-es
+    $ npm install eslint-config-es \
+                  eslint \
+                  eslint-plugin-extended \
+                  eslint-plugin-mocha
 
 ## Quick Start
 
