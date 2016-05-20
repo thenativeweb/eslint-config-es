@@ -2,8 +2,8 @@
 
 const server = require('./server');
 
-const parserOptions = server.parserOptions,
-      globals = server.globals,
+const globals = server.globals,
+      parserOptions = server.parserOptions,
       plugins = server.plugins,
       rules = server.rules;
 
