@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-es",
   "version": "0.5.0",
-  "description": "eslint-config-es contains strict ESLint configurations for ES5 and ES2015.",
+  "description": "eslint-config-es contains a strict ESLint configuration for ES2015.",
   "contributors": [
     {
       "name": "Golo Roden",
@@ -12,11 +12,11 @@
       "email": "matthias.wagler@thenativeweb.io"
     }
   ],
-  "main": "5/server.js",
+  "main": "2015/server.js",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "3.9.0",
-    "roboter": "0.3.3"
+    "gulp": "3.9.1",
+    "roboter": "0.5.1"
   },
   "repository": {
     "type": "git",
@@ -24,9 +24,9 @@
   },
   "keywords": [
     "ecmascript",
-    "es5",
     "es6",
     "es2015",
+    "es2016",
     "eslint",
     "eslint-config"
   ],

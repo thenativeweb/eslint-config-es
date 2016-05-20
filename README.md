@@ -1,19 +1,21 @@
 # eslint-config-es
 
-eslint-config-es contains strict ESLint configurations for ES5 and ES2015.
+eslint-config-es contains a strict ESLint configuration for ES2015.
 
 ## Installation
 
-    $ npm install eslint-config-es \
-                  eslint \
-                  eslint-plugin-extended \
-                  eslint-plugin-mocha
+```bash
+$ npm install eslint-config-es \
+              eslint \
+              eslint-plugin-extended \
+              eslint-plugin-mocha
+```
 
 ## Quick Start
 
-This module contains strict ESLint configurations for ES5 and ES2015, both for server and client development.
+This module contains a strict ESLint configuration and ES2015, both for server and client development.
 
-To use one of those configurations, create a `.eslintrc` file in your project and use the `extends` keyword.
+To use one of those configurations, create a `.eslintrc.json` file in your project and use the `extends` keyword.
 
 ```json
 {
@@ -21,7 +23,7 @@ To use one of those configurations, create a `.eslintrc` file in your project an
 }
 ```
 
-Alternatively, you may also use `es/2015/client`, `es/5/server`, and `es/5/client`.
+Alternatively, you may also use `es/2015/client`.
 
 If you want to override any rules, you can do so in your configuration file.
 
@@ -29,12 +31,14 @@ If you want to override any rules, you can do so in your configuration file.
 
 To build this module use [roboter](https://www.npmjs.com/package/roboter).
 
-    $ bot build-server
+```bash
+$ bot build-server
+```
 
 ## License
 
 The MIT License (MIT)
-Copyright (c) 2015 the native web.
+Copyright (c) 2015-2016 the native web.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
