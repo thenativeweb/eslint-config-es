@@ -163,7 +163,7 @@ const rules = {
   'id-length': [ 2, { min: 2, max: Number.infinity, properties: 'always', exceptions: [ '_' ]}],
   'id-match': 0,
   indent: [ 2, 2, { SwitchCase: 1, VariableDeclarator: { var: 2, let: 2, const: 3 }}],
-  'jsx-quotes': [ 2, 'prefer-double' ],
+  'jsx-quotes': [ 2, 'prefer-single' ],
   'key-spacing': [ 2, { beforeColon: false, afterColon: true, mode: 'strict' }],
   'keyword-spacing': [ 2, { before: true, after: true }],
   'linebreak-style': [ 2, 'unix' ],
