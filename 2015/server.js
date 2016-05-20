@@ -70,7 +70,7 @@ const rules = {
   'no-case-declarations': 2,
   'no-div-regex': 2,
   'no-else-return': 2,
-  'no-empty-function': [ 2, { allow: []}],
+  'no-empty-function': [ 2, { allow: [ 'methods' ]}],
   'no-eq-null': 2,
   'no-eval': 2,
   'no-extend-native': 2,
