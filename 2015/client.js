@@ -1,6 +1,11 @@
 'use strict';
 
-const { parserOptions, globals, plugins, rules } = require('./server');
+const server = require('./server');
+
+const parserOptions = server.parserOptions,
+      globals = server.globals,
+      plugins = server.plugins,
+      rules = server.rules;
 
 const env = {
   browser: true,
