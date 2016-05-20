@@ -160,7 +160,7 @@ const rules = {
   'func-names': 0,
   'func-style': [ 2, 'expression' ],
   'id-blacklist': 0,
-  'id-length': [ 2, { min: 2, max: Number.infinity, properties: 'always', exceptions: []}],
+  'id-length': [ 2, { min: 2, max: Number.infinity, properties: 'always', exceptions: [ '_' ]}],
   'id-match': 0,
   indent: [ 2, 2, { SwitchCase: 1, VariableDeclarator: { var: 2, let: 2, const: 3 }}],
   'jsx-quotes': [ 2, 'prefer-double' ],
