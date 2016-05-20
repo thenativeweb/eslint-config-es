@@ -189,7 +189,7 @@ const rules = {
     ignoreUrls: true
   }],
   'max-nested-callbacks': [ 2, { max: 10 }],
-  'max-params': [ 2, { max: 3 }],
+  'max-params': [ 2, { max: 5 }],
   'max-statements': [ 2, { max: 25 }],
   'max-statements-per-line': [ 2, { max: 1 }],
   'new-cap': [ 2, {
