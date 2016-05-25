@@ -219,7 +219,7 @@ const rules = {
   'no-nested-ternary': 2,
   'no-new-object': 2,
   'no-plusplus': [ 2, { allowForLoopAfterthoughts: true }],
-  'no-restricted-syntax': 0,
+  'no-restricted-syntax': [ 2, 'ClassDeclaration' ],
   'no-spaced-func': 2,
   'no-ternary': 0,
   'no-trailing-spaces': [ 2, { skipBlankLines: false }],
