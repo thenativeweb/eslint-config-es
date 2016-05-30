@@ -184,8 +184,8 @@ const rules = {
     allowArrayStart: true,
     allowArrayEnd: true
   }],
-  'max-depth': [ 2, { max: 4 }],
-  'max-len': [ 2, {
+  'max-depth': [ 1, { max: 4 }],
+  'max-len': [ 1, {
     code: 100,
     tabWidth: 2,
     comments: 100,
@@ -193,9 +193,9 @@ const rules = {
     ignoreTrailingComments: false,
     ignoreUrls: true
   }],
-  'max-nested-callbacks': [ 2, { max: 10 }],
-  'max-params': [ 2, { max: 5 }],
-  'max-statements': [ 2, { max: 25 }],
+  'max-nested-callbacks': [ 1, { max: 10 }],
+  'max-params': [ 1, { max: 3 }],
+  'max-statements': [ 1, { max: 25 }],
   'max-statements-per-line': [ 2, { max: 1 }],
   'new-cap': [ 2, {
     newIsCap: true,
