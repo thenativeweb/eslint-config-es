@@ -57,7 +57,7 @@ const rules = {
   'accessor-pairs': [ 2, { getWithoutSet: false, setWithoutGet: true }],
   'array-callback-return': 2,
   'block-scoped-var': 2,
-  complexity: [ 1, { max: 11 }],
+  complexity: 0,
   'consistent-return': 0,
   curly: [ 2, 'all' ],
   'default-case': 2,
@@ -184,18 +184,11 @@ const rules = {
     allowArrayStart: true,
     allowArrayEnd: true
   }],
-  'max-depth': [ 1, { max: 4 }],
-  'max-len': [ 1, {
-    code: 100,
-    tabWidth: 2,
-    comments: 100,
-    ignoreComments: false,
-    ignoreTrailingComments: false,
-    ignoreUrls: true
-  }],
-  'max-nested-callbacks': [ 1, { max: 10 }],
-  'max-params': [ 1, { max: 3 }],
-  'max-statements': [ 1, { max: 25 }],
+  'max-depth': 0,
+  'max-len': 0,
+  'max-nested-callbacks': 0,
+  'max-params': 0,
+  'max-statements': 0,
   'max-statements-per-line': [ 2, { max: 1 }],
   'new-cap': [ 2, {
     newIsCap: true,
