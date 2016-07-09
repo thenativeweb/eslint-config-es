@@ -1,0 +1,18 @@
+[
+  "accessor",
+  "amqp",
+  "api",
+  "ecma",
+  "eslint",
+  "fs",
+  "globals",
+  "http",
+  "https",
+  "io",
+  "jetstream",
+  "jsx",
+  "multiline",
+  "utf",
+  "util",
+  "whitespace"
+]
