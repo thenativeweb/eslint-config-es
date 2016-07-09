@@ -8,7 +8,8 @@ eslint-config-es contains a strict ESLint configuration for ES2015.
 $ npm install eslint-config-es \
               eslint \
               eslint-plugin-extended \
-              eslint-plugin-mocha
+              eslint-plugin-mocha \
+              eslint-plugin-spellcheck
 ```
 
 ## Quick Start
