@@ -1,7 +1,5 @@
 'use strict';
 
-const dictionary = require('./dictionary');
-
 const parserOptions = {
   ecmaVersion: 6,
   sourceType: 'script',
@@ -22,8 +20,7 @@ const globals = {};
 
 const plugins = [
   'extended',
-  'mocha',
-  'spellcheck'
+  'mocha'
 ];
 
 const rules = {
@@ -285,18 +282,7 @@ const rules = {
   'mocha/no-pending-tests': 2,
   'mocha/handle-done-callback': 2,
   'mocha/no-synchronous-tests': 2,
-  'mocha/no-global-tests': 2,
-
-  'spellcheck/spell-checker': [ 1, {
-    comments: true,
-    strings: true,
-    identifiers: true,
-    lang: 'en_US',
-    skipWords: dictionary,
-    skipIfMatch: [
-      'http://[^s]*'
-    ]}
-  ]
+  'mocha/no-global-tests': 2
 };
 
 module.exports = { parserOptions, env, globals, plugins, rules };
