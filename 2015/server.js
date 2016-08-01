@@ -1,6 +1,6 @@
 'use strict';
 
-const dictionary = require('./dictionary.json');
+const dictionary = require('./dictionary');
 
 const parserOptions = {
   ecmaVersion: 6,
