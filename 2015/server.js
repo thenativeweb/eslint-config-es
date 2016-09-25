@@ -100,7 +100,9 @@ const rules = {
   'no-param-reassign': 0,
   'no-proto': 2,
   'no-redeclare': 2,
-  'no-restricted-properties': [ 2, {}],
+
+  // 'no-restricted-properties': [ 2, {}],
+
   'no-return-assign': [ 2, 'always' ],
   'no-script-url': 2,
   'no-self-assign': 2,
