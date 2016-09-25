@@ -1,6 +1,6 @@
 # eslint-config-es
 
-eslint-config-es contains a strict ESLint configuration for ES2015.
+eslint-config-es contains a very strict ESLint configuration for ES2015 and above.
 
 ## Installation
 
@@ -13,7 +13,7 @@ $ npm install eslint-config-es \
 
 ## Quick Start
 
-This module contains a strict ESLint configuration and ES2015, both for server and client development.
+This module contains a very strict ESLint configuration for ES2015 and above, both for server and client development. Its aims to eradicate *any* variation in code style. If you can not tell any more, based on little individual manners, who of your co-workers wrote a piece of code, this module succeeded. This helps you to narrow down your focus to pure functionality, as you do not have to think about code styling any more at all.
 
 To use one of those configurations, create a `.eslintrc.json` file in your project and use the `extends` keyword.
 
