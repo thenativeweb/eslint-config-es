@@ -32,7 +32,7 @@ If you want to override any rules, you can do so in your configuration file.
 To build this module use [roboter](https://www.npmjs.com/package/roboter).
 
 ```bash
-$ bot build-server
+$ bot
 ```
 
 ## License
