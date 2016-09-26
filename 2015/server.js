@@ -241,7 +241,7 @@ const rules = {
   'require-jsdoc': 0,
   semi: [ 2, 'always' ],
   'semi-spacing': [ 2, { before: false, after: true }],
-  'sort-keys': [ 2, 'asc', { caseSensitive: true, natural: true }],
+  'sort-keys': [ 0 ],
   'sort-vars': [ 2, { ignoreCase: true }],
   'space-before-blocks': [ 2, 'always' ],
   'space-before-function-paren': [ 2, { anonymous: 'always', named: 'always' }],
