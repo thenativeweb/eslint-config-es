@@ -286,11 +286,11 @@ const rules = {
   'yield-star-spacing': [ 2, { before: true, after: true }]
 };
 
-if (plugins.extended) {
+if (plugins.includes('extended')) {
   rules['extended/consistent-err-names'] = [ 2, 'prefix' ];
 }
 
-if (plugins.mocha) {
+if (plugins.includes('mocha')) {
   rules['mocha/no-exclusive-tests'] = 2;
   rules['mocha/no-skipped-tests'] = 2;
   rules['mocha/no-pending-tests'] = 2;
@@ -309,7 +309,7 @@ if (plugins.mocha) {
   rules['mocha/max-top-level-suites'] = [ 2, { limit: 1 }];
 }
 
-if (plugins.react) {
+if (plugins.includes('react')) {
   rules['react/jsx-no-duplicate-props'] = 2;
   rules['react/jsx-uses-vars'] = 2;
 }
