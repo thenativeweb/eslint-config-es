@@ -1,5 +1,7 @@
 'use strict';
 
+const isPluginInstalled = require('./isPluginInstalled');
+
 const parserOptions = {
   ecmaVersion: 6,
   sourceType: 'script',
@@ -18,10 +20,8 @@ const env = {
 
 const globals = {};
 
-const plugins = [
-  'extended',
-  'mocha'
-];
+const plugins = [ 'extended', 'mocha', 'react' ].
+  filter(plugin => isPluginInstalled(plugin));
 
 const rules = {
   'comma-dangle': [ 2, 'never' ],
@@ -283,16 +283,35 @@ const rules = {
   }],
   'symbol-description': 2,
   'template-curly-spacing': [ 2, 'never' ],
-  'yield-star-spacing': [ 2, { before: true, after: true }],
-
-  'extended/consistent-err-names': [ 2, 'prefix' ],
-
-  'mocha/no-exclusive-tests': 2,
-  'mocha/no-skipped-tests': 2,
-  'mocha/no-pending-tests': 2,
-  'mocha/handle-done-callback': 2,
-  'mocha/no-synchronous-tests': 2,
-  'mocha/no-global-tests': 2
+  'yield-star-spacing': [ 2, { before: true, after: true }]
 };
+
+if (plugins.extended) {
+  rules['extended/consistent-err-names'] = [ 2, 'prefix' ];
+}
+
+if (plugins.mocha) {
+  rules['mocha/no-exclusive-tests'] = 2;
+  rules['mocha/no-skipped-tests'] = 2;
+  rules['mocha/no-pending-tests'] = 2;
+  rules['mocha/handle-done-callback'] = 2;
+  rules['mocha/no-synchronous-tests'] = 2;
+  rules['mocha/no-global-tests'] = 2;
+  rules['mocha/no-return-and-callback'] = 2;
+  rules['mocha/valid-test-description'] = 0;
+  rules['mocha/valid-suite-description'] = 0;
+  rules['mocha/no-sibling-hooks'] = 2;
+  rules['mocha/no-mocha-arrows'] = 0;
+  rules['mocha/no-hooks'] = 0;
+  rules['mocha/no-hooks-for-single-case'] = 0;
+  rules['mocha/no-top-level-hooks'] = 2;
+  rules['mocha/no-identical-title'] = 2;
+  rules['mocha/max-top-level-suites'] = [ 2, { limit: 1 }];
+}
+
+if (plugins.react) {
+  rules['react/jsx-no-duplicate-props'] = 2;
+  rules['react/jsx-uses-vars'] = 2;
+}
 
 module.exports = { parserOptions, env, globals, plugins, rules };

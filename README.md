@@ -6,10 +6,14 @@ eslint-config-es contains a very strict ESLint configuration for ES2015 and abov
 
 ```bash
 $ npm install eslint-config-es \
-              eslint \
-              eslint-plugin-extended \
-              eslint-plugin-mocha
+              eslint
 ```
+
+You may install additional plugins for ESLint. If you do, the following ones are automatically detected and configured for you.
+
+- [eslint-plugin-extended](https://www.npmjs.com/package/eslint-plugin-extended)
+- [eslint-plugin-mocha](https://www.npmjs.com/package/eslint-plugin-mocha)
+- [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
 
 ## Quick Start
 
