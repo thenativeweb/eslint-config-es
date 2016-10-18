@@ -1,6 +1,12 @@
 'use strict';
 
+const includes = require('array-includes');
+
 const isPluginInstalled = require('./isPluginInstalled');
+
+// This is needed for Node.js 4.x support. Once we drop this, we can remove this
+// line as well as the entire array-includes package.
+includes.shim();
 
 const parserOptions = {
   ecmaVersion: 6,
