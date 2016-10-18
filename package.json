@@ -13,7 +13,9 @@
     }
   ],
   "main": "2015/server.js",
-  "dependencies": {},
+  "dependencies": {
+    "array-includes": "3.0.2"
+  },
   "devDependencies": {
     "roboter": "0.13.4",
     "roboter-server": "0.13.4"
