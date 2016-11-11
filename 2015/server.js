@@ -121,6 +121,7 @@ const rules = {
   'no-useless-call': 2,
   'no-useless-concat': 2,
   'no-useless-escape': 2,
+  'no-useless-return': 2,
   'no-void': 2,
   'no-warning-comments': 2,
   'no-with': 2,
@@ -170,6 +171,7 @@ const rules = {
   'eol-last': 2,
   'func-names': 0,
   'func-call-spacing': [ 2, 'never' ],
+  'func-name-matching': 0,
   'func-style': [ 2, 'expression' ],
   'id-blacklist': 0,
   'id-length': [ 2, {
@@ -366,7 +368,6 @@ if (plugins.includes('react')) {
   rules['react/jsx-pascal-case'] = [ 2, { allowAllCaps: false }];
   rules['react/jsx-sort-props'] = 0;
   rules['react/jsx-space-before-closing'] = [ 2, 'always' ];
-  rules['react/jsx-tag-spacing'] = [ 2, { closingSlash: 'never', beforeSelfClosing: 'always', afterOpening: 'never' }];
   rules['react/jsx-uses-react'] = 2;
   rules['react/jsx-uses-vars'] = 2;
   rules['react/jsx-wrap-multilines'] = 2;
