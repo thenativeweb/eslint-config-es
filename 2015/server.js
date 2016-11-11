@@ -316,8 +316,60 @@ if (plugins.includes('mocha')) {
 }
 
 if (plugins.includes('react')) {
+  rules['react/display-name'] = 0;
+  rules['react/forbid-component-props'] = 0;
+  rules['react/forbid-prop-types'] = 0;
+  rules['react/no-children-prop'] = 0;
+  rules['react/no-danger'] = 0;
+  rules['react/no-danger-with-children'] = 2;
+  rules['react/no-deprecated'] = 0;
+  rules['react/no-did-mount-set-state'] = 0;
+  rules['react/no-did-update-set-state'] = 0;
+  rules['react/no-direct-mutation-state'] = 2;
+  rules['react/no-find-dom-node'] = 2;
+  rules['react/no-is-mounted'] = 2;
+  rules['react/no-multi-comp'] = 0;
+  rules['react/no-render-return-value'] = 2;
+  rules['react/no-set-state'] = 0;
+  rules['react/no-string-refs'] = 2;
+  rules['react/no-unescaped-entities'] = 2;
+  rules['react/no-unknown-property'] = 2;
+  rules['react/no-unused-prop-types'] = 2;
+  rules['react/prefer-es6-class'] = [ 2, 'always' ];
+  rules['react/prefer-stateless-function'] = [ 2, { ignorePureComponents: false }];
+  rules['react/prop-types'] = 0;
+  rules['react/react-in-jsx-scope'] = 2;
+  rules['react/require-optimization'] = 0;
+  rules['react/require-render-return'] = 2;
+  rules['react/self-closing-comp'] = [ 2, { component: true, html: true }];
+  rules['react/sort-comp'] = 2;
+  rules['react/sort-prop-types'] = [ 2, { callbacksLast: true, ignoreCase: true, requiredFirst: true }];
+  rules['react/style-prop-object'] = 2;
+
+  rules['react/jsx-boolean-value'] = [ 2, 'always' ];
+  rules['react/jsx-closing-bracket-location'] = [ 2, 'tag-aligned' ];
+  rules['react/jsx-curly-spacing'] = [ 2, 'always', { spacing: { objectLiterals: 'never' }}];
+  rules['react/jsx-equals-spacing'] = [ 2, 'never' ];
+  rules['react/jsx-filename-extension'] = 2;
+  rules['react/jsx-first-prop-new-line'] = [ 2, 'multiline' ];
+  rules['react/jsx-handler-names'] = [ 2, { eventHandlerPrefix: 'handle', eventHandlerPropPrefix: 'on' }];
+  rules['react/jsx-indent'] = [ 2, 2 ];
+  rules['react/jsx-indent-props'] = [ 2, 2 ];
+  rules['react/jsx-key'] = 2;
+  rules['react/jsx-max-props-per-line'] = 0;
+  rules['react/jsx-no-bind'] = [ 2, { ignoreRefs: true, allowArrowFunctions: true, allowBind: false }];
+  rules['react/jsx-no-comment-textnodes'] = 2;
   rules['react/jsx-no-duplicate-props'] = 2;
+  rules['react/jsx-no-literals'] = 0;
+  rules['react/jsx-no-target-blank'] = 2;
+  rules['react/jsx-no-undef'] = 2;
+  rules['react/jsx-pascal-case'] = [ 2, { allowAllCaps: false }];
+  rules['react/jsx-sort-props'] = 0;
+  rules['react/jsx-space-before-closing'] = [ 2, 'always' ];
+  rules['react/jsx-tag-spacing'] = [ 2, { closingSlash: 'never', beforeSelfClosing: 'always', afterOpening: 'never' }];
+  rules['react/jsx-uses-react'] = 2;
   rules['react/jsx-uses-vars'] = 2;
+  rules['react/jsx-wrap-multilines'] = 2;
 }
 
 module.exports = { parserOptions, env, globals, plugins, rules };
