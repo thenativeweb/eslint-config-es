@@ -337,7 +337,7 @@ if (plugins.includes('react')) {
   rules['react/no-unescaped-entities'] = 2;
   rules['react/no-unknown-property'] = 2;
   rules['react/no-unused-prop-types'] = 2;
-  rules['react/prefer-es6-class'] = [ 2, 'always' ];
+  rules['react/prefer-es6-class'] = [ 2, 'never' ];
   rules['react/prefer-stateless-function'] = [ 2, { ignorePureComponents: false }];
   rules['react/prop-types'] = 0;
   rules['react/react-in-jsx-scope'] = 2;
