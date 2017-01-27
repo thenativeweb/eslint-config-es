@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-es",
   "version": "0.8.10",
-  "description": "eslint-config-es contains a very strict ESLint configuration for ES2015 and above.",
+  "description": "eslint-config-es contains a strict ESLint configuration for ES2015+.",
   "contributors": [
     {
       "name": "Golo Roden",
