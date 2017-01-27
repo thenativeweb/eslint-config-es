@@ -1,6 +1,6 @@
 # eslint-config-es
 
-eslint-config-es contains a very strict ESLint configuration for ES2015 and above.
+eslint-config-es contains a strict ESLint configuration for ES2015+.
 
 ## Installation
 
