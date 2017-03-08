@@ -9,7 +9,7 @@ const isPluginInstalled = require('./isPluginInstalled');
 includes.shim();
 
 const parserOptions = {
-  ecmaVersion: 6,
+  ecmaVersion: 2017,
   sourceType: 'script',
   ecmaFeatures: {
     globalReturn: false,
