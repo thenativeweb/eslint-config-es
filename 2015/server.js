@@ -367,7 +367,7 @@ if (plugins.includes('react')) {
   rules['react/jsx-no-undef'] = 2;
   rules['react/jsx-pascal-case'] = [ 2, { allowAllCaps: false }];
   rules['react/jsx-sort-props'] = 0;
-  rules['react/jsx-space-before-closing'] = [ 2, 'always' ];
+  rules['react/jsx-tag-spacing'] = 2;
   rules['react/jsx-uses-react'] = 2;
   rules['react/jsx-uses-vars'] = 2;
   rules['react/jsx-wrap-multilines'] = 2;
