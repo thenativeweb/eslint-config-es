@@ -10,6 +10,10 @@
     {
       "name": "Matthias Wagler",
       "email": "matthias.wagler@thenativeweb.io"
+    },
+    {
+      "name": "Stefan Heine",
+      "email": "stefan.heine@microfocus.com"
     }
   ],
   "main": "2015/server.js",
