@@ -167,7 +167,7 @@ const rules = {
   'no-restricted-modules': 0,
   'no-sync': [ 2, { allowAtRootLevel: false }],
 
-  'array-bracket-newline': [ 2, { multiline: true }],
+  'array-bracket-newline': 0,
   'array-bracket-spacing': [ 2, 'always', {
     singleValue: true,
     objectsInArrays: false,
@@ -186,7 +186,7 @@ const rules = {
   'func-call-spacing': [ 2, 'never' ],
   'func-name-matching': 0,
   'func-style': [ 2, 'expression' ],
-  'function-paren-newline': [ 2, { multiline: true }],
+  'function-paren-newline': [ 2, 'multiline' ],
   'id-blacklist': 0,
   'id-length': [ 2, {
     min: 2,
