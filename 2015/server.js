@@ -9,7 +9,7 @@ const isPluginInstalled = require('./isPluginInstalled');
 includes.shim();
 
 const parserOptions = {
-  ecmaVersion: 2017,
+  ecmaVersion: 2018,
   sourceType: 'script',
   ecmaFeatures: {
     globalReturn: false,
@@ -31,6 +31,10 @@ const plugins = [ 'extended', 'mocha', 'react' ].
 
 const rules = {
   'comma-dangle': [ 2, 'never' ],
+  'for-direction': 2,
+  'getter-return': [ 2, { allowImplicit: true }],
+  'no-await-in-loop': 0,
+  'no-compare-neg-zero': 2,
   'no-cond-assign': [ 2, 'always' ],
   'no-console': 2,
   'no-constant-condition': 2,
@@ -43,7 +47,13 @@ const rules = {
   'no-empty-character-class': 2,
   'no-ex-assign': 2,
   'no-extra-boolean-cast': 2,
-  'no-extra-parens': [ 2, 'all', { ignoreJSX: 'all', nestedBinaryExpressions: false }],
+  'no-extra-parens': [ 2, 'all', {
+    conditionalAssign: false,
+    enforceForArrowConditionals: false,
+    ignoreJSX: 'all',
+    nestedBinaryExpressions: false,
+    returnAssign: false
+  }],
   'no-extra-semi': 2,
   'no-func-assign': 2,
   'no-inner-declarations': [ 2, 'both' ],
@@ -62,7 +72,7 @@ const rules = {
   'valid-typeof': 2,
 
   'accessor-pairs': [ 2, { getWithoutSet: false, setWithoutGet: true }],
-  'array-callback-return': 2,
+  'array-callback-return': [ 2, { allowImplicit: true }],
   'block-scoped-var': 2,
   'class-methods-use-this': 2,
   complexity: 0,
@@ -148,19 +158,22 @@ const rules = {
   'callback-return': [ 2, [ 'callback', 'done', 'next' ]],
   'global-require': 2,
   'handle-callback-err': [ 2, 'err' ],
+  'no-buffer-constructor': 2,
   'no-mixed-requires': [ 2, true ],
   'no-new-require': 2,
   'no-path-concat': 2,
   'no-process-env': 2,
   'no-process-exit': 2,
   'no-restricted-modules': 0,
-  'no-sync': 2,
+  'no-sync': [ 2, { allowAtRootLevel: false }],
 
+  'array-bracket-newline': [ 2, { multiline: true }],
   'array-bracket-spacing': [ 2, 'always', {
     singleValue: true,
     objectsInArrays: false,
     arraysInArrays: false
   }],
+  'array-element-newline': 0,
   'block-spacing': [ 2, 'always' ],
   'brace-style': [ 2, '1tbs', { allowSingleLine: false }],
   camelcase: 2,
@@ -173,6 +186,7 @@ const rules = {
   'func-call-spacing': [ 2, 'never' ],
   'func-name-matching': 0,
   'func-style': [ 2, 'expression' ],
+  'function-paren-newline': [ 2, { multiline: true }],
   'id-blacklist': 0,
   'id-length': [ 2, {
     min: 2,
@@ -181,7 +195,11 @@ const rules = {
     exceptions: [ '_', 'i', 'j', 'x', 'y', 'z' ]
   }],
   'id-match': 0,
-  indent: [ 2, 2, { SwitchCase: 1, VariableDeclarator: { var: 2, let: 2, const: 3 }}],
+  'implicit-arrow-linebreak': 0,
+  indent: [ 2, 2, {
+    SwitchCase: 1,
+    VariableDeclarator: { var: 2, let: 2, const: 3 }
+  }],
   'jsx-quotes': [ 2, 'prefer-single' ],
   'key-spacing': [ 2, { beforeColon: false, afterColon: true, mode: 'strict' }],
   'keyword-spacing': [ 2, { before: true, after: true }],
@@ -199,13 +217,15 @@ const rules = {
     allowArrayStart: true,
     allowArrayEnd: true
   }],
-  'lines-around-directive': [ 2, 'always' ],
+  'lines-between-class-members': [ 2, 'always' ],
   'max-depth': 0,
   'max-len': 0,
   'max-nested-callbacks': 0,
   'max-params': 0,
   'max-statements': 0,
   'max-statements-per-line': [ 2, { max: 1 }],
+  'multiline-comment-style': [ 2, 'separate-lines' ],
+  'multiline-ternary': [ 2, 'always-multiline' ],
   'new-cap': [ 2, {
     newIsCap: true,
     capIsNew: true,
@@ -214,8 +234,6 @@ const rules = {
     properties: true
   }],
   'new-parens': 2,
-  'newline-after-var': [ 2, 'always' ],
-  'newline-before-return': 2,
   'newline-per-chained-call': [ 2, { ignoreChainWithDepth: 2 }],
   'no-array-constructor': 2,
   'no-bitwise': 2,
@@ -230,25 +248,40 @@ const rules = {
   'no-plusplus': [ 2, { allowForLoopAfterthoughts: true }],
   'no-restricted-syntax': 0,
   'no-ternary': 0,
-  'no-trailing-spaces': [ 2, { skipBlankLines: false }],
+  'no-trailing-spaces': [ 2, {
+    ignoreComments: false,
+    skipBlankLines: false
+  }],
   'no-underscore-dangle': 2,
   'no-unneeded-ternary': 2,
   'no-whitespace-before-property': 2,
+  'object-curly-newline': [ 2, {
+    ObjectExpression: { multiline: true },
+    ObjectPattern: { multiline: true }
+  }],
   'object-curly-spacing': [ 2, 'always', {
     objectsInObjects: false,
     arraysInObjects: false
   }],
-  'object-property-newline': [ 2, { allowMultiplePropertiesPerLine: true }],
+  'object-property-newline': [ 2, { allowAllPropertiesOnSameLine: true }],
   'one-var': 0,
   'one-var-declaration-per-line': [ 2, 'always' ],
   'operator-assignment': [ 2, 'always' ],
   'operator-linebreak': [ 2, 'after' ],
   'padded-blocks': [ 2, 'never' ],
+  'padding-line-between-statements': [
+    2,
+    { blankLine: 'always', prev: '*', next: 'return' },
+    { blankLine: 'always', prev: [ 'const', 'let', 'var' ], next: '*' },
+    { blankLine: 'any', prev: [ 'const', 'let', 'var' ], next: [ 'const', 'let', 'var' ]},
+    { blankLine: 'always', prev: 'directive', next: '*' }, { blankLine: 'any', prev: 'directive', next: 'directive' }
+  ],
   'quote-props': [ 2, 'as-needed' ],
   quotes: [ 2, 'single', { avoidEscape: false, allowTemplateLiterals: true }],
   'require-jsdoc': 0,
   semi: [ 2, 'always' ],
   'semi-spacing': [ 2, { before: false, after: true }],
+  'semi-style': [ 2, 'last' ],
   'sort-keys': [ 0 ],
   'sort-vars': [ 2, { ignoreCase: true }],
   'space-before-blocks': [ 2, 'always' ],
@@ -257,6 +290,7 @@ const rules = {
   'space-infix-ops': [ 2, { int32Hint: false }],
   'space-unary-ops': [ 2, { words: true, nonwords: false }],
   'spaced-comment': [ 2, 'always' ],
+  'switch-colon-spacing': [ 2, { after: true, before: false }],
   'wrap-regex': 0,
 
   'arrow-body-style': [ 2, 'as-needed' ],
