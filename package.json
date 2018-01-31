@@ -21,8 +21,8 @@
     "array-includes": "3.0.3"
   },
   "devDependencies": {
-    "roboter": "0.15.4",
-    "roboter-server": "0.15.4"
+    "roboter": "0.15.5",
+    "roboter-server": "0.15.5"
   },
   "repository": {
     "type": "git",

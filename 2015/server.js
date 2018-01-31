@@ -12,6 +12,7 @@ const parserOptions = {
   ecmaVersion: 2018,
   sourceType: 'script',
   ecmaFeatures: {
+    experimentalObjectRestSpread: true,
     globalReturn: false,
     impliedStrict: false,
     jsx: true
@@ -186,7 +187,7 @@ const rules = {
   'func-call-spacing': [ 2, 'never' ],
   'func-name-matching': 0,
   'func-style': [ 2, 'expression' ],
-  'function-paren-newline': [ 2, 'multiline' ],
+  'function-paren-newline': [ 2, 'consistent' ],
   'id-blacklist': 0,
   'id-length': [ 2, {
     min: 2,
@@ -256,8 +257,8 @@ const rules = {
   'no-unneeded-ternary': 2,
   'no-whitespace-before-property': 2,
   'object-curly-newline': [ 2, {
-    ObjectExpression: { multiline: true },
-    ObjectPattern: { multiline: true }
+    ObjectExpression: { consistent: true },
+    ObjectPattern: { consistent: true }
   }],
   'object-curly-spacing': [ 2, 'always', {
     objectsInObjects: false,
