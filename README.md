@@ -11,13 +11,13 @@ $ npm install eslint-config-es \
 
 You may install additional plugins for ESLint. If you do, the following ones are automatically detected and configured for you.
 
-- [eslint-plugin-extended](https://www.npmjs.com/package/eslint-plugin-extended)
-- [eslint-plugin-mocha](https://www.npmjs.com/package/eslint-plugin-mocha)
-- [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
+-   [eslint-plugin-extended](https://www.npmjs.com/package/eslint-plugin-extended)
+-   [eslint-plugin-mocha](https://www.npmjs.com/package/eslint-plugin-mocha)
+-   [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
 
 ## Quick Start
 
-This module contains a very strict ESLint configuration for ES2015 and above, both for server and client development. Its aims to eradicate *any* variation in code style. If you can not tell any more, based on little individual manners, who of your co-workers wrote a piece of code, this module succeeded. This helps you to narrow down your focus to pure functionality, as you do not have to think about code styling any more at all.
+This module contains a very strict ESLint configuration for ES2015 and above, both for server and client development. Its aims to eradicate _any_ variation in code style. If you can not tell any more, based on little individual manners, who of your co-workers wrote a piece of code, this module succeeded. This helps you to narrow down your focus to pure functionality, as you do not have to think about code styling any more at all.
 
 To use one of those configurations, create a `.eslintrc.json` file in your project and use the `extends` keyword.
 
