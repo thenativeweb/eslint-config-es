@@ -17,12 +17,9 @@
     }
   ],
   "main": "2015/server.js",
-  "dependencies": {
-    "array-includes": "3.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "roboter": "0.15.5",
-    "roboter-server": "0.15.5"
+    "roboter": "4.0.2"
   },
   "repository": {
     "type": "git",
