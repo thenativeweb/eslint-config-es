@@ -17,27 +17,37 @@ You may install additional plugins for ESLint. If you do, the following ones are
 
 ## Quick Start
 
-This module contains a very strict ESLint configuration for ES2015 and above, both for server and client development. Its aims to eradicate _any_ variation in code style. If you can not tell any more, based on little individual manners, who of your co-workers wrote a piece of code, this module succeeded. This helps you to narrow down your focus to pure functionality, as you do not have to think about code styling any more at all.
+This module contains a very strict ESLint configuration for ES2015 and above, both for Node.js and browser development. Its aims to eradicate _any_ variation in code style. If you can not tell any more, based on little individual manners, who of your co-workers wrote a piece of code, this module succeeded. This helps you to narrow down your focus to pure functionality, as you do not have to think about code styling any more at all.
 
 To use one of those configurations, create a `.eslintrc.json` file in your project and use the `extends` keyword.
 
 ```json
 {
-  "extends": "es/2015/server"
+  "extends": "es/node"
 }
 ```
 
-Alternatively, you may also use `es/2015/client`.
+Alternatively, you may also use `es/browser`.
 
 If you want to override any rules, you can do so in your configuration file.
 
 ## Running the build
 
-To build this module use [roboter](https://www.npmjs.com/package/roboter).
+Since this module is required by [roboter](https://www.npmjs.com/package/roboter), it can not use roboter to build itself. Hence you have to use `npm` for that.
+
+To analyse the source code run the following command:
 
 ```shell
-$ npx roboter
+$ npm run analyse
 ```
+
+To release a new version run the following command:
+
+```shell
+$ npm run publish-patch
+```
+
+Alternatively you may also use `publish-minor` and `publish-major`, depending on the changes you have made.
 
 ## License
 

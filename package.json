@@ -14,12 +14,26 @@
     {
       "name": "Stefan Heine",
       "email": "stefan.heine@microfocus.com"
+    },
+    {
+      "name": "Jan-Hendrik Grundhöfer",
+      "email": "jan-hendrik.grundhoefer@thenativeweb.io"
     }
   ],
-  "main": "2015/server.js",
+  "main": "node.js",
   "dependencies": {},
   "devDependencies": {
-    "roboter": "4.0.2"
+    "eslint": "5.16.0",
+    "eslint-plugin-extended": "0.2.0",
+    "eslint-plugin-mocha": "5.3.0",
+    "eslint-plugin-react": "7.13.0",
+    "react": "16.8.6"
+  },
+  "scripts": {
+    "analyse": "npx eslint --config node.js *.js",
+    "publish-patch": "npm run analyse && npm version patch && git push --tags && git push && npm publish",
+    "publish-minor": "npm run analyse && npm version minor && git push --tags && git push && npm publish",
+    "publish-major": "npm run analyse && npm version major && git push --tags && git push && npm publish"
   },
   "repository": {
     "type": "git",
@@ -32,6 +46,7 @@
     "es2016",
     "es2017",
     "es2018",
+    "es2019",
     "eslint",
     "eslint-config"
   ],
