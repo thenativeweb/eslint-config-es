@@ -30,7 +30,7 @@
     "react": "16.8.6"
   },
   "scripts": {
-    "analyse": "npx eslint --config node.js *.js",
+    "analyse": "npx eslint --config node.js *.js lib/**/*.js",
     "publish-patch": "npm run analyse && npm version patch && git push --tags && git push && npm publish",
     "publish-minor": "npm run analyse && npm version minor && git push --tags && git push && npm publish",
     "publish-major": "npm run analyse && npm version major && git push --tags && git push && npm publish"

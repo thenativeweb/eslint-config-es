@@ -1,6 +1,6 @@
 'use strict';
 
-const isPluginInstalled = require('./lib/isPluginInstalled');
+const isInstalled = require('./lib/isInstalled');
 
 const parserOptions = {
   ecmaVersion: 2019,
@@ -20,15 +20,21 @@ const env = {
 
 const globals = {};
 
-const plugins = [ 'extended', 'mocha', 'react' ].
-  filter(name => isPluginInstalled({ name }));
-
+const plugins = [];
 const settings = {};
 
-if (plugins.includes('react')) {
-  settings.react = {
-    version: 'detect'
-  };
+if (isInstalled({ name: 'eslint-plugin-extended' })) {
+  plugins.push('extended');
+}
+if (isInstalled({ name: 'eslint-plugin-mocha' })) {
+  plugins.push('mocha');
+}
+if (
+  isInstalled({ name: 'eslint-plugin-react' }) &&
+  isInstalled({ name: 'react' })
+) {
+  plugins.push('react');
+  settings.react = { version: 'detect' };
 }
 
 const rules = {
