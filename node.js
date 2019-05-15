@@ -434,7 +434,7 @@ const rules = {
   }],
   'prefer-destructuring': [ 'error',
     { array: true, object: true },
-    { enforceForRenamedProperties: true }
+    { enforceForRenamedProperties: false }
   ],
   'prefer-numeric-literals': 'error',
   'prefer-rest-params': 'error',
