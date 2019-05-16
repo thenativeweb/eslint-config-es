@@ -57,7 +57,7 @@ const rules = {
     conditionalAssign: false,
     enforceForArrowConditionals: false,
     ignoreJSX: 'all',
-    nestedBinaryExpressions: true,
+    nestedBinaryExpressions: false,
     returnAssign: false
   }],
   'no-extra-semi': 'error',
