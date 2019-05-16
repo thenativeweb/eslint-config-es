@@ -23,16 +23,13 @@ const globals = {};
 const plugins = [];
 const settings = {};
 
-if (isInstalled({ name: 'eslint-plugin-extended' })) {
+if (isInstalled('eslint-plugin-extended')) {
   plugins.push('extended');
 }
-if (isInstalled({ name: 'eslint-plugin-mocha' })) {
+if (isInstalled('eslint-plugin-mocha')) {
   plugins.push('mocha');
 }
-if (
-  isInstalled({ name: 'eslint-plugin-react' }) &&
-  isInstalled({ name: 'react' })
-) {
+if (isInstalled('eslint-plugin-react', 'react')) {
   plugins.push('react');
   settings.react = { version: 'detect' };
 }
@@ -191,7 +188,7 @@ const rules = {
   'no-delete-var': 'error',
   'no-label-var': 'error',
   'no-restricted-globals': 'error',
-  'no-shadow': [ 'error', { builtinGlobals: true, hoist: 'functions', allow: []}],
+  'no-shadow': [ 'error', { builtinGlobals: false, hoist: 'functions', allow: []}],
   'no-shadow-restricted-names': 'error',
   'no-undef': [ 'error', { typeof: true }],
   'no-undef-init': 'error',
@@ -482,11 +479,7 @@ if (plugins.includes('mocha')) {
 
 if (plugins.includes('react')) {
   rules['react/boolean-prop-naming'] = 'off';
-  rules['react/button-has-type'] = [ 'error', {
-    button: true,
-    submit: true,
-    reset: true
-  }];
+  rules['react/button-has-type'] = 'off';
   rules['react/default-props-match-prop-types'] = 'off';
   rules['react/destructuring-assignment'] = [ 'error', 'always' ];
   rules['react/display-name'] = 'off';
