@@ -20,16 +20,10 @@ const env = {
 
 const globals = {};
 
-const plugins = [];
+const plugins = [ 'extended', 'mocha', 'unicorn' ];
 const settings = {};
 
-if (isInstalled('eslint-plugin-extended')) {
-  plugins.push('extended');
-}
-if (isInstalled('eslint-plugin-mocha')) {
-  plugins.push('mocha');
-}
-if (isInstalled('eslint-plugin-react', 'react')) {
+if (isInstalled('react')) {
   plugins.push('react');
   settings.react = { version: 'detect' };
 }
@@ -214,7 +208,9 @@ const rules = {
   'no-new-require': 'error',
   'no-path-concat': 'error',
   'no-process-env': 'error',
-  'no-process-exit': 'error',
+
+  // The no-process-exit rule is superseded by the unicorn/no-process-exit rule.
+  'no-process-exit': 'off',
   'no-restricted-modules': 'off',
   'no-sync': [ 'error', { allowAtRootLevel: false }],
 
@@ -429,8 +425,11 @@ const rules = {
     destructuring: 'any',
     ignoreReadBeforeAssign: true
   }],
+
+  // Arrays are disabled here because of the unicorn/no-unreadable-array-destructuring
+  // rule.
   'prefer-destructuring': [ 'error',
-    { array: true, object: true },
+    { array: false, object: true },
     { enforceForRenamedProperties: false }
   ],
   'prefer-numeric-literals': 'error',
@@ -447,35 +446,71 @@ const rules = {
   }],
   'symbol-description': 'error',
   'template-curly-spacing': [ 'error', 'never' ],
-  'yield-star-spacing': [ 'error', { before: true, after: true }]
+  'yield-star-spacing': [ 'error', { before: true, after: true }],
+
+  // Plugin extended
+  'extended/consistent-err-names': [ 'error', 'prefix' ],
+
+  // Plugin mocha
+  'mocha/handle-done-callback': 'error',
+  'mocha/max-top-level-suites': [ 'error', { limit: 1 }],
+  'mocha/no-async-describe': 'error',
+  'mocha/no-exclusive-tests': 'error',
+  'mocha/no-global-tests': 'error',
+  'mocha/no-hooks': 'off',
+  'mocha/no-hooks-for-single-case': 'off',
+  'mocha/no-identical-title': 'error',
+  'mocha/no-mocha-arrows': 'off',
+  'mocha/no-nested-tests': 'error',
+  'mocha/no-pending-tests': 'error',
+  'mocha/no-return-and-callback': 'error',
+  'mocha/no-setup-in-describe': 'off',
+  'mocha/no-sibling-hooks': 'error',
+  'mocha/no-skipped-tests': 'error',
+  'mocha/no-synchronous-tests': 'error',
+  'mocha/no-top-level-hooks': 'error',
+  'mocha/prefer-arrow-callback': 'off',
+  'mocha/valid-suite-description': [ 'error', '[^\\.]$' ],
+  'mocha/valid-test-description': [ 'error', '\\.$' ],
+
+  'unicorn/catch-error-name': [ 'error', { caughtErrorsIgnorePattern: '^ex([A-Z0-9].*)?$' }],
+  'unicorn/custom-error-definition': 'off',
+  'unicorn/error-message': 'error',
+  'unicorn/escape-case': 'error',
+  'unicorn/explicit-length-check': [ 'error', { 'non-zero': 'greater-than' }],
+  'unicorn/filename-case': 'off',
+  'unicorn/import-index': 'error',
+  'unicorn/new-for-builtins': 'error',
+  'unicorn/no-abusive-eslint-disable': 'error',
+  'unicorn/no-array-instanceof': 'error',
+  'unicorn/no-console-spaces': 'error',
+  'unicorn/no-fn-reference-in-iterator': 'error',
+  'unicorn/no-for-loop': 'error',
+  'unicorn/no-hex-escape': 'error',
+
+  // The unicorn/no-new-buffer rule does the same thing as ESLint's built-in
+  // no-buffer-constructor rule.
+  'unicorn/no-new-buffer': 'off',
+  'unicorn/no-process-exit': 'error',
+  'unicorn/no-unreadable-array-destructuring': 'error',
+  'unicorn/no-unsafe-regex': 'off',
+  'unicorn/no-unused-properties': 'off',
+  'unicorn/no-zero-fractions': 'error',
+  'unicorn/number-literal-case': 'error',
+  'unicorn/prefer-add-event-listener': 'off',
+  'unicorn/prefer-exponentiation-operator': 'error',
+  'unicorn/prefer-includes': 'error',
+  'unicorn/prefer-node-append': 'off',
+  'unicorn/prefer-node-remove': 'off',
+  'unicorn/prefer-query-selector': 'off',
+  'unicorn/prefer-spread': 'error',
+  'unicorn/prefer-starts-ends-with': 'error',
+  'unicorn/prefer-text-content': 'off',
+  'unicorn/prefer-type-error': 'off',
+  'unicorn/prevent-abbreviations': 'off',
+  'unicorn/regex-shorthand': 'error',
+  'unicorn/throw-new-error': 'error'
 };
-
-if (plugins.includes('extended')) {
-  rules['extended/consistent-err-names'] = [ 'error', 'prefix' ];
-}
-
-if (plugins.includes('mocha')) {
-  rules['mocha/handle-done-callback'] = 'error';
-  rules['mocha/max-top-level-suites'] = [ 'error', { limit: 1 }];
-  rules['mocha/no-async-describe'] = 'error';
-  rules['mocha/no-exclusive-tests'] = 'error';
-  rules['mocha/no-global-tests'] = 'error';
-  rules['mocha/no-hooks'] = 'off';
-  rules['mocha/no-hooks-for-single-case'] = 'off';
-  rules['mocha/no-identical-title'] = 'error';
-  rules['mocha/no-mocha-arrows'] = 'off';
-  rules['mocha/no-nested-tests'] = 'error';
-  rules['mocha/no-pending-tests'] = 'error';
-  rules['mocha/no-return-and-callback'] = 'error';
-  rules['mocha/no-setup-in-describe'] = 'off';
-  rules['mocha/no-sibling-hooks'] = 'error';
-  rules['mocha/no-skipped-tests'] = 'error';
-  rules['mocha/no-synchronous-tests'] = 'error';
-  rules['mocha/no-top-level-hooks'] = 'error';
-  rules['mocha/prefer-arrow-callback'] = 'off';
-  rules['mocha/valid-suite-description'] = [ 'error', '[^\\.]$' ];
-  rules['mocha/valid-test-description'] = [ 'error', '\\.$' ];
-}
 
 if (plugins.includes('react')) {
   rules['react/boolean-prop-naming'] = 'off';

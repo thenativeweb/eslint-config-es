@@ -9,11 +9,15 @@ $ npm install eslint-config-es \
               eslint
 ```
 
-You may install additional plugins for ESLint. If you do, the following ones are automatically detected and configured for you.
+The following additional ESLint plugins are included by default, so you don't have to install them:
 
--   [eslint-plugin-extended](https://www.npmjs.com/package/eslint-plugin-extended)
--   [eslint-plugin-mocha](https://www.npmjs.com/package/eslint-plugin-mocha)
--   [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
+| Plugin | Automatically enabled |
+|-|-|
+| [eslint-plugin-extended](https://www.npmjs.com/package/eslint-plugin-extended) | Yes |
+| [eslint-plugin-mocha](https://www.npmjs.com/package/eslint-plugin-mocha) | Yes |
+| [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) | No |
+
+To enable support for React and JSX, all you need to do is to install the [react](https://www.npmjs.com/package/react) module. The appropriate rules will become enabled automatically.
 
 ## Quick Start
 
