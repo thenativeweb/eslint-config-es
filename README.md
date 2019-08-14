@@ -1,6 +1,6 @@
 # eslint-config-es
 
-eslint-config-es contains a strict ESLint configuration for ES2015+.
+eslint-config-es contains a strict ESLint configuration for ES2015+ and TypeScript.
 
 ## Status
 
