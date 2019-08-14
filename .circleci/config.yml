@@ -5,6 +5,8 @@ jobs:
       - image: node:12.8.0-alpine
 
     steps:
+      - run: apk add ca-certificates
+
       - checkout
 
       - restore_cache:
