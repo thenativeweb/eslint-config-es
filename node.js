@@ -18,6 +18,11 @@ const parserOptions = {
   }
 };
 
+if (isTypeScript) {
+  // Necessary for @typesript-eslint/parser to find the tsconfig.json.
+  parserOptions.project = '.';
+}
+
 const env = {
   es6: true,
   mocha: true,
