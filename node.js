@@ -1,5 +1,7 @@
 'use strict';
 
+const { join } = require('path');
+
 const isInstalled = require('./lib/isInstalled');
 
 const isTypeScript = isInstalled('typescript');
@@ -20,7 +22,7 @@ const parserOptions = {
 
 if (isTypeScript) {
   // Necessary for @typesript-eslint/parser to find the tsconfig.json.
-  parserOptions.project = '.';
+  parserOptions.project = join('.', 'tsconfig.json');
 }
 
 const env = {
