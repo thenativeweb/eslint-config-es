@@ -2,16 +2,19 @@
 
 const { join } = require('path');
 
+const appRoot = require('app-root-path'),
+      isTypeScript = require('is-typescript');
+
 const isInstalled = require('./lib/isInstalled');
 
-const isTypeScript = isInstalled('typescript');
+const isTypeScriptInstalled = isTypeScript({ directory: appRoot.toString() });
 
-const parser = isTypeScript ?
+const parser = isTypeScriptInstalled ?
   '@typescript-eslint/parser' :
   'espree';
 
 const parserOptions = {
-  sourceType: isTypeScript ? 'module' : 'script',
+  sourceType: isTypeScriptInstalled ? 'module' : 'script',
   ecmaVersion: 2019,
   ecmaFeatures: {
     globalReturn: false,
@@ -20,7 +23,7 @@ const parserOptions = {
   }
 };
 
-if (isTypeScript) {
+if (isTypeScriptInstalled) {
   // Necessary for @typesript-eslint/parser to find the tsconfig.json.
   parserOptions.project = join('.', 'tsconfig.json');
 }
@@ -41,7 +44,7 @@ if (isInstalled('react')) {
   settings.react = { version: 'detect' };
 }
 
-if (isTypeScript) {
+if (isTypeScriptInstalled) {
   plugins.push('@typescript-eslint');
 }
 
@@ -662,7 +665,7 @@ if (plugins.includes('react')) {
   };
 }
 
-if (isTypeScript) {
+if (isTypeScriptInstalled) {
   rules = {
     ...rules,
 
