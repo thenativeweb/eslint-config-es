@@ -2,19 +2,10 @@
 
 const { join } = require('path');
 
-const appRoot = require('app-root-path'),
-      isTypeScript = require('is-typescript');
-
 const isInstalled = require('./lib/isInstalled');
 
-const isTypeScriptInstalled = isTypeScript({ directory: appRoot.toString() });
-
-const parser = isTypeScriptInstalled ?
-  '@typescript-eslint/parser' :
-  'espree';
-
 const parserOptions = {
-  sourceType: isTypeScriptInstalled ? 'module' : 'script',
+  sourceType: 'script',
   ecmaVersion: 2019,
   ecmaFeatures: {
     globalReturn: false,
@@ -22,11 +13,6 @@ const parserOptions = {
     jsx: true
   }
 };
-
-if (isTypeScriptInstalled) {
-  // Necessary for @typesript-eslint/parser to find the tsconfig.json.
-  parserOptions.project = join('.', 'tsconfig.json');
-}
 
 const env = {
   es6: true,
@@ -42,10 +28,6 @@ const settings = {};
 if (isInstalled('react')) {
   plugins.push('react');
   settings.react = { version: 'detect' };
-}
-
-if (isTypeScriptInstalled) {
-  plugins.push('@typescript-eslint');
 }
 
 let rules = {
@@ -665,182 +647,190 @@ if (plugins.includes('react')) {
   };
 }
 
-if (isTypeScriptInstalled) {
-  rules = {
-    ...rules,
-
-    '@typescript-eslint/adjacent-overload-signatures': 'error',
-    '@typescript-eslint/array-type': [ 'error', { default: 'array' }],
-    '@typescript-eslint/await-thenable': 'error',
-    '@typescript-eslint/ban-ts-ignore': 'error',
-    '@typescript-eslint/ban-types': 'error',
-    camelcase: 'off',
-    '@typescript-eslint/camelcase': [ 'error', {
-      properties: 'always',
-      ignoreDestructuring: false,
-      allow: []
-    }],
-    '@typescript-eslint/class-name-casing': [ 'error', {
-      allowUnderscorePrefix: false
-    }],
-    '@typescript-eslint/consistent-type-assertions': [ 'error', {
-      assertionStyle: 'as',
-      objectLiteralTypeAssertions: 'allow'
-    }],
-    '@typescript-eslint/consistent-type-definitions': [ 'error', 'interface' ],
-    '@typescript-eslint/explicit-function-return-type': [ 'error', {
-      allowExpressions: false,
-      allowTypedFunctionExpressions: false,
-      allowHigherOrderFunctions: false
-    }],
-    '@typescript-eslint/explicit-member-accessibility': [ 'error', {
-      accessibility: 'explicit'
-    }],
-    'func-call-spacing': 'off',
-    '@typescript-eslint/func-call-spacing': [ 'error', 'never' ],
-    '@typescript-eslint/generic-type-naming': [ 'error', '^T[A-Z][a-zA-Z]+$' ],
-    indent: 'off',
-    '@typescript-eslint/indent': [ 'error', 2, {
-      SwitchCase: 1,
-      VariableDeclarator: { var: 2, let: 2, const: 3 },
-      outerIIFEBody: 1,
-      MemberExpression: 1,
-      FunctionDeclaration: { parameters: 1, body: 1 },
-      FunctionExpression: { parameters: 1, body: 1 },
-      CallExpression: { arguments: 1 },
-      ArrayExpression: 1,
-      ObjectExpression: 1,
-      ImportDeclaration: 1,
-      flatTernaryExpressions: false,
-      ignoredNodes: [],
-      ignoreComments: false
-    }],
-    '@typescript-eslint/interface-name-prefix': [ 'error', 'never' ],
-    '@typescript-eslint/member-delimiter-style': [ 'error', {
-      multiline: { delimiter: 'semi', requireLast: true },
-      singleline: { delimiter: 'semi', requireLast: false }
-    }],
-    '@typescript-eslint/member-naming': [ 'error', {
-      private: '^_',
-      protected: '^_',
-      public: '^[a-z]'
-    }],
-    '@typescript-eslint/member-ordering': [ 'error', {
-      default: [
-        'public-static-field', 'protected-static-field', 'private-static-field',
-        'public-instance-field', 'protected-instance-field', 'private-instance-field',
-        'public-field', 'protected-field', 'private-field',
-        'static-field', 'instance-field', 'field',
-        'public-constructor', 'protected-constructor', 'private-constructor', 'constructor',
-        'public-static-method', 'protected-static-method', 'private-static-method',
-        'public-instance-method', 'protected-instance-method', 'private-instance-method',
-        'public-method', 'protected-method', 'private-method',
-        'static-method', 'instance-method', 'method'
-      ]
-    }],
-    'no-array-constructor': 'off',
-    '@typescript-eslint/no-array-constructor': 'error',
-    'no-empty-function': 'off',
-    '@typescript-eslint/no-empty-function': 'error',
-    '@typescript-eslint/no-empty-interface': [ 'error', {
-      allowSingleExtends: false
-    }],
-    '@typescript-eslint/no-explicit-any': 'off',
-    'no-extra-parens': 'off',
-    '@typescript-eslint/no-extra-parens': [ 'error', 'all', {
-      conditionalAssign: false,
-      enforceForArrowConditionals: false,
-      ignoreJSX: 'all',
-      nestedBinaryExpressions: false,
-      returnAssign: false
-    }],
-    '@typescript-eslint/no-extraneous-class': [ 'error', {
-      allowConstructorOnly: false,
-      allowEmpty: false,
-      allowStaticOnly: false
-    }],
-    '@typescript-eslint/no-floating-promises': 'error',
-    '@typescript-eslint/no-for-in-array': 'error',
-    '@typescript-eslint/no-inferrable-types': [ 'error', {
-      ignoreParameters: false,
-      ignoreProperties: false
-    }],
-    'no-magic-numbers': 'off',
-    '@typescript-eslint/no-magic-numbers': 'off',
-    '@typescript-eslint/no-misused-new': 'error',
-    '@typescript-eslint/no-misused-promises': [ 'error', {
-      checksConditionals: true,
-      checksVoidReturn: false
-    }],
-    '@typescript-eslint/no-namespace': [ 'error', {
-      allowDeclarations: false,
-      allowDefinitionFiles: true
-    }],
-    '@typescript-eslint/no-non-null-assertion': 'off',
-    '@typescript-eslint/no-parameter-properties': 'error',
-    '@typescript-eslint/no-require-imports': 'error',
-    '@typescript-eslint/no-this-alias': [ 'error', {
-      allowDestructuring: false,
-      allowedNames: []
-    }],
-    '@typescript-eslint/no-type-alias': 'off',
-    '@typescript-eslint/no-unnecessary-qualifier': 'error',
-    '@typescript-eslint/no-unnecessary-type-arguments': 'error',
-    '@typescript-eslint/no-unnecessary-type-assertion': [ 'error', {
-      typesToIgnore: []
-    }],
-    'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': [ 'error', { vars: 'all' }],
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': [ 'error', {
-      functions: true,
-      classes: true,
-      variables: true,
-      typedefs: true
-    }],
-    'no-useless-constructor': 'off',
-    '@typescript-eslint/no-useless-constructor': 'error',
-    '@typescript-eslint/no-var-requires': 'error',
-    '@typescript-eslint/prefer-for-of': 'error',
-    '@typescript-eslint/prefer-function-type': 'error',
-    '@typescript-eslint/prefer-includes': 'error',
-    '@typescript-eslint/prefer-namespace-keyword': 'off',
-    '@typescript-eslint/prefer-readonly': 'error',
-    '@typescript-eslint/prefer-regexp-exec': 'error',
-    '@typescript-eslint/prefer-string-starts-ends-with': 'error',
-    '@typescript-eslint/promise-function-async': [ 'error', {
-      allowAny: false,
-      allowedPromiseNames: [],
-      checkArrowFunctions: true,
-      checkFunctionDeclarations: true,
-      checkFunctionExpressions: true,
-      checkMethodDeclarations: true
-    }],
-    '@typescript-eslint/require-array-sort-compare': 'error',
-    'require-await': 'off',
-    '@typescript-eslint/require-await': 'error',
-    '@typescript-eslint/restrict-plus-operands': 'error',
-    semi: 'off',
-    '@typescript-eslint/semi': [ 'error', 'always', { omitLastInOneLineBlock: false }],
-    '@typescript-eslint/strict-boolean-expressions': 'off',
-    '@typescript-eslint/triple-slash-reference': 'error',
-    '@typescript-eslint/type-annotation-spacing': [ 'error', {
-      before: false,
-      after: true,
-      overrides: { arrow: { before: true, after: true }}
-    }],
-    '@typescript-eslint/typedef': 'off',
-    '@typescript-eslint/unbound-method': [ 'error', { ignoreStatic: true }],
-    '@typescript-eslint/unified-signatures': 'error'
-  };
-}
+const overrides = [
+  {
+    files: [ '*.ts', '*.tsx' ],
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+      ...parserOptions,
+      sourceType: 'module',
+      project: join('.', 'tsconfig.json')
+    },
+    plugins: [ ...plugins, '@typescript-eslint' ],
+    rules: {
+      '@typescript-eslint/adjacent-overload-signatures': 'error',
+      '@typescript-eslint/array-type': [ 'error', { default: 'array' }],
+      '@typescript-eslint/await-thenable': 'error',
+      '@typescript-eslint/ban-ts-ignore': 'error',
+      '@typescript-eslint/ban-types': 'error',
+      camelcase: 'off',
+      '@typescript-eslint/camelcase': [ 'error', {
+        properties: 'always',
+        ignoreDestructuring: false,
+        allow: []
+      }],
+      '@typescript-eslint/class-name-casing': [ 'error', {
+        allowUnderscorePrefix: false
+      }],
+      '@typescript-eslint/consistent-type-assertions': [ 'error', {
+        assertionStyle: 'as',
+        objectLiteralTypeAssertions: 'allow'
+      }],
+      '@typescript-eslint/consistent-type-definitions': [ 'error', 'interface' ],
+      '@typescript-eslint/explicit-function-return-type': [ 'error', {
+        allowExpressions: false,
+        allowTypedFunctionExpressions: false,
+        allowHigherOrderFunctions: false
+      }],
+      '@typescript-eslint/explicit-member-accessibility': [ 'error', {
+        accessibility: 'explicit'
+      }],
+      'func-call-spacing': 'off',
+      '@typescript-eslint/func-call-spacing': [ 'error', 'never' ],
+      '@typescript-eslint/generic-type-naming': [ 'error', '^T[A-Z][a-zA-Z]+$' ],
+      indent: 'off',
+      '@typescript-eslint/indent': [ 'error', 2, {
+        SwitchCase: 1,
+        VariableDeclarator: { var: 2, let: 2, const: 3 },
+        outerIIFEBody: 1,
+        MemberExpression: 1,
+        FunctionDeclaration: { parameters: 1, body: 1 },
+        FunctionExpression: { parameters: 1, body: 1 },
+        CallExpression: { arguments: 1 },
+        ArrayExpression: 1,
+        ObjectExpression: 1,
+        ImportDeclaration: 1,
+        flatTernaryExpressions: false,
+        ignoredNodes: [],
+        ignoreComments: false
+      }],
+      '@typescript-eslint/interface-name-prefix': [ 'error', 'never' ],
+      '@typescript-eslint/member-delimiter-style': [ 'error', {
+        multiline: { delimiter: 'semi', requireLast: true },
+        singleline: { delimiter: 'semi', requireLast: false }
+      }],
+      '@typescript-eslint/member-naming': [ 'error', {
+        private: '^_',
+        protected: '^_',
+        public: '^[a-z]'
+      }],
+      '@typescript-eslint/member-ordering': [ 'error', {
+        default: [
+          'public-static-field', 'protected-static-field', 'private-static-field',
+          'public-instance-field', 'protected-instance-field', 'private-instance-field',
+          'public-field', 'protected-field', 'private-field',
+          'static-field', 'instance-field', 'field',
+          'public-constructor', 'protected-constructor', 'private-constructor', 'constructor',
+          'public-static-method', 'protected-static-method', 'private-static-method',
+          'public-instance-method', 'protected-instance-method', 'private-instance-method',
+          'public-method', 'protected-method', 'private-method',
+          'static-method', 'instance-method', 'method'
+        ]
+      }],
+      'no-array-constructor': 'off',
+      '@typescript-eslint/no-array-constructor': 'error',
+      'no-empty-function': 'off',
+      '@typescript-eslint/no-empty-function': 'error',
+      '@typescript-eslint/no-empty-interface': [ 'error', {
+        allowSingleExtends: false
+      }],
+      '@typescript-eslint/no-explicit-any': 'off',
+      'no-extra-parens': 'off',
+      '@typescript-eslint/no-extra-parens': [ 'error', 'all', {
+        conditionalAssign: false,
+        enforceForArrowConditionals: false,
+        ignoreJSX: 'all',
+        nestedBinaryExpressions: false,
+        returnAssign: false
+      }],
+      '@typescript-eslint/no-extraneous-class': [ 'error', {
+        allowConstructorOnly: false,
+        allowEmpty: false,
+        allowStaticOnly: false
+      }],
+      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/no-for-in-array': 'error',
+      '@typescript-eslint/no-inferrable-types': [ 'error', {
+        ignoreParameters: false,
+        ignoreProperties: false
+      }],
+      'no-magic-numbers': 'off',
+      '@typescript-eslint/no-magic-numbers': 'off',
+      '@typescript-eslint/no-misused-new': 'error',
+      '@typescript-eslint/no-misused-promises': [ 'error', {
+        checksConditionals: true,
+        checksVoidReturn: false
+      }],
+      '@typescript-eslint/no-namespace': [ 'error', {
+        allowDeclarations: false,
+        allowDefinitionFiles: true
+      }],
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      '@typescript-eslint/no-parameter-properties': 'error',
+      '@typescript-eslint/no-require-imports': 'error',
+      '@typescript-eslint/no-this-alias': [ 'error', {
+        allowDestructuring: false,
+        allowedNames: []
+      }],
+      '@typescript-eslint/no-type-alias': 'off',
+      '@typescript-eslint/no-unnecessary-qualifier': 'error',
+      '@typescript-eslint/no-unnecessary-type-arguments': 'error',
+      '@typescript-eslint/no-unnecessary-type-assertion': [ 'error', {
+        typesToIgnore: []
+      }],
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [ 'error', { vars: 'all' }],
+      'no-use-before-define': 'off',
+      '@typescript-eslint/no-use-before-define': [ 'error', {
+        functions: true,
+        classes: true,
+        variables: true,
+        typedefs: true
+      }],
+      'no-useless-constructor': 'off',
+      '@typescript-eslint/no-useless-constructor': 'error',
+      '@typescript-eslint/no-var-requires': 'error',
+      '@typescript-eslint/prefer-for-of': 'error',
+      '@typescript-eslint/prefer-function-type': 'error',
+      '@typescript-eslint/prefer-includes': 'error',
+      '@typescript-eslint/prefer-namespace-keyword': 'off',
+      '@typescript-eslint/prefer-readonly': 'error',
+      '@typescript-eslint/prefer-regexp-exec': 'error',
+      '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+      '@typescript-eslint/promise-function-async': [ 'error', {
+        allowAny: false,
+        allowedPromiseNames: [],
+        checkArrowFunctions: true,
+        checkFunctionDeclarations: true,
+        checkFunctionExpressions: true,
+        checkMethodDeclarations: true
+      }],
+      '@typescript-eslint/require-array-sort-compare': 'error',
+      'require-await': 'off',
+      '@typescript-eslint/require-await': 'error',
+      '@typescript-eslint/restrict-plus-operands': 'error',
+      semi: 'off',
+      '@typescript-eslint/semi': [ 'error', 'always', { omitLastInOneLineBlock: false }],
+      '@typescript-eslint/strict-boolean-expressions': 'off',
+      '@typescript-eslint/triple-slash-reference': 'error',
+      '@typescript-eslint/type-annotation-spacing': [ 'error', {
+        before: false,
+        after: true,
+        overrides: { arrow: { before: true, after: true }}
+      }],
+      '@typescript-eslint/typedef': 'off',
+      '@typescript-eslint/unbound-method': [ 'error', { ignoreStatic: true }],
+      '@typescript-eslint/unified-signatures': 'error'
+    }
+  }
+];
 
 module.exports = {
-  parser,
   parserOptions,
   env,
   globals,
   plugins,
   settings,
-  rules
+  rules,
+  overrides
 };

@@ -31,7 +31,7 @@ The following additional ESLint plugins are included by default, so you don't ha
 
 To enable support for React and JSX, all you need to do is to install the [react](https://www.npmjs.com/package/react) module. The appropriate rules will become enabled automatically.
 
-To enable support for TypeScript, all you need to do is to install the [typescript](https://www.npmjs.com/package/typescript) module. The appropriate rules will become enabled automatically. The generated configuration expects a `tsconfig.json` at the project root.
+To enable support for TypeScript, all you need to do is to install the [typescript](https://www.npmjs.com/package/typescript) module. The appropriate rules will become enabled automatically for `.ts` and `.tsx` files. The generated configuration expects a `tsconfig.json` at the project root.
 
 ## Quick Start
 
