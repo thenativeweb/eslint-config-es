@@ -807,7 +807,7 @@ const overrides = [
       }],
       '@typescript-eslint/require-array-sort-compare': 'error',
       'require-await': 'off',
-      '@typescript-eslint/require-await': 'error',
+      '@typescript-eslint/require-await': 'off',
       '@typescript-eslint/restrict-plus-operands': 'error',
       semi: 'off',
       '@typescript-eslint/semi': [ 'error', 'always', { omitLastInOneLineBlock: false }],
