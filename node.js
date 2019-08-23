@@ -602,7 +602,9 @@ if (plugins.includes('react')) {
       spacing: { objectLiterals: 'never' }
     }],
     'react/jsx-equals-spacing': [ 'error', 'never' ],
-    'react/jsx-filename-extension': 'error',
+    'react/jsx-filename-extension': [ 'error', {
+      extensions: [ '.jsx', '.tsx' ]
+    }],
     'react/jsx-first-prop-new-line': [ 'error', 'multiline' ],
     'react/jsx-handler-names': [ 'error', {
       eventHandlerPrefix: 'handle',
