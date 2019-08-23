@@ -800,7 +800,7 @@ const overrides = [
       '@typescript-eslint/prefer-regexp-exec': 'error',
       '@typescript-eslint/prefer-string-starts-ends-with': 'error',
       '@typescript-eslint/promise-function-async': [ 'error', {
-        allowAny: false,
+        allowAny: true,
         allowedPromiseNames: [],
         checkArrowFunctions: true,
         checkFunctionDeclarations: true,
