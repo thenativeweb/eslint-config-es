@@ -6,7 +6,7 @@ const isInstalled = require('./lib/isInstalled');
 
 const parserOptions = {
   sourceType: 'script',
-  ecmaVersion: 2019,
+  ecmaVersion: 2020,
   ecmaFeatures: {
     globalReturn: false,
     impliedStrict: false,
@@ -245,6 +245,7 @@ let rules = {
   'func-name-matching': 'off',
   'func-names': 'off',
   'func-style': [ 'error', 'expression' ],
+  'function-call-argument-newline': [ 'error', 'consistent' ],
   'function-paren-newline': [ 'error', 'consistent' ],
   'id-blacklist': 'off',
   'id-length': [ 'error', {
