@@ -689,7 +689,7 @@ const overrides = [
       }],
       'func-call-spacing': 'off',
       '@typescript-eslint/func-call-spacing': [ 'error', 'never' ],
-      '@typescript-eslint/generic-type-naming': [ 'error', '^T[A-Z][a-zA-Z]+$' ],
+      '@typescript-eslint/generic-type-naming': [ 'error', '^(T|T[A-Z][a-zA-Z]+)$' ],
       indent: 'off',
       '@typescript-eslint/indent': [ 'error', 2, {
         SwitchCase: 1,
