@@ -335,7 +335,7 @@ let rules = {
   }],
   'no-underscore-dangle': [ 'error', {
     allow: [],
-    allowAfterThis: false,
+    allowAfterThis: true,
     allowAfterSuper: false,
     enforceInMethodNames: true
   }],
