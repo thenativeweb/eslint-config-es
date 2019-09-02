@@ -27,7 +27,7 @@ jobs:
           paths:
             - node_modules
           key: node-modules-{{ checksum "package.json" }}
-      - run: npx roboter
+      - run: npm run analyse
       - persist_to_workspace:
           root: ~/workspace
           paths:
