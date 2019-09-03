@@ -713,8 +713,8 @@ const overrides = [
         singleline: { delimiter: 'semi', requireLast: false }
       }],
       '@typescript-eslint/member-naming': [ 'error', {
-        private: '^_',
-        protected: '^_',
+        private: '^[a-z]',
+        protected: '^[a-z]',
         public: '^[a-z]'
       }],
       '@typescript-eslint/member-ordering': [ 'error', {
