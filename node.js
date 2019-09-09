@@ -666,6 +666,8 @@ const overrides = [
       '@typescript-eslint/await-thenable': 'error',
       '@typescript-eslint/ban-ts-ignore': 'error',
       '@typescript-eslint/ban-types': 'error',
+      'brace-style': 'off',
+      '@typescript-eslint/brace-style': [ 'error', '1tbs', { allowSingleLine: false }],
       camelcase: 'off',
       '@typescript-eslint/camelcase': [ 'error', {
         properties: 'always',
