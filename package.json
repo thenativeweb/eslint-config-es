@@ -36,7 +36,7 @@
   "devDependencies": {
     "eslint": "6.3.0",
     "react": "16.9.0",
-    "typescript": "3.6.2"
+    "typescript": "3.6.3"
   },
   "scripts": {
     "analyse": "npx eslint --config node.js *.js lib/**/*.js",
