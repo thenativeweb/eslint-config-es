@@ -58,6 +58,7 @@ let rules = {
   }],
   'no-extra-semi': 'error',
   'no-func-assign': 'error',
+  'no-import-assign': 'error',
   'no-inner-declarations': [ 'error', 'both' ],
   'no-invalid-regexp': [ 'error', { allowConstructorFlags: [ 'u', 'y' ]}],
   'no-irregular-whitespace': [ 'error', {
@@ -81,7 +82,11 @@ let rules = {
   'valid-typeof': [ 'error', { requireStringLiterals: true }],
 
   // Best practices
-  'accessor-pairs': [ 'error', { getWithoutSet: false, setWithoutGet: true }],
+  'accessor-pairs': [ 'error', {
+    getWithoutSet: false,
+    setWithoutGet: true,
+    enforceForClassMembers: true
+  }],
   'array-callback-return': [ 'error', { allowImplicit: true }],
   'block-scoped-var': 'error',
   'class-methods-use-this': [ 'error', { exceptMethods: []}],
@@ -89,6 +94,7 @@ let rules = {
   'consistent-return': 'off',
   curly: [ 'error', 'all' ],
   'default-case': 'error',
+  'default-param-last': 'error',
   'dot-location': [ 'error', 'object' ],
   'dot-notation': [ 'error', { allowKeywords: true }],
   eqeqeq: [ 'error', 'always' ],
@@ -169,6 +175,7 @@ let rules = {
   'no-with': 'error',
   'prefer-named-capture-group': 'error',
   'prefer-promise-reject-errors': [ 'error', { allowEmptyReject: false }],
+  'prefer-regex-literals': 'error',
   radix: [ 'error', 'always' ],
   'require-await': 'off',
   'require-unicode-regexp': 'error',
@@ -238,7 +245,7 @@ let rules = {
   'comma-dangle': [ 'error', 'never' ],
   'comma-spacing': [ 'error', { before: false, after: true }],
   'comma-style': [ 'error', 'last' ],
-  'computed-property-spacing': [ 'error', 'never' ],
+  'computed-property-spacing': [ 'error', 'never', { enforceForClassMembers: true }],
   'consistent-this': [ 'error', 'that' ],
   'eol-last': [ 'error', 'always' ],
   'func-call-spacing': [ 'error', 'never' ],
