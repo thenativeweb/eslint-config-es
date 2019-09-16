@@ -330,7 +330,6 @@ let rules = {
   'no-multi-assign': 'error',
   'no-multiple-empty-lines': [ 'error', { max: 1, maxEOF: 1, maxBOF: 0 }],
   'no-negated-condition': 'off',
-  'no-nested-ternary': 'error',
   'no-new-object': 'error',
   'no-plusplus': [ 'error', { allowForLoopAfterthoughts: true }],
   'no-restricted-syntax': 'off',
@@ -485,9 +484,11 @@ let rules = {
   'mocha/valid-test-description': [ 'error', '\\.$' ],
 
   'unicorn/catch-error-name': [ 'error', { caughtErrorsIgnorePattern: '^ex([A-Z0-9].*)?$' }],
+  'unicorn/consistent-function-scoping': 'error',
   'unicorn/custom-error-definition': 'off',
   'unicorn/error-message': 'error',
   'unicorn/escape-case': 'error',
+  'unicorn/expiring-todo-comments': 'off',
   'unicorn/explicit-length-check': [ 'error', { 'non-zero': 'greater-than' }],
   'unicorn/filename-case': [ 'error', {
     cases: {
@@ -505,6 +506,8 @@ let rules = {
   'unicorn/no-fn-reference-in-iterator': 'error',
   'unicorn/no-for-loop': 'error',
   'unicorn/no-hex-escape': 'error',
+  'unicorn/no-nested-ternary': 'error',
+  'no-nested-ternary': 'off',
 
   // The unicorn/no-new-buffer rule does the same thing as ESLint's built-in
   // no-buffer-constructor rule.
@@ -516,6 +519,7 @@ let rules = {
   'unicorn/no-zero-fractions': 'error',
   'unicorn/number-literal-case': 'error',
   'unicorn/prefer-add-event-listener': 'off',
+  'unicorn/prefer-dataset': 'error',
   'unicorn/prefer-event-key': 'error',
   'unicorn/prefer-exponentiation-operator': 'error',
   'unicorn/prefer-flat-map': 'error',
@@ -523,6 +527,7 @@ let rules = {
   'unicorn/prefer-node-append': 'off',
   'unicorn/prefer-node-remove': 'off',
   'unicorn/prefer-query-selector': 'off',
+  'unicorn/prefer-reflect-apply': 'error',
   'unicorn/prefer-spread': 'error',
   'unicorn/prefer-starts-ends-with': 'error',
   'unicorn/prefer-text-content': 'off',
