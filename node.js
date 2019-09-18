@@ -765,7 +765,9 @@ const overrides = [
         allowEmpty: false,
         allowStaticOnly: false
       }],
-      '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/no-floating-promises': [ 'error', {
+        ignoreVoid: false
+      }],
       '@typescript-eslint/no-for-in-array': 'error',
       '@typescript-eslint/no-inferrable-types': [ 'error', {
         ignoreParameters: false,
@@ -790,6 +792,7 @@ const overrides = [
         allowedNames: []
       }],
       '@typescript-eslint/no-type-alias': 'off',
+      '@typescript-eslint/no-unnecessary-condition': [ 'error', { ignoreRhs: false }],
       '@typescript-eslint/no-unnecessary-qualifier': 'error',
       '@typescript-eslint/no-unnecessary-type-arguments': 'error',
       '@typescript-eslint/no-unnecessary-type-assertion': [ 'error', {
