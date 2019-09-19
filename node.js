@@ -792,7 +792,7 @@ const overrides = [
         allowedNames: []
       }],
       '@typescript-eslint/no-type-alias': 'off',
-      '@typescript-eslint/no-unnecessary-condition': [ 'error', { ignoreRhs: false }],
+      '@typescript-eslint/no-unnecessary-condition': [ 'error', { ignoreRhs: true }],
       '@typescript-eslint/no-unnecessary-qualifier': 'error',
       '@typescript-eslint/no-unnecessary-type-arguments': 'error',
       '@typescript-eslint/no-unnecessary-type-assertion': [ 'error', {
