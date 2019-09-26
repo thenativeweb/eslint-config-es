@@ -330,6 +330,10 @@ let rules = {
   'no-multi-assign': 'error',
   'no-multiple-empty-lines': [ 'error', { max: 1, maxEOF: 1, maxBOF: 0 }],
   'no-negated-condition': 'off',
+
+  // The no-nested-ternary rule is superseded by the unicorn/no-nested-ternary
+  // rule.
+  'no-nested-ternary': 'off',
   'no-new-object': 'error',
   'no-plusplus': [ 'error', { allowForLoopAfterthoughts: true }],
   'no-restricted-syntax': 'off',
@@ -507,7 +511,6 @@ let rules = {
   'unicorn/no-for-loop': 'error',
   'unicorn/no-hex-escape': 'error',
   'unicorn/no-nested-ternary': 'error',
-  'no-nested-ternary': 'off',
 
   // The unicorn/no-new-buffer rule does the same thing as ESLint's built-in
   // no-buffer-constructor rule.
@@ -530,6 +533,7 @@ let rules = {
   'unicorn/prefer-reflect-apply': 'error',
   'unicorn/prefer-spread': 'error',
   'unicorn/prefer-starts-ends-with': 'error',
+  'unicorn/prefer-string-slice': 'error',
   'unicorn/prefer-text-content': 'off',
   'unicorn/prefer-type-error': 'off',
   'unicorn/prevent-abbreviations': 'off',
