@@ -78,7 +78,7 @@ let rules = {
   'no-unsafe-finally': 'error',
   'no-unsafe-negation': 'error',
   'require-atomic-updates': 'off',
-  'use-isnan': 'error',
+  'use-isnan': [ 'error', { enforceForSwitchCase: true }],
   'valid-typeof': [ 'error', { requireStringLiterals: true }],
 
   // Best practices
