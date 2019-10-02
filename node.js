@@ -646,6 +646,7 @@ if (plugins.includes('react')) {
       enforceDynamicLinks: 'always'
     }],
     'react/jsx-no-undef': [ 'error', { allowGlobals: false }],
+    'react/jsx-no-useless-fragment': 'error',
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-curly-brace-presence': [ 'error', 'never' ],
     'react/jsx-fragments': [ 'error', 'element' ],
