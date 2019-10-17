@@ -778,7 +778,7 @@ const overrides = [
         allowDefinitionFiles: true
       }],
       '@typescript-eslint/no-non-null-assertion': 'off',
-      '@typescript-eslint/no-parameter-properties': 'error',
+      '@typescript-eslint/no-parameter-properties': 'off',
       '@typescript-eslint/no-require-imports': 'error',
       '@typescript-eslint/no-this-alias': [ 'error', {
         allowDestructuring: false,
