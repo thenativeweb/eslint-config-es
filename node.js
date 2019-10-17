@@ -99,7 +99,7 @@ let rules = {
   'dot-notation': [ 'error', { allowKeywords: true }],
   eqeqeq: [ 'error', 'always' ],
   'guard-for-in': 'error',
-  'max-classes-per-file': [ 'error', 1 ],
+  'max-classes-per-file': 'off',
   'no-alert': 'error',
   'no-caller': 'error',
   'no-case-declarations': 'error',
