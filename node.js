@@ -275,7 +275,7 @@ let rules = {
     ObjectExpression: 1,
     ImportDeclaration: 1,
     flatTernaryExpressions: false,
-    ignoredNodes: [],
+    ignoredNodes: [ 'JSXElement' ],
     ignoreComments: false
   }],
   'jsx-quotes': [ 'error', 'prefer-single' ],
