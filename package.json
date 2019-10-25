@@ -34,7 +34,7 @@
     "eslint-plugin-unicorn": "12.1.0"
   },
   "devDependencies": {
-    "eslint": "6.5.1",
+    "eslint": "6.6.0",
     "react": "16.11.0",
     "typescript": "3.6.4"
   },
