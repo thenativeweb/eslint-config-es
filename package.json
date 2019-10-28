@@ -29,7 +29,7 @@
     "@typescript-eslint/eslint-plugin": "2.5.0",
     "@typescript-eslint/parser": "2.5.0",
     "eslint-plugin-extended": "0.2.0",
-    "eslint-plugin-mocha": "6.2.0",
+    "eslint-plugin-mocha": "6.2.1",
     "eslint-plugin-react": "7.16.0",
     "eslint-plugin-unicorn": "12.1.0"
   },
