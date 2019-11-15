@@ -517,7 +517,10 @@ let rules = {
       pascalCase: true,
       kebabCase: false,
       snakeCase: false
-    }
+    },
+    ignore: [
+      'next-env.d.ts'
+    ]
   }],
   'unicorn/import-index': 'error',
   'unicorn/new-for-builtins': 'error',
