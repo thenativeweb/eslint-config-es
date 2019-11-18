@@ -759,6 +759,7 @@ const overrides = [
       '@typescript-eslint/member-ordering': 'off',
       'no-array-constructor': 'off',
       '@typescript-eslint/no-array-constructor': 'error',
+      '@typescript-eslint/no-dynamic-delete': 'error',
       'no-empty-function': 'off',
       '@typescript-eslint/no-empty-function': 'error',
       '@typescript-eslint/no-empty-interface': [ 'error', {
@@ -811,6 +812,7 @@ const overrides = [
       '@typescript-eslint/no-unnecessary-type-assertion': [ 'error', {
         typesToIgnore: []
       }],
+      '@typescript-eslint/no-untyped-public-signature': 'error',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [ 'error', { vars: 'all' }],
       'no-use-before-define': 'off',
@@ -842,8 +844,15 @@ const overrides = [
       'require-await': 'off',
       '@typescript-eslint/require-await': 'off',
       '@typescript-eslint/restrict-plus-operands': 'error',
+      '@typescript-eslint/restrict-template-expressions': [ 'error', {
+        allowNumber: true,
+        allowBoolean: false,
+        allowNullable: false
+      }],
       semi: 'off',
       '@typescript-eslint/semi': [ 'error', 'always', { omitLastInOneLineBlock: false }],
+      'space-before-function-paren': 'off',
+      '@typescript-eslint/space-before-function-paren': 'error',
       '@typescript-eslint/strict-boolean-expressions': 'off',
       '@typescript-eslint/triple-slash-reference': 'error',
       '@typescript-eslint/type-annotation-spacing': [ 'error', {
