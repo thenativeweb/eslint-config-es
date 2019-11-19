@@ -812,7 +812,7 @@ const overrides = [
       '@typescript-eslint/no-unnecessary-type-assertion': [ 'error', {
         typesToIgnore: []
       }],
-      '@typescript-eslint/no-untyped-public-signature': 'error',
+      '@typescript-eslint/no-untyped-public-signature': 'off',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [ 'error', { vars: 'all' }],
       'no-use-before-define': 'off',
@@ -844,11 +844,7 @@ const overrides = [
       'require-await': 'off',
       '@typescript-eslint/require-await': 'off',
       '@typescript-eslint/restrict-plus-operands': 'error',
-      '@typescript-eslint/restrict-template-expressions': [ 'error', {
-        allowNumber: true,
-        allowBoolean: false,
-        allowNullable: false
-      }],
+      '@typescript-eslint/restrict-template-expressions': 'off',
       semi: 'off',
       '@typescript-eslint/semi': [ 'error', 'always', { omitLastInOneLineBlock: false }],
       'space-before-function-paren': 'off',
