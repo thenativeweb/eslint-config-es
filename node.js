@@ -122,7 +122,7 @@ let rules = {
   'no-implicit-coercion': 'error',
   'no-implicit-globals': [ 'error', { lexicalBindings: false }],
   'no-implied-eval': 'error',
-  'no-invalid-this': [ 'error', { capIsConstructor: true }],
+  'no-invalid-this': 'off',
   'no-iterator': 'error',
   'no-labels': [ 'error', { allowLoop: false, allowSwitch: false }],
   'no-lone-blocks': 'error',
