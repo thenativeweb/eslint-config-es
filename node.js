@@ -43,6 +43,7 @@ let rules = {
   'no-control-regex': 'error',
   'no-debugger': 'error',
   'no-dupe-args': 'error',
+  'no-dupe-else-if': 'error',
   'no-dupe-keys': 'error',
   'no-duplicate-case': 'error',
   'no-empty': [ 'error', { allowEmptyCatch: false }],
@@ -71,6 +72,7 @@ let rules = {
   'no-obj-calls': 'error',
   'no-prototype-builtins': 'error',
   'no-regex-spaces': 'error',
+  'no-setter-return': 'error',
   'no-sparse-arrays': 'error',
   'no-template-curly-in-string': 'error',
   'no-unexpected-multiline': 'error',
@@ -98,11 +100,13 @@ let rules = {
   'dot-location': [ 'error', 'object' ],
   'dot-notation': [ 'error', { allowKeywords: true }],
   eqeqeq: [ 'error', 'always' ],
+  'grouped-accessor-pairs': [ 'error', 'getBeforeSet' ],
   'guard-for-in': 'error',
   'max-classes-per-file': 'off',
   'no-alert': 'error',
   'no-caller': 'error',
   'no-case-declarations': 'error',
+  'no-constructor-return': 'error',
   'no-div-regex': 'error',
   'no-else-return': [ 'error', { allowElseIf: false }],
   'no-empty-function': [ 'error', { allow: []}],
@@ -116,9 +120,9 @@ let rules = {
   'no-floating-decimal': 'error',
   'no-global-assign': [ 'error', { exceptions: []}],
   'no-implicit-coercion': 'error',
-  'no-implicit-globals': 'error',
+  'no-implicit-globals': [ 'error', { lexicalBindings: false }],
   'no-implied-eval': 'error',
-  'no-invalid-this': 'off',
+  'no-invalid-this': [ 'error', { capIsConstructor: true }],
   'no-iterator': 'error',
   'no-labels': [ 'error', { allowLoop: false, allowSwitch: false }],
   'no-lone-blocks': 'error',
@@ -236,6 +240,7 @@ let rules = {
   camelcase: [ 'error', {
     properties: 'always',
     ignoreDestructuring: false,
+    ignoreImports: false,
     allow: []
   }],
   'capitalized-comments': [ 'error', 'always', {
@@ -363,6 +368,7 @@ let rules = {
   'no-underscore-dangle': [ 'error', {
     allow: [],
     allowAfterThis: false,
+    allowAfterThisConstructor: false,
     allowAfterSuper: false,
     enforceInMethodNames: true
   }],
@@ -393,6 +399,7 @@ let rules = {
     { blankLine: 'always', prev: 'directive', next: '*' },
     { blankLine: 'any', prev: 'directive', next: 'directive' }
   ],
+  'prefer-exponentiation-operator': 'error',
   'prefer-object-spread': 'error',
   'quote-props': [ 'error', 'as-needed', {
     keywords: false,
@@ -434,7 +441,7 @@ let rules = {
   'no-new-symbol': 'error',
   'no-restricted-imports': 'off',
   'no-this-before-super': 'error',
-  'no-useless-computed-key': 'error',
+  'no-useless-computed-key': [ 'error', { enforceForClassMembers: true }],
   'no-useless-constructor': 'error',
   'no-useless-rename': [ 'error', {
     ignoreDestructuring: false,
