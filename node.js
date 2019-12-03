@@ -1,6 +1,6 @@
 'use strict';
 
-const { join } = require('path');
+const path = require('path');
 
 const isInstalled = require('./lib/isInstalled');
 
@@ -529,7 +529,7 @@ let rules = {
       'next-env.d.ts'
     ]
   }],
-  'unicorn/import-index': 'error',
+  'unicorn/import-index': [ 'error', { ignoreImports: false }],
   'unicorn/new-for-builtins': 'error',
   'unicorn/no-abusive-eslint-disable': 'error',
   'unicorn/no-array-instanceof': 'error',
@@ -554,6 +554,7 @@ let rules = {
   'unicorn/prefer-exponentiation-operator': 'error',
   'unicorn/prefer-flat-map': 'error',
   'unicorn/prefer-includes': 'error',
+  'unicorn/prefer-negative-index': 'error',
   'unicorn/prefer-node-append': 'off',
   'unicorn/prefer-node-remove': 'off',
   'unicorn/prefer-query-selector': 'off',
@@ -562,6 +563,7 @@ let rules = {
   'unicorn/prefer-starts-ends-with': 'error',
   'unicorn/prefer-string-slice': 'error',
   'unicorn/prefer-text-content': 'off',
+  'unicorn/prefer-trim-start-end': 'error',
   'unicorn/prefer-type-error': 'off',
   'unicorn/prevent-abbreviations': 'off',
   'unicorn/regex-shorthand': 'error',
@@ -652,7 +654,8 @@ if (plugins.includes('react')) {
     'react/jsx-first-prop-new-line': [ 'error', 'multiline' ],
     'react/jsx-handler-names': [ 'error', {
       eventHandlerPrefix: 'handle',
-      eventHandlerPropPrefix: 'on'
+      eventHandlerPropPrefix: 'on',
+      checkLocalVariables: false
     }],
     'react/jsx-indent': [ 'error', 2 ],
     'react/jsx-indent-props': [ 'error', 2 ],
@@ -670,6 +673,7 @@ if (plugins.includes('react')) {
     'react/jsx-no-duplicate-props': [ 'error', { ignoreCase: true }],
     'react/jsx-no-literals': 'off',
     'react/jsx-no-target-blank': [ 'error', {
+      allowReferrer: false,
       enforceDynamicLinks: 'always'
     }],
     'react/jsx-no-undef': [ 'error', { allowGlobals: false }],
@@ -701,7 +705,7 @@ const overrides = [
     parserOptions: {
       ...parserOptions,
       sourceType: 'module',
-      project: join('.', 'tsconfig.json')
+      project: path.join('.', 'tsconfig.json')
     },
     plugins: [ ...plugins, '@typescript-eslint' ],
     rules: {
@@ -836,6 +840,10 @@ const overrides = [
       '@typescript-eslint/prefer-function-type': 'error',
       '@typescript-eslint/prefer-includes': 'error',
       '@typescript-eslint/prefer-namespace-keyword': 'off',
+      '@typescript-eslint/prefer-nullish-coalescing': [ 'error', {
+        ignoreConditionalTests: false,
+        ignoreMixedLogicalExpressions: false
+      }],
       '@typescript-eslint/prefer-readonly': 'error',
       '@typescript-eslint/prefer-regexp-exec': 'error',
       '@typescript-eslint/prefer-string-starts-ends-with': 'error',
