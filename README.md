@@ -4,13 +4,13 @@ eslint-config-es contains a strict ESLint configuration for ES2015+ and TypeScri
 
 ## Status
 
-| Category         | Status                                                                                                                                                       |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Version          | [![npm](https://img.shields.io/npm/v/eslint-config-es)](https://www.npmjs.com/package/eslint-config-es)                                                      |
-| Dependencies     | ![David](https://img.shields.io/david/thenativeweb/eslint-config-es)                                                                                         |
-| Dev dependencies | ![David](https://img.shields.io/david/dev/thenativeweb/eslint-config-es)                                                                                     |
-| Build            | [![CircleCI](https://img.shields.io/circleci/build/github/thenativeweb/eslint-config-es)](https://circleci.com/gh/thenativeweb/eslint-config-es/tree/master) |
-| License          | ![GitHub](https://img.shields.io/github/license/thenativeweb/eslint-config-es)                                                                               |
+| Category         | Status                                                                                                        |
+| ---------------- | ------------------------------------------------------------------------------------------------------------- |
+| Version          | [![npm](https://img.shields.io/npm/v/eslint-config-es)](https://www.npmjs.com/package/eslint-config-es)       |
+| Dependencies     | ![David](https://img.shields.io/david/thenativeweb/eslint-config-es)                                          |
+| Dev dependencies | ![David](https://img.shields.io/david/dev/thenativeweb/eslint-config-es)                                      |
+| Build            | ![GitHub Actions](https://github.com/thenativeweb/eslint-config-es/workflows/Release/badge.svg?branch=master) |
+| License          | ![GitHub](https://img.shields.io/github/license/thenativeweb/eslint-config-es)                                |
 
 ## Installation
 
