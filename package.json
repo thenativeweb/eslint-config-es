@@ -26,12 +26,12 @@
   ],
   "main": "node.js",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "2.9.0",
+    "@typescript-eslint/eslint-plugin": "2.10.0",
     "@typescript-eslint/parser": "2.10.0",
     "eslint-plugin-extended": "0.2.0",
     "eslint-plugin-mocha": "6.2.2",
-    "eslint-plugin-react": "7.16.0",
-    "eslint-plugin-unicorn": "13.0.0"
+    "eslint-plugin-react": "7.17.0",
+    "eslint-plugin-unicorn": "14.0.1"
   },
   "devDependencies": {
     "eslint": "6.7.2",
@@ -40,10 +40,7 @@
     "typescript": "3.7.2"
   },
   "scripts": {
-    "analyse": "npx eslint --config node.js *.js lib/**/*.js",
-    "release-patch": "npm run analyse && npm version patch && git push --tags && git push",
-    "release-minor": "npm run analyse && npm version minor && git push --tags && git push",
-    "release-major": "npm run analyse && npm version major && git push --tags && git push"
+    "analyse": "npx eslint --config node.js *.js lib/**/*.js"
   },
   "repository": {
     "type": "git",

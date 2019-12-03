@@ -58,11 +58,3 @@ To analyse the source code run the following command:
 ```shell
 $ npm run analyse
 ```
-
-To release a new version run the following command:
-
-```shell
-$ npm run release-patch
-```
-
-Alternatively you may also use `release-minor` and `release-major`, depending on the changes you have made.
