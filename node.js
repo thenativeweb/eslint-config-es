@@ -554,6 +554,7 @@ let rules = {
   'unicorn/prefer-exponentiation-operator': 'error',
   'unicorn/prefer-flat-map': 'error',
   'unicorn/prefer-includes': 'error',
+  'unicorn/prefer-modern-dom-apis': 'off',
   'unicorn/prefer-negative-index': 'error',
   'unicorn/prefer-node-append': 'off',
   'unicorn/prefer-node-remove': 'off',
