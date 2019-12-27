@@ -786,6 +786,8 @@ const overrides = [
         nestedBinaryExpressions: false,
         returnAssign: false
       }],
+      'no-extra-semi': 'off',
+      '@typescript-eslint/no-extra-semi': 'error',
       '@typescript-eslint/no-extraneous-class': [ 'error', {
         allowConstructorOnly: false,
         allowEmpty: false,
@@ -817,6 +819,7 @@ const overrides = [
         allowDestructuring: false,
         allowedNames: []
       }],
+      '@typescript-eslint/no-throw-literal': 'error',
       '@typescript-eslint/no-type-alias': 'off',
       '@typescript-eslint/no-unnecessary-condition': [ 'error', { ignoreRhs: true }],
       '@typescript-eslint/no-unnecessary-qualifier': 'error',
@@ -831,6 +834,7 @@ const overrides = [
       '@typescript-eslint/no-use-before-define': [ 'error', {
         functions: true,
         classes: true,
+        enums: true,
         variables: true,
         typedefs: true
       }],
