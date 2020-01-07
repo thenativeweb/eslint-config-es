@@ -1,3 +1,10 @@
+## [3.19.12](https://github.com/thenativeweb/eslint-config-es/compare/3.19.11...3.19.12) (2020-01-07)
+
+
+### Bug Fixes
+
+* Update TypeScript plugin and adjust rules. ([#96](https://github.com/thenativeweb/eslint-config-es/issues/96)) ([220b7d7](https://github.com/thenativeweb/eslint-config-es/commit/220b7d7ed043d6661e77f52f61a0c3f36fa03b7a))
+
 ## [3.19.11](https://github.com/thenativeweb/eslint-config-es/compare/3.19.10...3.19.11) (2020-01-06)
 
 
