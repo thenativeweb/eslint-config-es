@@ -740,6 +740,12 @@ const overrides = [
       '@typescript-eslint/explicit-member-accessibility': [ 'error', {
         accessibility: 'explicit'
       }],
+      '@typescript-eslint/explicit-module-boundary-types': [ 'error', {
+        allowTypedFunctionExpressions: true,
+        allowHigherOrderFunctions: true,
+        allowDirectConstAssertionInArrowFunctions: true,
+        allowedNames: []
+      }],
       'func-call-spacing': 'off',
       '@typescript-eslint/func-call-spacing': [ 'error', 'never' ],
       '@typescript-eslint/generic-type-naming': [ 'error', '^(T|T[A-Z][a-zA-Z]+)$' ],
@@ -814,6 +820,7 @@ const overrides = [
         allowDeclarations: false,
         allowDefinitionFiles: true
       }],
+      '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-parameter-properties': 'off',
       '@typescript-eslint/no-require-imports': 'error',
