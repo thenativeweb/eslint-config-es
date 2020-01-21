@@ -1,3 +1,10 @@
+## [3.19.18](https://github.com/thenativeweb/eslint-config-es/compare/3.19.17...3.19.18) (2020-01-21)
+
+
+### Bug Fixes
+
+* Disable non-working rule. ([#106](https://github.com/thenativeweb/eslint-config-es/issues/106)) ([db92e49](https://github.com/thenativeweb/eslint-config-es/commit/db92e4934d3a0561cca120a296f8a3b8a070d6c2))
+
 ## [3.19.17](https://github.com/thenativeweb/eslint-config-es/compare/3.19.16...3.19.17) (2020-01-21)
 
 
