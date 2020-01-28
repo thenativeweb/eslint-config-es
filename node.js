@@ -713,6 +713,11 @@ const overrides = [
       '@typescript-eslint/adjacent-overload-signatures': 'error',
       '@typescript-eslint/array-type': [ 'error', { default: 'array' }],
       '@typescript-eslint/await-thenable': 'error',
+      '@typescript-eslint/ban-ts-comment': [ 'error', {
+        'ts-ignore': true,
+        'ts-nocheck': true,
+        'ts-check': false
+      }],
       '@typescript-eslint/ban-ts-ignore': 'error',
       '@typescript-eslint/ban-types': 'error',
       'brace-style': 'off',
@@ -726,6 +731,8 @@ const overrides = [
       '@typescript-eslint/class-name-casing': [ 'error', {
         allowUnderscorePrefix: false
       }],
+      'comma-spacing': 'off',
+      '@typescript-eslint/comma-spacing': 'error',
       '@typescript-eslint/consistent-type-assertions': [ 'error', {
         assertionStyle: 'as',
         objectLiteralTypeAssertions: 'allow'
@@ -845,6 +852,7 @@ const overrides = [
       'no-useless-constructor': 'off',
       '@typescript-eslint/no-useless-constructor': 'error',
       '@typescript-eslint/no-var-requires': 'error',
+      '@typescript-eslint/prefer-as-const': 'error',
       '@typescript-eslint/prefer-for-of': 'error',
       '@typescript-eslint/prefer-function-type': 'error',
       '@typescript-eslint/prefer-includes': 'error',
