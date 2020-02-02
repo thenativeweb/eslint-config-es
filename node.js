@@ -551,7 +551,6 @@ let rules = {
   'unicorn/prefer-add-event-listener': 'off',
   'unicorn/prefer-dataset': 'error',
   'unicorn/prefer-event-key': 'error',
-  'unicorn/prefer-exponentiation-operator': 'error',
   'unicorn/prefer-flat-map': 'error',
   'unicorn/prefer-includes': 'error',
   'unicorn/prefer-modern-dom-apis': 'off',
@@ -560,6 +559,7 @@ let rules = {
   'unicorn/prefer-node-remove': 'off',
   'unicorn/prefer-query-selector': 'off',
   'unicorn/prefer-reflect-apply': 'error',
+  'unicorn/prefer-replace-all': 'error',
   'unicorn/prefer-spread': 'error',
   'unicorn/prefer-starts-ends-with': 'error',
   'unicorn/prefer-string-slice': 'error',
@@ -567,7 +567,7 @@ let rules = {
   'unicorn/prefer-trim-start-end': 'error',
   'unicorn/prefer-type-error': 'off',
   'unicorn/prevent-abbreviations': 'off',
-  'unicorn/regex-shorthand': 'error',
+  'unicorn/regex-shorthand': [ 'error', { sortCharacterClasses: true }],
   'unicorn/throw-new-error': 'error'
 };
 
