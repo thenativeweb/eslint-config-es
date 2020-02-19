@@ -1,3 +1,10 @@
+## [3.19.34](https://github.com/thenativeweb/eslint-config-es/compare/3.19.33...3.19.34) (2020-02-19)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-mocha from 6.2.2 to 6.3.0 ([#131](https://github.com/thenativeweb/eslint-config-es/issues/131)) ([5dcb20e](https://github.com/thenativeweb/eslint-config-es/commit/5dcb20e1dbabdeb0bdc285e441565a139362e8a8))
+
 ## [3.19.33](https://github.com/thenativeweb/eslint-config-es/compare/3.19.32...3.19.33) (2020-02-17)
 
 
