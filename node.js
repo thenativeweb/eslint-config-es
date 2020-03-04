@@ -780,6 +780,7 @@ const overrides = [
       '@typescript-eslint/member-ordering': 'off',
       'no-array-constructor': 'off',
       '@typescript-eslint/no-array-constructor': 'error',
+      '@typescript-eslint/no-base-to-string': 'error',
       'no-dupe-class-members': 'off',
       '@typescript-eslint/no-dupe-class-members': 'error',
       '@typescript-eslint/no-dynamic-delete': 'error',
@@ -864,7 +865,8 @@ const overrides = [
         ignoreConditionalTests: false,
         ignoreMixedLogicalExpressions: false
       }],
-      '@typescript-eslint/prefer-readonly': 'error',
+      '@typescript-eslint/prefer-readonly': [ 'error', { onlyInlineLambdas: false }],
+      '@typescript-eslint/prefer-readonly-parameter-types': 'off',
       '@typescript-eslint/prefer-regexp-exec': 'error',
       '@typescript-eslint/prefer-string-starts-ends-with': 'error',
       '@typescript-eslint/promise-function-async': [ 'error', {
