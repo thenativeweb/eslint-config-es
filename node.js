@@ -511,6 +511,7 @@ let rules = {
   'mocha/valid-suite-description': [ 'error', '[^\\.]$' ],
   'mocha/valid-test-description': [ 'error', '\\.$' ],
 
+  'unicorn/better-regex': [ 'error', { sortCharacterClasses: true }],
   'unicorn/catch-error-name': [ 'error', { caughtErrorsIgnorePattern: '^ex([A-Z0-9].*)?$' }],
   'unicorn/consistent-function-scoping': 'error',
   'unicorn/custom-error-definition': 'off',
@@ -567,7 +568,7 @@ let rules = {
   'unicorn/prefer-trim-start-end': 'error',
   'unicorn/prefer-type-error': 'off',
   'unicorn/prevent-abbreviations': 'off',
-  'unicorn/regex-shorthand': [ 'error', { sortCharacterClasses: true }],
+  'unicorn/string-content': 'off',
   'unicorn/throw-new-error': 'error'
 };
 
