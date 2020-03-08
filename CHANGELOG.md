@@ -1,3 +1,10 @@
+## [3.19.40](https://github.com/thenativeweb/eslint-config-es/compare/3.19.39...3.19.40) (2020-03-08)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 16.1.1 to 17.0.0 ([#140](https://github.com/thenativeweb/eslint-config-es/issues/140)) ([b5daa06](https://github.com/thenativeweb/eslint-config-es/commit/b5daa0665841282a73526f4163f1d3cf36879a1a))
+
 ## [3.19.39](https://github.com/thenativeweb/eslint-config-es/compare/3.19.38...3.19.39) (2020-03-06)
 
 

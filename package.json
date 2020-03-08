@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-es",
-  "version": "3.19.39",
+  "version": "3.19.40",
   "description": "eslint-config-es contains a strict ESLint configuration for ES2015+ and TypeScript.",
   "contributors": [
     {
