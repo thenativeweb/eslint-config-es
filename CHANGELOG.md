@@ -1,3 +1,24 @@
+## [3.19.44](https://github.com/thenativeweb/eslint-config-es/compare/3.19.43...3.19.44) (2020-03-11)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 17.1.0 to 17.2.0 ([#145](https://github.com/thenativeweb/eslint-config-es/issues/145)) ([e784d45](https://github.com/thenativeweb/eslint-config-es/commit/e784d45f2a47d66bb91dde7803006e043caa3200))
+
+## [3.19.43](https://github.com/thenativeweb/eslint-config-es/compare/3.19.42...3.19.43) (2020-03-10)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 17.0.1 to 17.1.0 ([#144](https://github.com/thenativeweb/eslint-config-es/issues/144)) ([4f55793](https://github.com/thenativeweb/eslint-config-es/commit/4f55793269f683e1c1647aed955c6ac156e09045))
+
+## [3.19.42](https://github.com/thenativeweb/eslint-config-es/compare/3.19.41...3.19.42) (2020-03-09)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 2.22.0 to 2.23.0 ([#143](https://github.com/thenativeweb/eslint-config-es/issues/143)) ([0aa511b](https://github.com/thenativeweb/eslint-config-es/commit/0aa511b0e233dfd2b1661070e14d2afa91d783dd))
+
 ## [3.19.41](https://github.com/thenativeweb/eslint-config-es/compare/3.19.40...3.19.41) (2020-03-08)
 
 
