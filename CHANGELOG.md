@@ -1,3 +1,10 @@
+## [3.19.45](https://github.com/thenativeweb/eslint-config-es/compare/3.19.44...3.19.45) (2020-03-15)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 2.22.0 to 2.23.0 ([#142](https://github.com/thenativeweb/eslint-config-es/issues/142)) ([251f268](https://github.com/thenativeweb/eslint-config-es/commit/251f26826d4f337631a70b0df6bb691be8fc7c79))
+
 ## [3.19.44](https://github.com/thenativeweb/eslint-config-es/compare/3.19.43...3.19.44) (2020-03-11)
 
 
