@@ -843,6 +843,9 @@ const overrides = [
       '@typescript-eslint/no-unnecessary-type-assertion': [ 'error', {
         typesToIgnore: []
       }],
+      '@typescript-eslint/no-unsafe-call': 'error',
+      '@typescript-eslint/no-unsafe-member-access': 'error',
+      '@typescript-eslint/no-unsafe-return': 'error',
       '@typescript-eslint/no-untyped-public-signature': 'off',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [ 'error', { vars: 'all' }],
