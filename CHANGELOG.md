@@ -1,3 +1,10 @@
+## [3.19.46](https://github.com/thenativeweb/eslint-config-es/compare/3.19.45...3.19.46) (2020-03-16)
+
+
+### Bug Fixes
+
+* Disable new rules. ([8460f07](https://github.com/thenativeweb/eslint-config-es/commit/8460f07613084b7540028e4a6c5a80f10369978d))
+
 ## [3.19.45](https://github.com/thenativeweb/eslint-config-es/compare/3.19.44...3.19.45) (2020-03-15)
 
 
