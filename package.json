@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "eslint": "6.8.0",
-    "react": "16.13.0",
+    "react": "16.13.1",
     "semantic-release-configuration": "1.0.18",
     "typescript": "3.8.3"
   },
