@@ -729,6 +729,7 @@ const overrides = [
         ignoreDestructuring: false,
         allow: []
       }],
+      '@typescript-eslint/class-literal-property-style': [ 'error', 'fields' ],
       '@typescript-eslint/class-name-casing': [ 'error', {
         allowUnderscorePrefix: false
       }],
