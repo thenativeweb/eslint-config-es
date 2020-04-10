@@ -22,6 +22,10 @@
     {
       "name": "Hannes Leutloff",
       "email": "hannes.leutloff@thenativeweb.io"
+    },
+    {
+      "name": "Henning Storck",
+      "email": "henning@slightlyblack.com"
     }
   ],
   "main": "node.js",
