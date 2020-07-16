@@ -41,7 +41,7 @@
     "eslint": "6.8.0",
     "react": "16.13.1",
     "semantic-release-configuration": "1.0.20",
-    "typescript": "3.9.6"
+    "typescript": "3.9.7"
   },
   "scripts": {
     "analyse": "npx eslint --config node.js *.js lib/**/*.js"
