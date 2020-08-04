@@ -590,6 +590,7 @@ if (plugins.includes('react')) {
       multiline: 'consistent',
       singleline: 'consistent'
     }],
+    'react/jsx-no-bind': 'off',
     'react/no-access-state-in-setstate': 'error',
     'react/no-array-index-key': 'error',
     'react/no-children-prop': 'error',
