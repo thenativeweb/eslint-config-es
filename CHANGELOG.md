@@ -1,3 +1,10 @@
+## [3.19.68](https://github.com/thenativeweb/eslint-config-es/compare/3.19.67...3.19.68) (2020-09-10)
+
+
+### Bug Fixes
+
+* Update dependencies. ([be9b2cb](https://github.com/thenativeweb/eslint-config-es/commit/be9b2cb3a7458a7485227a83629a32c870d2b52b))
+
 ## [3.19.67](https://github.com/thenativeweb/eslint-config-es/compare/3.19.66...3.19.67) (2020-08-14)
 
 
