@@ -736,6 +736,7 @@ const overrides = [
         'ts-check': false
       }],
       '@typescript-eslint/ban-ts-ignore': 'error',
+      '@typescript-eslint/ban-tslint-comment': 'error',
       '@typescript-eslint/ban-types': 'error',
       'brace-style': 'off',
       '@typescript-eslint/brace-style': [ 'error', '1tbs', { allowSingleLine: false }],
@@ -756,7 +757,16 @@ const overrides = [
         objectLiteralTypeAssertions: 'allow'
       }],
       '@typescript-eslint/consistent-type-definitions': [ 'error', 'interface' ],
+      '@typescript-eslint/consistent-type-imports': [ 'error', {
+        prefer: 'type-imports',
+        disallowTypeAnnotations: true
+      }],
       '@typescript-eslint/default-param-last': 'error',
+      'dot-notation': 'off',
+      '@typescript-eslint/dot-notation': [ 'error', {
+        allowKeywords: true,
+        allowPrivateClassPropertyAccess: false
+      }],
       '@typescript-eslint/explicit-function-return-type': [ 'error', {
         allowExpressions: false,
         allowTypedFunctionExpressions: false,
@@ -785,7 +795,15 @@ const overrides = [
         ignoredNodes: [],
         ignoreComments: false
       }],
+      '@typescript-eslint/init-declarations': [ 'off' ],
       '@typescript-eslint/interface-name-prefix': [ 'error', 'never' ],
+      'keyword-spacing': 'off',
+      '@typescript-eslint/keyword-spacing': [ 'error', { before: true, after: true }],
+      'lines-between-class-members': 'off',
+      '@typescript-eslint/lines-between-class-members': [ 'error', 'always', {
+        exceptAfterSingleLine: false,
+        exceptAfterOverload: false
+      }],
       '@typescript-eslint/member-delimiter-style': [ 'error', {
         multiline: { delimiter: 'semi', requireLast: true },
         singleline: { delimiter: 'semi', requireLast: false }
@@ -796,9 +814,11 @@ const overrides = [
         public: '^[a-z]'
       }],
       '@typescript-eslint/member-ordering': 'off',
+      '@typescript-eslint/method-signature-style': [ 'error', 'property' ],
       'no-array-constructor': 'off',
       '@typescript-eslint/no-array-constructor': 'error',
       '@typescript-eslint/no-base-to-string': 'error',
+      '@typescript-eslint/no-confusing-non-null-assertion': 'error',
       'no-dupe-class-members': 'off',
       '@typescript-eslint/no-dupe-class-members': 'error',
       '@typescript-eslint/no-dynamic-delete': 'error',
@@ -827,11 +847,20 @@ const overrides = [
         ignoreVoid: false
       }],
       '@typescript-eslint/no-for-in-array': 'error',
+      '@typescript-eslint/no-implicit-any-catch': 'error',
       '@typescript-eslint/no-implied-eval': 'error',
       '@typescript-eslint/no-inferrable-types': [ 'error', {
         ignoreParameters: false,
         ignoreProperties: false
       }],
+      '@typescript-eslint/no-invalid-this': 'off',
+      '@typescript-eslint/no-invalid-void-type': [ 'error', {
+        allowInGenericTypeArguments: true
+      }],
+      'no-loop-func': 'off',
+      '@typescript-eslint/no-loop-func': 'error',
+      'no-loss-of-precision': 'off',
+      '@typescript-eslint/no-loss-of-precision': 'error',
       'no-magic-numbers': 'off',
       '@typescript-eslint/no-magic-numbers': 'off',
       '@typescript-eslint/no-misused-new': 'error',
@@ -863,6 +892,7 @@ const overrides = [
       '@typescript-eslint/no-unnecessary-type-assertion': [ 'error', {
         typesToIgnore: []
       }],
+      '@typescript-eslint/no-unsafe-assignment': 'error',
       '@typescript-eslint/no-unsafe-call': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-return': 'off',
@@ -881,9 +911,11 @@ const overrides = [
       '@typescript-eslint/no-useless-constructor': 'error',
       '@typescript-eslint/no-var-requires': 'error',
       '@typescript-eslint/prefer-as-const': 'error',
+      '@typescript-eslint/prefer-enum-initializers': 'off',
       '@typescript-eslint/prefer-for-of': 'error',
       '@typescript-eslint/prefer-function-type': 'error',
       '@typescript-eslint/prefer-includes': 'error',
+      '@typescript-eslint/prefer-literal-enum-member': 'error',
       '@typescript-eslint/prefer-namespace-keyword': 'off',
       '@typescript-eslint/prefer-nullish-coalescing': [ 'error', {
         ignoreConditionalTests: false,
@@ -891,8 +923,10 @@ const overrides = [
       }],
       '@typescript-eslint/prefer-readonly': [ 'error', { onlyInlineLambdas: false }],
       '@typescript-eslint/prefer-readonly-parameter-types': 'off',
+      '@typescript-eslint/prefer-reduce-type-parameter': 'error',
       '@typescript-eslint/prefer-regexp-exec': 'error',
       '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+      '@typescript-eslint/prefer-ts-expect-error': 'error',
       '@typescript-eslint/promise-function-async': [ 'error', {
         allowAny: true,
         allowedPromiseNames: [],
