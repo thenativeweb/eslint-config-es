@@ -1,3 +1,10 @@
+# [3.20.0](https://github.com/thenativeweb/eslint-config-es/compare/3.19.69...3.20.0) (2020-09-12)
+
+
+### Features
+
+* Update rules to latest plugins. ([6cfae00](https://github.com/thenativeweb/eslint-config-es/commit/6cfae008a699010097502c521d7faa89a2f4b2de))
+
 ## [3.19.69](https://github.com/thenativeweb/eslint-config-es/compare/3.19.68...3.19.69) (2020-09-12)
 
 
