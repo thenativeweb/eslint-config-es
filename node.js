@@ -735,21 +735,11 @@ const overrides = [
         'ts-nocheck': true,
         'ts-check': false
       }],
-      '@typescript-eslint/ban-ts-ignore': 'error',
       '@typescript-eslint/ban-tslint-comment': 'error',
       '@typescript-eslint/ban-types': 'error',
       'brace-style': 'off',
       '@typescript-eslint/brace-style': [ 'error', '1tbs', { allowSingleLine: false }],
-      camelcase: 'off',
-      '@typescript-eslint/camelcase': [ 'error', {
-        properties: 'always',
-        ignoreDestructuring: false,
-        allow: []
-      }],
       '@typescript-eslint/class-literal-property-style': [ 'error', 'fields' ],
-      '@typescript-eslint/class-name-casing': [ 'error', {
-        allowUnderscorePrefix: false
-      }],
       'comma-spacing': 'off',
       '@typescript-eslint/comma-spacing': 'error',
       '@typescript-eslint/consistent-type-assertions': [ 'error', {
@@ -778,7 +768,6 @@ const overrides = [
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       'func-call-spacing': 'off',
       '@typescript-eslint/func-call-spacing': [ 'error', 'never' ],
-      '@typescript-eslint/generic-type-naming': [ 'error', '^(T|T[A-Z][a-zA-Z]+)$' ],
       indent: 'off',
       '@typescript-eslint/indent': [ 'error', 2, {
         SwitchCase: 1,
@@ -796,7 +785,6 @@ const overrides = [
         ignoreComments: false
       }],
       '@typescript-eslint/init-declarations': [ 'off' ],
-      '@typescript-eslint/interface-name-prefix': [ 'error', 'never' ],
       'keyword-spacing': 'off',
       '@typescript-eslint/keyword-spacing': [ 'error', { before: true, after: true }],
       'lines-between-class-members': 'off',
@@ -808,13 +796,39 @@ const overrides = [
         multiline: { delimiter: 'semi', requireLast: true },
         singleline: { delimiter: 'semi', requireLast: false }
       }],
-      '@typescript-eslint/member-naming': [ 'error', {
-        private: '^[a-z]',
-        protected: '^[a-z]',
-        public: '^[a-z]'
-      }],
       '@typescript-eslint/member-ordering': 'off',
       '@typescript-eslint/method-signature-style': [ 'error', 'property' ],
+      camelcase: 'off',
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          selector: [ 'variableLike', 'memberLike' ],
+          format: [ 'strictCamelCase' ],
+          leadingUnderscore: 'forbid',
+          trailingUnderscore: 'forbid'
+        },
+        {
+          selector: [ 'variableLike' ],
+          types: [ 'boolean' ],
+          format: [ 'StrictPascalCase' ],
+          prefix: [ 'can', 'did', 'has', 'is', 'should', 'will' ],
+          leadingUnderscore: 'forbid',
+          trailingUnderscore: 'forbid'
+        },
+        {
+          selector: [ 'typeLike' ],
+          format: [ 'StrictPascalCase' ],
+          leadingUnderscore: 'forbid',
+          trailingUnderscore: 'forbid'
+        },
+        {
+          selector: [ 'typeParameter' ],
+          format: [ 'StrictPascalCase' ],
+          prefix: [ 'T' ],
+          leadingUnderscore: 'forbid',
+          trailingUnderscore: 'forbid'
+        }
+      ],
       'no-array-constructor': 'off',
       '@typescript-eslint/no-array-constructor': 'error',
       '@typescript-eslint/no-base-to-string': 'error',
@@ -896,7 +910,6 @@ const overrides = [
       '@typescript-eslint/no-unsafe-call': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/no-unsafe-return': 'off',
-      '@typescript-eslint/no-untyped-public-signature': 'off',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [ 'error', { vars: 'all' }],
       'no-use-before-define': 'off',
