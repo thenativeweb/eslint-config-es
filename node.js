@@ -803,30 +803,46 @@ const overrides = [
         'error',
         {
           selector: [ 'variableLike', 'memberLike' ],
-          format: [ 'strictCamelCase' ],
-          leadingUnderscore: 'forbid',
-          trailingUnderscore: 'forbid'
+          format: [ 'strictCamelCase' ]
         },
         {
-          selector: [ 'variableLike' ],
+          selector: 'variable',
           types: [ 'boolean' ],
           format: [ 'StrictPascalCase' ],
-          prefix: [ 'can', 'did', 'has', 'is', 'should', 'will' ],
-          leadingUnderscore: 'forbid',
-          trailingUnderscore: 'forbid'
+          prefix: [ 'can', 'did', 'has', 'is', 'should', 'will' ]
+        },
+        {
+          selector: 'parameter',
+          types: [ 'boolean' ],
+          format: [ 'StrictPascalCase' ],
+          prefix: [ 'can', 'did', 'has', 'is', 'should', 'will' ]
+        },
+        {
+          selector: 'property',
+          types: [ 'boolean' ],
+          format: [ 'StrictPascalCase' ],
+          prefix: [ 'can', 'did', 'has', 'is', 'should', 'will' ]
+        },
+        {
+          selector: 'parameterProperty',
+          types: [ 'boolean' ],
+          format: [ 'StrictPascalCase' ],
+          prefix: [ 'can', 'did', 'has', 'is', 'should', 'will' ]
+        },
+        {
+          selector: 'accessor',
+          types: [ 'boolean' ],
+          format: [ 'StrictPascalCase' ],
+          prefix: [ 'can', 'did', 'has', 'is', 'should', 'will' ]
         },
         {
           selector: [ 'typeLike' ],
-          format: [ 'StrictPascalCase' ],
-          leadingUnderscore: 'forbid',
-          trailingUnderscore: 'forbid'
+          format: [ 'StrictPascalCase' ]
         },
         {
           selector: [ 'typeParameter' ],
           format: [ 'StrictPascalCase' ],
-          prefix: [ 'T' ],
-          leadingUnderscore: 'forbid',
-          trailingUnderscore: 'forbid'
+          prefix: [ 'T' ]
         }
       ],
       'no-array-constructor': 'off',
