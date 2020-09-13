@@ -1,3 +1,10 @@
+## [3.20.1](https://github.com/thenativeweb/eslint-config-es/compare/3.20.0...3.20.1) (2020-09-13)
+
+
+### Bug Fixes
+
+* Update to new TypeScript rules. ([#192](https://github.com/thenativeweb/eslint-config-es/issues/192)) ([893f160](https://github.com/thenativeweb/eslint-config-es/commit/893f160aae85230e36813e4e8f897d3ba7bb009c))
+
 # [3.20.0](https://github.com/thenativeweb/eslint-config-es/compare/3.19.69...3.20.0) (2020-09-12)
 
 
