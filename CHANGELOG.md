@@ -1,3 +1,10 @@
+## [3.21.1](https://github.com/thenativeweb/eslint-config-es/compare/3.21.0...3.21.1) (2020-09-18)
+
+
+### Bug Fixes
+
+* Disable verifying assigning any. ([aed445c](https://github.com/thenativeweb/eslint-config-es/commit/aed445c001539f6a10e9cea0ab6cffc2d0377f81))
+
 # [3.21.0](https://github.com/thenativeweb/eslint-config-es/compare/3.20.5...3.21.0) (2020-09-18)
 
 
