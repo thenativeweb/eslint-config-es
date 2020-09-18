@@ -748,7 +748,7 @@ const overrides = [
       }],
       '@typescript-eslint/consistent-type-definitions': [ 'error', 'interface' ],
       '@typescript-eslint/consistent-type-imports': [ 'error', {
-        prefer: 'type-imports',
+        prefer: 'no-type-imports',
         disallowTypeAnnotations: true
       }],
       '@typescript-eslint/default-param-last': 'error',
@@ -806,6 +806,22 @@ const overrides = [
           format: [ 'strictCamelCase' ]
         },
         {
+          selector: 'property',
+          format: [ 'strictCamelCase' ],
+          filter: {
+            regex: '^[a-zA-Z_][a-zA-Z0-9_]*$',
+            match: false
+          }
+        },
+        {
+          selector: 'parameterProperty',
+          format: [ 'strictCamelCase' ],
+          filter: {
+            regex: '^[a-zA-Z_][a-zA-Z0-9_]*$',
+            match: false
+          }
+        },
+        {
           selector: 'variable',
           types: [ 'boolean' ],
           format: [ 'StrictPascalCase' ],
@@ -834,6 +850,26 @@ const overrides = [
           types: [ 'boolean' ],
           format: [ 'StrictPascalCase' ],
           prefix: [ 'can', 'did', 'has', 'is', 'should', 'will' ]
+        },
+        {
+          selector: 'variable',
+          types: [ 'function' ],
+          format: [ 'strictCamelCase', 'StrictPascalCase' ]
+        },
+        {
+          selector: 'parameter',
+          types: [ 'function' ],
+          format: [ 'strictCamelCase', 'StrictPascalCase' ]
+        },
+        {
+          selector: 'property',
+          types: [ 'function' ],
+          format: [ 'strictCamelCase', 'StrictPascalCase' ]
+        },
+        {
+          selector: 'parameterProperty',
+          types: [ 'function' ],
+          format: [ 'strictCamelCase', 'StrictPascalCase' ]
         },
         {
           selector: [ 'typeLike' ],
