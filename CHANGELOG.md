@@ -1,3 +1,10 @@
+## [3.21.2](https://github.com/thenativeweb/eslint-config-es/compare/3.21.1...3.21.2) (2020-09-18)
+
+
+### Bug Fixes
+
+* Disable rules for parameter properties. ([364ef86](https://github.com/thenativeweb/eslint-config-es/commit/364ef8696fdf7db376470d656a909f67d4c49832))
+
 ## [3.21.1](https://github.com/thenativeweb/eslint-config-es/compare/3.21.0...3.21.1) (2020-09-18)
 
 
