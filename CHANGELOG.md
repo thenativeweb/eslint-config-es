@@ -1,3 +1,10 @@
+## [3.20.5](https://github.com/thenativeweb/eslint-config-es/compare/3.20.4...3.20.5) (2020-09-18)
+
+
+### Bug Fixes
+
+* Add dollar character as valid identifier for variables and properties. ([88f98ca](https://github.com/thenativeweb/eslint-config-es/commit/88f98cab694b6485ee207f5db743f503aabe83ff))
+
 ## [3.20.4](https://github.com/thenativeweb/eslint-config-es/compare/3.20.3...3.20.4) (2020-09-18)
 
 
