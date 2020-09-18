@@ -809,7 +809,7 @@ const overrides = [
           selector: 'property',
           format: [ 'strictCamelCase' ],
           filter: {
-            regex: '^[a-zA-Z_][a-zA-Z0-9_]*$',
+            regex: '^[a-zA-Z_\\$][a-zA-Z0-9_\\$]*$',
             match: false
           }
         },
@@ -817,7 +817,7 @@ const overrides = [
           selector: 'parameterProperty',
           format: [ 'strictCamelCase' ],
           filter: {
-            regex: '^[a-zA-Z_][a-zA-Z0-9_]*$',
+            regex: '^[a-zA-Z_\\$][a-zA-Z0-9_\\$]*$',
             match: false
           }
         },
