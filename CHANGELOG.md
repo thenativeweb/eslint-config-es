@@ -1,3 +1,10 @@
+# [3.21.0](https://github.com/thenativeweb/eslint-config-es/compare/3.20.5...3.21.0) (2020-09-18)
+
+
+### Features
+
+* Allow expiring todos, and fix void return type issue. ([11b1e2b](https://github.com/thenativeweb/eslint-config-es/commit/11b1e2b57a36703fcded78b90b89a2f327d53246))
+
 ## [3.20.5](https://github.com/thenativeweb/eslint-config-es/compare/3.20.4...3.20.5) (2020-09-18)
 
 
