@@ -1,3 +1,10 @@
+## [3.20.4](https://github.com/thenativeweb/eslint-config-es/compare/3.20.3...3.20.4) (2020-09-18)
+
+
+### Bug Fixes
+
+* Adjust naming conventions. ([b07b234](https://github.com/thenativeweb/eslint-config-es/commit/b07b23488d87737701852d6e2ec55eb8f95e7170))
+
 ## [3.20.3](https://github.com/thenativeweb/eslint-config-es/compare/3.20.2...3.20.3) (2020-09-15)
 
 
