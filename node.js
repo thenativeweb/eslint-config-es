@@ -180,7 +180,7 @@ let rules = {
   'no-useless-escape': 'error',
   'no-useless-return': 'error',
   'no-void': 'error',
-  'no-warning-comments': [ 'error', { terms: [ 'todo' ], location: 'start' }],
+  'no-warning-comments': 'off',
   'no-with': 'error',
   'prefer-named-capture-group': 'error',
   'prefer-promise-reject-errors': [ 'error', { allowEmptyReject: false }],
@@ -525,7 +525,11 @@ let rules = {
   'unicorn/custom-error-definition': 'off',
   'unicorn/error-message': 'error',
   'unicorn/escape-case': 'error',
-  'unicorn/expiring-todo-comments': 'off',
+  'unicorn/expiring-todo-comments': [ 'error', {
+    ignoreDatesOnPullRequests: false,
+    terms: [ 'todo' ],
+    allowWarningComments: false
+  }],
   'unicorn/explicit-length-check': [ 'error', { 'non-zero': 'greater-than' }],
   'unicorn/filename-case': [ 'error', {
     cases: {
@@ -920,9 +924,7 @@ const overrides = [
         ignoreProperties: false
       }],
       '@typescript-eslint/no-invalid-this': 'off',
-      '@typescript-eslint/no-invalid-void-type': [ 'error', {
-        allowInGenericTypeArguments: true
-      }],
+      '@typescript-eslint/no-invalid-void-type': 'off',
       'no-loop-func': 'off',
       '@typescript-eslint/no-loop-func': 'error',
       'no-loss-of-precision': 'off',
