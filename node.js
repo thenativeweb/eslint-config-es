@@ -543,6 +543,21 @@ let rules = {
     ]
   }],
   'unicorn/import-index': [ 'error', { ignoreImports: false }],
+  'unicorn/import-style': [ 'error', {
+    styles: {
+      crypto: { unassigned: false, default: true, namespace: false, named: false },
+      fs: { unassigned: false, default: true, namespace: false, named: false },
+      path: { unassigned: false, default: true, namespace: false, named: false },
+      stream: { unassigned: false, default: false, namespace: false, named: true },
+      url: { unassigned: false, default: false, namespace: false, named: true },
+      util: { unassigned: false, default: false, namespace: false, named: true }
+    },
+    extendDefaultStyles: false,
+    checkImport: true,
+    checkDynamicImport: true,
+    checkExportFrom: true,
+    checkRequire: true
+  }],
   'unicorn/new-for-builtins': 'error',
   'unicorn/no-abusive-eslint-disable': 'error',
   'unicorn/no-array-instanceof': 'error',
