@@ -1,3 +1,10 @@
+# [3.22.0](https://github.com/thenativeweb/eslint-config-es/compare/3.21.4...3.22.0) (2020-09-21)
+
+
+### Features
+
+* Tighten rule for exception handling. ([08357ab](https://github.com/thenativeweb/eslint-config-es/commit/08357abf364fb5f0dadc22134f1e4d3118352e3b))
+
 ## [3.21.4](https://github.com/thenativeweb/eslint-config-es/compare/3.21.3...3.21.4) (2020-09-21)
 
 
