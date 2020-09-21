@@ -859,6 +859,12 @@ const overrides = [
           prefix: [ 'can', 'did', 'has', 'is', 'should', 'will' ]
         },
         {
+          selector: 'parameterProperty',
+          types: [ 'boolean' ],
+          format: [ 'StrictPascalCase' ],
+          prefix: [ 'can', 'did', 'has', 'is', 'should', 'will' ]
+        },
+        {
           selector: 'accessor',
           types: [ 'boolean' ],
           format: [ 'StrictPascalCase' ],
@@ -876,6 +882,11 @@ const overrides = [
         },
         {
           selector: 'property',
+          types: [ 'function' ],
+          format: [ 'strictCamelCase', 'StrictPascalCase' ]
+        },
+        {
+          selector: 'parameterProperty',
           types: [ 'function' ],
           format: [ 'strictCamelCase', 'StrictPascalCase' ]
         },
