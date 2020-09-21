@@ -1,3 +1,10 @@
+## [3.21.4](https://github.com/thenativeweb/eslint-config-es/compare/3.21.3...3.21.4) (2020-09-21)
+
+
+### Reverts
+
+* Revert "fix: Disable rules for parameter properties." ([7f04874](https://github.com/thenativeweb/eslint-config-es/commit/7f04874fcd072f0274a153df1d564aff4de645c2))
+
 ## [3.21.3](https://github.com/thenativeweb/eslint-config-es/compare/3.21.2...3.21.3) (2020-09-19)
 
 
