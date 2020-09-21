@@ -744,6 +744,7 @@ const overrides = [
       sourceType: 'module',
       project: path.join('.', 'tsconfig.json')
     },
+    globals: { ...globals, NodeJS: true },
     plugins: [ ...plugins, '@typescript-eslint' ],
     rules: {
       '@typescript-eslint/adjacent-overload-signatures': 'error',
