@@ -1,3 +1,10 @@
+# [3.23.0](https://github.com/thenativeweb/eslint-config-es/compare/3.22.0...3.23.0) (2020-09-21)
+
+
+### Features
+
+* Support NodeJS type in TypeScript files. ([35ad11f](https://github.com/thenativeweb/eslint-config-es/commit/35ad11f55f4f94230ecd24fa407ae3ddfc42e701))
+
 # [3.22.0](https://github.com/thenativeweb/eslint-config-es/compare/3.21.4...3.22.0) (2020-09-21)
 
 
