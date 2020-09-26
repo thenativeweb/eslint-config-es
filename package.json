@@ -34,7 +34,7 @@
     "@typescript-eslint/parser": "4.2.0",
     "eslint-plugin-extended": "0.2.0",
     "eslint-plugin-mocha": "8.0.0",
-    "eslint-plugin-react": "7.21.1",
+    "eslint-plugin-react": "7.21.2",
     "eslint-plugin-unicorn": "22.0.0"
   },
   "devDependencies": {
