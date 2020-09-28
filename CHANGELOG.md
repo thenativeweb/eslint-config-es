@@ -1,3 +1,10 @@
+## [3.23.5](https://github.com/thenativeweb/eslint-config-es/compare/3.23.4...3.23.5) (2020-09-28)
+
+
+### Bug Fixes
+
+* Allow camel case and pascal case for variables and properties. ([cac230d](https://github.com/thenativeweb/eslint-config-es/commit/cac230d4d6fa745ae0b64e4fd8c80d8055f38c9c))
+
 ## [3.23.4](https://github.com/thenativeweb/eslint-config-es/compare/3.23.3...3.23.4) (2020-09-26)
 
 
