@@ -269,7 +269,7 @@ let rules = {
     min: 2,
     max: Number.infinity,
     properties: 'always',
-    exceptions: [ '_', 'i', 'j', 'x', 'y', 'z' ]
+    exceptions: [ '_', 'i', 'j', 't', 'x', 'y', 'z' ]
   }],
   'id-match': 'off',
   'implicit-arrow-linebreak': 'off',
