@@ -1,3 +1,10 @@
+# [3.24.0](https://github.com/thenativeweb/eslint-config-es/compare/3.23.8...3.24.0) (2020-10-06)
+
+
+### Features
+
+* Allow t as single-letter variable for i18next. ([2055359](https://github.com/thenativeweb/eslint-config-es/commit/20553597a47dc56f5cda119f07144866533aac54))
+
 ## [3.23.8](https://github.com/thenativeweb/eslint-config-es/compare/3.23.7...3.23.8) (2020-10-03)
 
 
