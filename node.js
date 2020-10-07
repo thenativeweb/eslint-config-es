@@ -762,6 +762,7 @@ const overrides = [
       '@typescript-eslint/class-literal-property-style': [ 'error', 'fields' ],
       'comma-spacing': 'off',
       '@typescript-eslint/comma-spacing': 'error',
+      '@typescript-eslint/consistent-indexed-object-style': [ 'error', 'record' ],
       '@typescript-eslint/consistent-type-assertions': [ 'error', {
         assertionStyle: 'as',
         objectLiteralTypeAssertions: 'allow'
