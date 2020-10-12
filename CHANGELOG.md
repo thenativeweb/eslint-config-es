@@ -1,3 +1,10 @@
+## [3.24.4](https://github.com/thenativeweb/eslint-config-es/compare/3.24.3...3.24.4) (2020-10-12)
+
+
+### Bug Fixes
+
+* Disable no-reduce rule. ([#211](https://github.com/thenativeweb/eslint-config-es/issues/211)) ([1450e5c](https://github.com/thenativeweb/eslint-config-es/commit/1450e5c5ebe47f856efb0d29476c8df81342b486))
+
 ## [3.24.3](https://github.com/thenativeweb/eslint-config-es/compare/3.24.2...3.24.3) (2020-10-12)
 
 
