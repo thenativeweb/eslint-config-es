@@ -573,7 +573,7 @@ let rules = {
   'unicorn/no-null': 'off',
   'unicorn/no-object-as-default-parameter': 'error',
   'unicorn/no-process-exit': 'error',
-  'unicorn/no-reduce': 'error',
+  'unicorn/no-reduce': 'off',
   'unicorn/no-unreadable-array-destructuring': 'error',
   'unicorn/no-unsafe-regex': 'off',
   'unicorn/no-unused-properties': 'off',
