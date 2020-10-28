@@ -572,6 +572,14 @@ let rules = {
   'unicorn/no-new-buffer': 'off',
   'unicorn/no-null': 'off',
   'unicorn/no-object-as-default-parameter': 'error',
+  'unicorn/numeric-separators-style': [ 'error', {
+    hexadecimal: { minimumDigits: 0, groupLength: 2 },
+    binary: { minimumDigits: 0, groupLength: 4 },
+    octal: { minimumDigits: 0, groupLength: 4 },
+    number: { minimumDigits: 0, groupLength: 3 }
+  }],
+  'unicorn/prefer-math-trunc': 'error',
+  'unicorn/prefer-ternary': 'error',
   'unicorn/no-process-exit': 'error',
   'unicorn/no-reduce': 'off',
   'unicorn/no-unreadable-array-destructuring': 'error',
@@ -913,6 +921,7 @@ const overrides = [
       '@typescript-eslint/no-unnecessary-type-assertion': [ 'error', {
         typesToIgnore: []
       }],
+      '@typescript-eslint/no-unnecessary-type-constraint': 'error',
       '@typescript-eslint/no-unsafe-assignment': 'off',
       '@typescript-eslint/no-unsafe-call': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
@@ -964,6 +973,8 @@ const overrides = [
       '@typescript-eslint/semi': [ 'error', 'always', { omitLastInOneLineBlock: false }],
       'space-before-function-paren': 'off',
       '@typescript-eslint/space-before-function-paren': 'error',
+      'space-infix-ops': 'off',
+      '@typescript-eslint/space-infix-ops': [ 'error', { int32Hint: false }],
       '@typescript-eslint/strict-boolean-expressions': 'off',
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
       '@typescript-eslint/triple-slash-reference': 'error',
