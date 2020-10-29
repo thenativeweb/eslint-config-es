@@ -1,3 +1,10 @@
+# [3.25.0](https://github.com/thenativeweb/eslint-config-es/compare/3.24.9...3.25.0) (2020-10-29)
+
+
+### Features
+
+* Allow `object` type in @typescript-eslint/ban-types rule. ([#228](https://github.com/thenativeweb/eslint-config-es/issues/228)) ([522b471](https://github.com/thenativeweb/eslint-config-es/commit/522b471b3f015f6db8f617cddc8ff2edf7872f53))
+
 ## [3.24.9](https://github.com/thenativeweb/eslint-config-es/compare/3.24.8...3.24.9) (2020-10-28)
 
 
