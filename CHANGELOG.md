@@ -1,3 +1,10 @@
+## [3.25.1](https://github.com/thenativeweb/eslint-config-es/compare/3.25.0...3.25.1) (2020-10-30)
+
+
+### Bug Fixes
+
+* Fix configuration of rule @typescript-eslint/ban-types. ([#229](https://github.com/thenativeweb/eslint-config-es/issues/229)) ([513a13d](https://github.com/thenativeweb/eslint-config-es/commit/513a13dd90dcdce72d56baa23117aab5317ce1cb))
+
 # [3.25.0](https://github.com/thenativeweb/eslint-config-es/compare/3.24.9...3.25.0) (2020-10-29)
 
 
