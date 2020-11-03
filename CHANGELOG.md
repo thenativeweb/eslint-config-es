@@ -1,3 +1,10 @@
+## [3.25.3](https://github.com/thenativeweb/eslint-config-es/compare/3.25.2...3.25.3) (2020-11-03)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.6.0 to 4.6.1 ([#232](https://github.com/thenativeweb/eslint-config-es/issues/232)) ([e2df36f](https://github.com/thenativeweb/eslint-config-es/commit/e2df36fdf72dc7e2096432ffb4c07ec450f3f77a))
+
 ## [3.25.2](https://github.com/thenativeweb/eslint-config-es/compare/3.25.1...3.25.2) (2020-11-02)
 
 
