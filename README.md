@@ -49,7 +49,7 @@ Alternatively, you may also use `es/browser`.
 
 If you want to override any rules, you can do so in your configuration file.
 
-## Running the build
+## Running quality assurance
 
 Since this module is required by [roboter](https://www.npmjs.com/package/roboter), it can not use roboter to build itself. Hence you have to use `npm` for that.
 
