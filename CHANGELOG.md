@@ -1,3 +1,10 @@
+## [3.25.4](https://github.com/thenativeweb/eslint-config-es/compare/3.25.3...3.25.4) (2020-11-03)
+
+
+### Bug Fixes
+
+* Fix headline for robot section in readme. ([#231](https://github.com/thenativeweb/eslint-config-es/issues/231)) ([32ea51a](https://github.com/thenativeweb/eslint-config-es/commit/32ea51ac2c090935824474bb0e9417c2544095cb))
+
 ## [3.25.3](https://github.com/thenativeweb/eslint-config-es/compare/3.25.2...3.25.3) (2020-11-03)
 
 
