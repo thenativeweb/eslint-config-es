@@ -1,3 +1,10 @@
+# [3.26.0](https://github.com/thenativeweb/eslint-config-es/compare/3.25.4...3.26.0) (2020-11-04)
+
+
+### Features
+
+* Allow special __html React syntax. ([#235](https://github.com/thenativeweb/eslint-config-es/issues/235)) ([845ec02](https://github.com/thenativeweb/eslint-config-es/commit/845ec0270672ab002357859a42a14086396479a3))
+
 ## [3.25.4](https://github.com/thenativeweb/eslint-config-es/compare/3.25.3...3.25.4) (2020-11-03)
 
 
