@@ -373,7 +373,7 @@ let rules = {
     skipBlankLines: false
   }],
   'no-underscore-dangle': [ 'error', {
-    allow: [],
+    allow: [ '__html' ],
     allowAfterThis: false,
     allowAfterThisConstructor: false,
     allowAfterSuper: false,
@@ -841,7 +841,8 @@ const overrides = [
         'error',
         {
           selector: [ 'variableLike', 'memberLike' ],
-          format: [ 'strictCamelCase', 'StrictPascalCase' ]
+          format: [ 'strictCamelCase', 'StrictPascalCase' ],
+          filter: { regex: '^__html$', match: false }
         },
         {
           selector: [ 'typeLike' ],
