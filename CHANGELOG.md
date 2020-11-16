@@ -1,3 +1,10 @@
+## [3.26.3](https://github.com/thenativeweb/eslint-config-es/compare/3.26.2...3.26.3) (2020-11-16)
+
+
+### Bug Fixes
+
+* Fixed no-shadow rule for typescript causing errors with enums ([#239](https://github.com/thenativeweb/eslint-config-es/issues/239)) ([15e2e83](https://github.com/thenativeweb/eslint-config-es/commit/15e2e8305b705b0857bed7ddbf47325f683084bc))
+
 ## [3.26.2](https://github.com/thenativeweb/eslint-config-es/compare/3.26.1...3.26.2) (2020-11-09)
 
 
