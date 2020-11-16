@@ -915,6 +915,8 @@ const overrides = [
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-parameter-properties': 'off',
       '@typescript-eslint/no-require-imports': 'error',
+      'no-shadow': 'off',
+      '@typescript-eslint/no-shadow': [ 'error', { builtinGlobals: false, hoist: 'functions', allow: []}],
       '@typescript-eslint/no-this-alias': [ 'error', {
         allowDestructuring: false,
         allowedNames: []
