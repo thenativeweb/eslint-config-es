@@ -30,7 +30,7 @@
   ],
   "main": "node.js",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "4.7.0",
+    "@typescript-eslint/eslint-plugin": "4.8.1",
     "@typescript-eslint/parser": "4.7.0",
     "eslint-plugin-extended": "0.2.0",
     "eslint-plugin-mocha": "8.0.0",
