@@ -84,6 +84,7 @@ let rules = {
   'no-unreachable-loop': 'error',
   'no-unsafe-finally': 'error',
   'no-unsafe-negation': 'error',
+  'no-unsafe-optional-chaining': [ 'error', { disallowArithmeticOperators: true }],
   'no-useless-backreference': 'error',
   'require-atomic-updates': 'off',
   'use-isnan': [ 'error', { enforceForSwitchCase: true }],
