@@ -1,3 +1,10 @@
+## [3.27.1](https://github.com/thenativeweb/eslint-config-es/compare/3.27.0...3.27.1) (2021-01-07)
+
+
+### Bug Fixes
+
+* Disable rule temporarily. ([f7c087f](https://github.com/thenativeweb/eslint-config-es/commit/f7c087fc12e270ec7ca59d1644dd68e2f8c5c00d))
+
 # [3.27.0](https://github.com/thenativeweb/eslint-config-es/compare/3.26.15...3.27.0) (2021-01-07)
 
 
