@@ -613,7 +613,11 @@ let rules = {
   'unicorn/prefer-reflect-apply': 'error',
   'unicorn/prefer-set-has': 'error',
   'unicorn/prefer-spread': 'error',
-  'unicorn/prefer-string-replace-all': 'error',
+
+  // TODO[2021-11-01] This should be 'error', unfortunately `replaceAll` is only
+  //                  available in Node.js 15.x, so we have to wait until 16 LTS
+  //                  to be able to enable this rule.
+  'unicorn/prefer-string-replace-all': 'off',
   'unicorn/prefer-string-slice': 'error',
   'unicorn/prefer-string-starts-ends-with': 'error',
   'unicorn/prefer-string-trim-start-end': 'error',
