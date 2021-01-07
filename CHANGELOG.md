@@ -1,3 +1,10 @@
+# [3.27.0](https://github.com/thenativeweb/eslint-config-es/compare/3.26.15...3.27.0) (2021-01-07)
+
+
+### Features
+
+* Update dependencies and introduce a few new rules. ([3e87786](https://github.com/thenativeweb/eslint-config-es/commit/3e8778637b060b9e423b888ed6424c13d06d53ea))
+
 ## [3.26.15](https://github.com/thenativeweb/eslint-config-es/compare/3.26.14...3.26.15) (2021-01-04)
 
 
