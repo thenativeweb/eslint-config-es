@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-es",
-  "version": "3.27.1",
+  "version": "3.27.3",
   "description": "eslint-config-es contains a strict ESLint configuration for ES2015+ and TypeScript.",
   "contributors": [
     {
@@ -30,8 +30,8 @@
   ],
   "main": "node.js",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "4.12.0",
-    "@typescript-eslint/parser": "4.12.0",
+    "@typescript-eslint/eslint-plugin": "4.13.0",
+    "@typescript-eslint/parser": "4.13.0",
     "eslint-plugin-extended": "0.2.0",
     "eslint-plugin-mocha": "8.0.0",
     "eslint-plugin-react": "7.22.0",
