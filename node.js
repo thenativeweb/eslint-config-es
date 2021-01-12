@@ -525,6 +525,7 @@ let rules = {
 
   'unicorn/better-regex': [ 'error', { sortCharacterClasses: true }],
   'unicorn/catch-error-name': [ 'error', { name: 'ex', ignore: [ '^ex([A-Z0-9].*)?$' ]}],
+  'unicorn/consistent-destructuring': 'error',
   'unicorn/consistent-function-scoping': 'error',
   'unicorn/custom-error-definition': 'off',
   'unicorn/empty-brace-spaces': 'off',
@@ -573,6 +574,7 @@ let rules = {
   'unicorn/no-instanceof-array': 'error',
   'unicorn/no-lonely-if': 'error',
   'unicorn/no-nested-ternary': 'error',
+  'unicorn/no-new-array': 'error',
 
   // The unicorn/no-new-buffer rule does the same thing as ESLint's built-in
   // no-buffer-constructor rule.
@@ -595,6 +597,7 @@ let rules = {
   'unicorn/prefer-add-event-listener': 'off',
   'unicorn/prefer-array-find': 'error',
   'unicorn/prefer-array-flat-map': 'error',
+  'unicorn/prefer-array-index-of': 'error',
   'unicorn/prefer-array-some': 'error',
   'unicorn/prefer-date-now': 'error',
   'unicorn/prefer-default-parameters': 'error',
@@ -611,6 +614,7 @@ let rules = {
   'unicorn/prefer-optional-catch-binding': 'error',
   'unicorn/prefer-query-selector': 'off',
   'unicorn/prefer-reflect-apply': 'error',
+  'unicorn/prefer-regexp-test': 'error',
   'unicorn/prefer-set-has': 'error',
   'unicorn/prefer-spread': 'error',
 
