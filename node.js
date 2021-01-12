@@ -597,7 +597,7 @@ let rules = {
   'unicorn/prefer-add-event-listener': 'off',
   'unicorn/prefer-array-find': 'error',
   'unicorn/prefer-array-flat-map': 'error',
-  'unicorn/prefer-array-index': 'error',
+  'unicorn/prefer-array-index-of': 'error',
   'unicorn/prefer-array-some': 'error',
   'unicorn/prefer-date-now': 'error',
   'unicorn/prefer-default-parameters': 'error',
