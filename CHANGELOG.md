@@ -1,3 +1,10 @@
+## [3.27.4](https://github.com/thenativeweb/eslint-config-es/compare/3.27.3...3.27.4) (2021-01-12)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 25.0.1 to 26.0.0 ([#272](https://github.com/thenativeweb/eslint-config-es/issues/272)) ([cacc281](https://github.com/thenativeweb/eslint-config-es/commit/cacc281e5dd9d727c38f663628a231273a20dbdf))
+
 ## [3.27.3](https://github.com/thenativeweb/eslint-config-es/compare/3.27.2...3.27.3) (2021-01-11)
 
 
