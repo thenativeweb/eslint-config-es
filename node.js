@@ -625,6 +625,7 @@ let rules = {
   'unicorn/prefer-string-slice': 'error',
   'unicorn/prefer-string-starts-ends-with': 'error',
   'unicorn/prefer-string-trim-start-end': 'error',
+
   // This rule is turned off since it not only applies to assignments, but to
   // expressions using await/throw/yield as well. We have opened an issue to try
   // to remedy this: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1079
