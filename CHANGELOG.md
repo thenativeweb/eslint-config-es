@@ -1,3 +1,10 @@
+# [3.28.0](https://github.com/thenativeweb/eslint-config-es/compare/3.27.7...3.28.0) (2021-01-27)
+
+
+### Features
+
+* Disable unicorn/prefer-ternary temporarily. ([#285](https://github.com/thenativeweb/eslint-config-es/issues/285)) ([8ae4324](https://github.com/thenativeweb/eslint-config-es/commit/8ae43244ba5fbabac7897891e2977f1ead3235be))
+
 ## [3.27.7](https://github.com/thenativeweb/eslint-config-es/compare/3.27.6...3.27.7) (2021-01-27)
 
 
