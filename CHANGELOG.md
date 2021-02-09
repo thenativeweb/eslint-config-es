@@ -1,3 +1,24 @@
+## [3.28.3](https://github.com/thenativeweb/eslint-config-es/compare/3.28.2...3.28.3) (2021-02-09)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.13.0 to 4.15.0 ([#290](https://github.com/thenativeweb/eslint-config-es/issues/290)) ([aa021f3](https://github.com/thenativeweb/eslint-config-es/commit/aa021f3e7bb2a237734ecd5b5d8adff9f95f2edb))
+
+## [3.28.2](https://github.com/thenativeweb/eslint-config-es/compare/3.28.1...3.28.2) (2021-02-08)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.14.2 to 4.15.0 ([#289](https://github.com/thenativeweb/eslint-config-es/issues/289)) ([dff5b6d](https://github.com/thenativeweb/eslint-config-es/commit/dff5b6d92eb1f277c690bfeaf463b5158387abec))
+
+## [3.28.1](https://github.com/thenativeweb/eslint-config-es/compare/3.28.0...3.28.1) (2021-02-01)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.14.1 to 4.14.2 ([#287](https://github.com/thenativeweb/eslint-config-es/issues/287)) ([637c204](https://github.com/thenativeweb/eslint-config-es/commit/637c20458816a78d742f5ef771f9d0fd98d49d8d))
+
 # [3.28.0](https://github.com/thenativeweb/eslint-config-es/compare/3.27.7...3.28.0) (2021-01-27)
 
 
