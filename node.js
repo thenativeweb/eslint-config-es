@@ -977,6 +977,11 @@ const overrides = [
       '@typescript-eslint/no-useless-constructor': 'error',
       '@typescript-eslint/no-var-requires': 'error',
       '@typescript-eslint/non-nullable-type-assertion-style': 'error',
+      'object-curly-spacing': 'off',
+      '@typescript-eslint/object-curly-spacing': [ 'error', 'always', {
+        objectsInObjects: false,
+        arraysInObjects: false
+      }],
       '@typescript-eslint/prefer-as-const': 'error',
       '@typescript-eslint/prefer-enum-initializers': 'off',
       '@typescript-eslint/prefer-for-of': 'error',
