@@ -35,7 +35,7 @@
     "eslint-plugin-extended": "0.2.0",
     "eslint-plugin-mocha": "8.0.0",
     "eslint-plugin-react": "7.22.0",
-    "eslint-plugin-unicorn": "27.0.0"
+    "eslint-plugin-unicorn": "28.0.0"
   },
   "devDependencies": {
     "eslint": "7.19.0",
