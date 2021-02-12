@@ -38,7 +38,7 @@
     "eslint-plugin-unicorn": "28.0.0"
   },
   "devDependencies": {
-    "eslint": "7.19.0",
+    "eslint": "7.20.0",
     "react": "17.0.1",
     "semantic-release-configuration": "1.0.33",
     "typescript": "4.1.5"
