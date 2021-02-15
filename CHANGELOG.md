@@ -1,3 +1,10 @@
+## [3.28.7](https://github.com/thenativeweb/eslint-config-es/compare/3.28.6...3.28.7) (2021-02-15)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.15.0 to 4.15.1 ([#299](https://github.com/thenativeweb/eslint-config-es/issues/299)) ([9e0ba07](https://github.com/thenativeweb/eslint-config-es/commit/9e0ba0738e6f4f473ec70be627cb170e700045eb))
+
 ## [3.28.6](https://github.com/thenativeweb/eslint-config-es/compare/3.28.5...3.28.6) (2021-02-15)
 
 
