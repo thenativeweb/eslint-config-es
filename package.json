@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-es",
-  "version": "3.28.12",
+  "version": "3.28.13",
   "description": "eslint-config-es contains a strict ESLint configuration for ES2015+ and TypeScript.",
   "contributors": [
     {
@@ -38,7 +38,7 @@
     "eslint-plugin-unicorn": "28.0.2"
   },
   "devDependencies": {
-    "eslint": "7.20.0",
+    "eslint": "7.21.0",
     "react": "17.0.1",
     "semantic-release-configuration": "1.0.35",
     "typescript": "4.2.2"
