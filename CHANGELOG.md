@@ -1,3 +1,10 @@
+## [3.28.14](https://github.com/thenativeweb/eslint-config-es/compare/3.28.13...3.28.14) (2021-03-05)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-mocha from 8.0.0 to 8.1.0 ([#312](https://github.com/thenativeweb/eslint-config-es/issues/312)) ([5f917ec](https://github.com/thenativeweb/eslint-config-es/commit/5f917ec34a3b812833921d8d83e69d939f177cdf))
+
 ## [3.28.13](https://github.com/thenativeweb/eslint-config-es/compare/3.28.12...3.28.13) (2021-03-02)
 
 
