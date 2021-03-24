@@ -1,3 +1,10 @@
+## [3.28.23](https://github.com/thenativeweb/eslint-config-es/compare/3.28.22...3.28.23) (2021-03-24)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-react from 7.23.0 to 7.23.1 ([#323](https://github.com/thenativeweb/eslint-config-es/issues/323)) ([b9f1f29](https://github.com/thenativeweb/eslint-config-es/commit/b9f1f29716ff70b0317532c1d267f11a021b44c7))
+
 ## [3.28.22](https://github.com/thenativeweb/eslint-config-es/compare/3.28.21...3.28.22) (2021-03-23)
 
 
