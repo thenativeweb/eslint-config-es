@@ -1,3 +1,10 @@
+## [3.28.24](https://github.com/thenativeweb/eslint-config-es/compare/3.28.23...3.28.24) (2021-03-25)
+
+
+### Bug Fixes
+
+* Migrate from master to main. ([#325](https://github.com/thenativeweb/eslint-config-es/issues/325)) ([37835fe](https://github.com/thenativeweb/eslint-config-es/commit/37835fe09f133f149727f82805654be0ce05cc76))
+
 ## [3.28.23](https://github.com/thenativeweb/eslint-config-es/compare/3.28.22...3.28.23) (2021-03-24)
 
 
