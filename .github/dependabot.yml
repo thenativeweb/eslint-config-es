@@ -1,0 +1,31 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  assignees:
+  - goloroden
+  - yeldiRium
+  labels:
+  - Dependencies
+  versioning-strategy: increase
+  allow:
+  - dependency-type: direct
+  ignore:
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.14.1
+    - 4.14.2
+    - 4.21.0
+  - dependency-name: eslint-plugin-unicorn
+    versions:
+    - 30.0.0
+  - dependency-name: semantic-release-configuration
+    versions:
+    - 2.0.0
+  commit-message:
+    prefix: fix
+    prefix-development: chore
