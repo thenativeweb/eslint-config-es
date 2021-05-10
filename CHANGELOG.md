@@ -1,3 +1,10 @@
+## [3.28.30](https://github.com/thenativeweb/eslint-config-es/compare/3.28.29...3.28.30) (2021-05-10)
+
+
+### Bug Fixes
+
+* bump hosted-git-info from 2.8.5 to 2.8.9 ([#343](https://github.com/thenativeweb/eslint-config-es/issues/343)) ([45cd151](https://github.com/thenativeweb/eslint-config-es/commit/45cd1512545be925ca746d8bdb68ef288f309b3b))
+
 ## [3.28.29](https://github.com/thenativeweb/eslint-config-es/compare/3.28.28...3.28.29) (2021-05-06)
 
 
