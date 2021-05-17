@@ -24,7 +24,7 @@ const env = {
 
 const globals = {};
 
-const plugins = [ 'extended', 'mocha', 'unicorn' ];
+const plugins = [ 'eslint-comments', 'extended', 'mocha', 'unicorn' ];
 const settings = {};
 
 if (isInstalled('react')) {
@@ -496,6 +496,22 @@ let rules = {
   'template-curly-spacing': [ 'error', 'never' ],
   'yield-star-spacing': [ 'error', { before: true, after: true }],
 
+  // Plugin eslint-comments
+  'eslint-comments/disable-enable-pair': 'error',
+  'eslint-comments/no-aggregating-enable': 'error',
+  'eslint-comments/no-duplicate-disable': 'error',
+  'eslint-comments/no-unlimited-disable': 'error',
+  'eslint-comments/no-unused-disable': 'error',
+  'eslint-comments/no-unused-enable': 'error',
+
+  'eslint-comments/no-restricted-disable': 'off',
+  'eslint-comments/no-use': 'off',
+
+  // TODO [eslint-plugin-eslint-comments@>3.2.0]: This should be turned on,
+  // once https://github.com/mysticatea/eslint-plugin-eslint-comments/pull/56
+  // has been merged.
+  'eslint-comments/require-description': 'off',
+
   // Plugin extended
   'extended/consistent-err-names': [ 'error', 'prefix' ],
 
@@ -569,6 +585,7 @@ let rules = {
   'unicorn/no-array-callback-reference': 'error',
   'unicorn/no-array-reduce': 'off',
   'unicorn/no-console-spaces': 'error',
+  'unicorn/no-document-cookie': 'error',
   'unicorn/no-for-loop': 'error',
   'unicorn/no-hex-escape': 'error',
   'unicorn/no-instanceof-array': 'error',
