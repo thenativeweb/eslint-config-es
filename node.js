@@ -816,6 +816,7 @@ const overrides = [
         prefer: 'no-type-imports',
         disallowTypeAnnotations: true
       }],
+      'default-param-last': 'off',
       '@typescript-eslint/default-param-last': 'error',
       'dot-notation': 'off',
       '@typescript-eslint/dot-notation': [ 'error', {
