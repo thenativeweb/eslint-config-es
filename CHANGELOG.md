@@ -1,3 +1,10 @@
+# [3.29.0](https://github.com/thenativeweb/eslint-config-es/compare/3.28.34...3.29.0) (2021-05-17)
+
+
+### Features
+
+* Introduce checking ESLint comments. ([#349](https://github.com/thenativeweb/eslint-config-es/issues/349)) ([fa4af08](https://github.com/thenativeweb/eslint-config-es/commit/fa4af08fa2018d65154bc30c2c19d8581f207805))
+
 ## [3.28.34](https://github.com/thenativeweb/eslint-config-es/compare/3.28.33...3.28.34) (2021-05-17)
 
 
