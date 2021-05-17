@@ -1,3 +1,10 @@
+## [3.28.31](https://github.com/thenativeweb/eslint-config-es/compare/3.28.30...3.28.31) (2021-05-17)
+
+
+### Bug Fixes
+
+* Disable ESLint's built-in rule default-param-last in TypeScript context. ([#348](https://github.com/thenativeweb/eslint-config-es/issues/348)) ([8a14463](https://github.com/thenativeweb/eslint-config-es/commit/8a14463b09d18e8e8950b4b9dffc021bbd09609b))
+
 ## [3.28.30](https://github.com/thenativeweb/eslint-config-es/compare/3.28.29...3.28.30) (2021-05-10)
 
 
