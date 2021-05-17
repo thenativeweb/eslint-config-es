@@ -1,3 +1,24 @@
+## [3.28.33](https://github.com/thenativeweb/eslint-config-es/compare/3.28.32...3.28.33) (2021-05-17)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.22.1 to 4.23.0 ([#346](https://github.com/thenativeweb/eslint-config-es/issues/346)) ([693d0aa](https://github.com/thenativeweb/eslint-config-es/commit/693d0aa826ff422831c5fb87b4f3eb431a24d459))
+
+## [3.28.32](https://github.com/thenativeweb/eslint-config-es/compare/3.28.31...3.28.32) (2021-05-17)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.22.1 to 4.23.0 ([#347](https://github.com/thenativeweb/eslint-config-es/issues/347)) ([e44be7f](https://github.com/thenativeweb/eslint-config-es/commit/e44be7f54f60bdba50f325fdf06e079bca46e208))
+
+## [3.28.31](https://github.com/thenativeweb/eslint-config-es/compare/3.28.30...3.28.31) (2021-05-17)
+
+
+### Bug Fixes
+
+* Disable ESLint's built-in rule default-param-last in TypeScript context. ([#348](https://github.com/thenativeweb/eslint-config-es/issues/348)) ([8a14463](https://github.com/thenativeweb/eslint-config-es/commit/8a14463b09d18e8e8950b4b9dffc021bbd09609b))
+
 ## [3.28.30](https://github.com/thenativeweb/eslint-config-es/compare/3.28.29...3.28.30) (2021-05-10)
 
 
