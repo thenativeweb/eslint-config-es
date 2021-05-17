@@ -23,6 +23,7 @@ The following additional ESLint plugins are included by default, so you don't ha
 
 | Plugin                                                                                             | Automatically enabled |
 | -------------------------------------------------------------------------------------------------- | --------------------- |
+| [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments)                     | Yes                   |
 | [eslint-plugin-extended](https://www.npmjs.com/package/eslint-plugin-extended)                     | Yes                   |
 | [eslint-plugin-mocha](https://www.npmjs.com/package/eslint-plugin-mocha)                           | Yes                   |
 | [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)                           | No                    |
