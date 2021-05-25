@@ -30,7 +30,7 @@
   ],
   "main": "node.js",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "4.23.0",
+    "@typescript-eslint/eslint-plugin": "4.25.0",
     "@typescript-eslint/parser": "4.24.0",
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-extended": "0.2.0",
