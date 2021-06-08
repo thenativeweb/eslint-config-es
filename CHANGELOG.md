@@ -1,3 +1,10 @@
+## [3.29.8](https://github.com/thenativeweb/eslint-config-es/compare/3.29.7...3.29.8) (2021-06-08)
+
+
+### Bug Fixes
+
+* bump trim-newlines from 3.0.0 to 3.0.1 ([#364](https://github.com/thenativeweb/eslint-config-es/issues/364)) ([67aea55](https://github.com/thenativeweb/eslint-config-es/commit/67aea55d8dd630a38654eedda7ef7702ee703980))
+
 ## [3.29.7](https://github.com/thenativeweb/eslint-config-es/compare/3.29.6...3.29.7) (2021-06-07)
 
 
