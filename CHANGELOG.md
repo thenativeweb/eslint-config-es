@@ -1,3 +1,10 @@
+## [3.29.9](https://github.com/thenativeweb/eslint-config-es/compare/3.29.8...3.29.9) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump normalize-url from 6.0.0 to 6.0.1 ([#365](https://github.com/thenativeweb/eslint-config-es/issues/365)) ([c1910b8](https://github.com/thenativeweb/eslint-config-es/commit/c1910b843bafb40c0d2cf3e688356aca525432b0))
+
 ## [3.29.8](https://github.com/thenativeweb/eslint-config-es/compare/3.29.7...3.29.8) (2021-06-08)
 
 
