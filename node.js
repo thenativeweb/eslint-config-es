@@ -8,7 +8,7 @@ const parserOptions = {
   sourceType: 'script',
 
   // eslint-disable-next-line unicorn/numeric-separators-style
-  ecmaVersion: 2021,
+  ecmaVersion: 'latest',
   ecmaFeatures: {
     globalReturn: false,
     impliedStrict: false,
@@ -624,6 +624,7 @@ let rules = {
   'unicorn/prefer-dom-node-dataset': 'error',
   'unicorn/prefer-dom-node-remove': 'off',
   'unicorn/prefer-dom-node-text-content': 'off',
+  'unicorn/prefer-object-has-own': 'error',
   'unicorn/prefer-includes': 'error',
   'unicorn/prefer-keyboard-event-key': 'error',
   'unicorn/prefer-math-trunc': 'error',
@@ -631,6 +632,7 @@ let rules = {
   'unicorn/prefer-negative-index': 'error',
   'unicorn/prefer-number-properties': 'error',
   'unicorn/prefer-optional-catch-binding': 'error',
+  'unicorn/prefer-prototype-methods': 'error',
   'unicorn/prefer-query-selector': 'off',
   'unicorn/prefer-reflect-apply': 'error',
   'unicorn/prefer-regexp-test': 'error',
@@ -651,6 +653,8 @@ let rules = {
   'unicorn/prefer-ternary': 'off',
   'unicorn/prefer-type-error': 'off',
   'unicorn/prevent-abbreviations': 'off',
+  'unicorn/require-array-join-separator': 'error',
+  'unicorn/require-number-to-fixed-digits-argument': 'error',
   'unicorn/string-content': 'off',
   'unicorn/throw-new-error': 'error'
 };
