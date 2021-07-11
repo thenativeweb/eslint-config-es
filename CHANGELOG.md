@@ -1,3 +1,10 @@
+# [3.30.0](https://github.com/thenativeweb/eslint-config-es/compare/3.29.11...3.30.0) (2021-07-11)
+
+
+### Features
+
+* Update dependencies, support latest EcmaScript. ([efa11e6](https://github.com/thenativeweb/eslint-config-es/commit/efa11e606865aabed39084dc2cc42b957082d9c9))
+
 ## [3.29.11](https://github.com/thenativeweb/eslint-config-es/compare/3.29.10...3.29.11) (2021-07-05)
 
 
