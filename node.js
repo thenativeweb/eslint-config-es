@@ -7,7 +7,6 @@ const isInstalled = require('./lib/isInstalled');
 const parserOptions = {
   sourceType: 'script',
 
-  // eslint-disable-next-line unicorn/numeric-separators-style
   ecmaVersion: 'latest',
   ecmaFeatures: {
     globalReturn: false,
@@ -583,6 +582,7 @@ let rules = {
   'unicorn/new-for-builtins': 'error',
   'unicorn/no-abusive-eslint-disable': 'error',
   'unicorn/no-array-callback-reference': 'error',
+  'unicorn/no-array-method-this-argument': 'error',
   'unicorn/no-array-reduce': 'off',
   'unicorn/no-console-spaces': 'error',
   'unicorn/no-document-cookie': 'error',
@@ -618,6 +618,7 @@ let rules = {
   'unicorn/prefer-array-flat-map': 'error',
   'unicorn/prefer-array-index-of': 'error',
   'unicorn/prefer-array-some': 'error',
+  'unicorn/prefer-at': 'error',
   'unicorn/prefer-date-now': 'error',
   'unicorn/prefer-default-parameters': 'error',
   'unicorn/prefer-dom-node-append': 'off',
@@ -651,10 +652,12 @@ let rules = {
   // expressions using await/throw/yield as well. We have opened an issue to try
   // to remedy this: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1079
   'unicorn/prefer-ternary': 'off',
+  'unicorn/prefer-top-level-await': 'error',
   'unicorn/prefer-type-error': 'off',
   'unicorn/prevent-abbreviations': 'off',
   'unicorn/require-array-join-separator': 'error',
   'unicorn/require-number-to-fixed-digits-argument': 'error',
+  'unicorn/require-post-message-target-origin': 'error',
   'unicorn/string-content': 'off',
   'unicorn/throw-new-error': 'error'
 };
