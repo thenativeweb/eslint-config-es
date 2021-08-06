@@ -52,10 +52,8 @@ If you want to override any rules, you can do so in your configuration file. For
 
 ## Running quality assurance
 
-Since this module is required by [roboter](https://www.npmjs.com/package/roboter), it can not use roboter to build itself. Hence you have to use `npm` for that.
-
-To analyse the source code run the following command:
+To run quality assurance for this module use [roboter](https://www.npmjs.com/package/roboter):
 
 ```shell
-$ npm run analyse
+$ npx roboter
 ```
