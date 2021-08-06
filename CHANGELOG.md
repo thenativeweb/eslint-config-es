@@ -1,3 +1,10 @@
+## [3.30.8](https://github.com/thenativeweb/eslint-config-es/compare/3.30.7...3.30.8) (2021-08-06)
+
+
+### Bug Fixes
+
+* Enhance documentation. ([#393](https://github.com/thenativeweb/eslint-config-es/issues/393)) ([b287b7e](https://github.com/thenativeweb/eslint-config-es/commit/b287b7ee06d242eebd16428a5d6d4113d7cdabcf))
+
 ## [3.30.7](https://github.com/thenativeweb/eslint-config-es/compare/3.30.6...3.30.7) (2021-08-02)
 
 
