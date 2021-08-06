@@ -48,14 +48,12 @@ To use one of those configurations, create a `.eslintrc.json` file in your proje
 
 Alternatively, you may also use `es/browser`.
 
-If you want to override any rules, you can do so in your configuration file.
+If you want to override any rules, you can do so in your configuration file. For details on how to do this, e.g. to get an explanation on how to enable or disable specific rules, see the [ESLint documentation on extending configuration files](https://eslint.org/docs/user-guide/configuring/configuration-files#extending-configuration-files).
 
 ## Running quality assurance
 
-Since this module is required by [roboter](https://www.npmjs.com/package/roboter), it can not use roboter to build itself. Hence you have to use `npm` for that.
-
-To analyse the source code run the following command:
+To run quality assurance for this module use [roboter](https://www.npmjs.com/package/roboter):
 
 ```shell
-$ npm run analyse
+$ npx roboter
 ```
