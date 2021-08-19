@@ -655,7 +655,7 @@ let rules = {
   // expressions using await/throw/yield as well. We have opened an issue to try
   // to remedy this: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1079
   'unicorn/prefer-ternary': 'off',
-  'unicorn/prefer-top-level-await': 'error',
+  'unicorn/prefer-top-level-await': 'off',
   'unicorn/prefer-type-error': 'off',
   'unicorn/prevent-abbreviations': 'off',
   'unicorn/require-array-join-separator': 'error',
