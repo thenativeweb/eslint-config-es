@@ -1,3 +1,10 @@
+## [3.30.13](https://github.com/thenativeweb/eslint-config-es/compare/3.30.12...3.30.13) (2021-08-19)
+
+
+### Bug Fixes
+
+* disable unicorn-top-level-await ([#399](https://github.com/thenativeweb/eslint-config-es/issues/399)) ([0fd4411](https://github.com/thenativeweb/eslint-config-es/commit/0fd4411672962a70231c6073c654abb0ae5071c0))
+
 ## [3.30.12](https://github.com/thenativeweb/eslint-config-es/compare/3.30.11...3.30.12) (2021-08-16)
 
 
