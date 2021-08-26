@@ -1,3 +1,10 @@
+## [3.30.15](https://github.com/thenativeweb/eslint-config-es/compare/3.30.14...3.30.15) (2021-08-26)
+
+
+### Bug Fixes
+
+* disable unicorn/require-post-message-target-origin ([#404](https://github.com/thenativeweb/eslint-config-es/issues/404)) ([9500768](https://github.com/thenativeweb/eslint-config-es/commit/9500768c109ca095e22677853c7319c3c10877f8))
+
 ## [3.30.14](https://github.com/thenativeweb/eslint-config-es/compare/3.30.13...3.30.14) (2021-08-26)
 
 
