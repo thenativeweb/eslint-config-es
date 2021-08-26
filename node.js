@@ -1041,6 +1041,9 @@ const overrides = [
       '@typescript-eslint/require-array-sort-compare': 'error',
       'require-await': 'off',
       '@typescript-eslint/require-await': 'off',
+
+      // This rule is already enforced via the type system and produces false-positives.
+      'unicorn/require-post-message-target-origin': 'off',
       '@typescript-eslint/restrict-plus-operands': 'error',
       '@typescript-eslint/restrict-template-expressions': 'off',
       semi: 'off',
