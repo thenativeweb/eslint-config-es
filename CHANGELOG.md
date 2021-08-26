@@ -1,3 +1,10 @@
+## [3.30.14](https://github.com/thenativeweb/eslint-config-es/compare/3.30.13...3.30.14) (2021-08-26)
+
+
+### Bug Fixes
+
+* set a valid `parserOptions.ecmaVersion` ([#403](https://github.com/thenativeweb/eslint-config-es/issues/403)) ([0024415](https://github.com/thenativeweb/eslint-config-es/commit/0024415daf039ecb2d4939964f87621b6c4b21df))
+
 ## [3.30.13](https://github.com/thenativeweb/eslint-config-es/compare/3.30.12...3.30.13) (2021-08-19)
 
 
