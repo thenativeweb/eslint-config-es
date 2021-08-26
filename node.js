@@ -7,7 +7,7 @@ const isInstalled = require('./lib/isInstalled');
 const parserOptions = {
   sourceType: 'script',
 
-  ecmaVersion: 'latest',
+  ecmaVersion: 12,
   ecmaFeatures: {
     globalReturn: false,
     impliedStrict: false,
