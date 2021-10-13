@@ -589,6 +589,7 @@ let rules = {
   'unicorn/no-for-loop': 'error',
   'unicorn/no-hex-escape': 'error',
   'unicorn/no-instanceof-array': 'error',
+  'unicorn/no-invalid-remove-event-listener': 'error',
   'unicorn/no-lonely-if': 'error',
   'unicorn/no-nested-ternary': 'error',
   'unicorn/no-new-array': 'error',
@@ -603,6 +604,7 @@ let rules = {
   'unicorn/no-unreadable-array-destructuring': 'error',
   'unicorn/no-unsafe-regex': 'off',
   'unicorn/no-unused-properties': 'off',
+  'unicorn/no-useless-fallback-in-spread': 'error',
   'unicorn/no-useless-length-check': 'error',
   'unicorn/no-useless-spread': 'error',
   'unicorn/no-useless-undefined': 'error',
@@ -662,6 +664,7 @@ let rules = {
   'unicorn/require-number-to-fixed-digits-argument': 'error',
   'unicorn/require-post-message-target-origin': 'error',
   'unicorn/string-content': 'off',
+  'unicorn/template-indent': 'off',
   'unicorn/throw-new-error': 'error'
 };
 
