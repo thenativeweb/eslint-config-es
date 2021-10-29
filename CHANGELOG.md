@@ -1,3 +1,10 @@
+# [3.31.0](https://github.com/thenativeweb/eslint-config-es/compare/3.30.15...3.31.0) (2021-10-29)
+
+
+### Features
+
+* Bump dependencies. ([#431](https://github.com/thenativeweb/eslint-config-es/issues/431)) ([77914df](https://github.com/thenativeweb/eslint-config-es/commit/77914dfbc8032bad9292e365ebafd4678d4b3f02))
+
 ## [3.30.15](https://github.com/thenativeweb/eslint-config-es/compare/3.30.14...3.30.15) (2021-08-26)
 
 
