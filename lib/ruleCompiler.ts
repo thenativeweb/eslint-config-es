@@ -1,12 +1,10 @@
 import { Linter } from 'eslint';
-import { RuleRecord } from './RuleRecord';
-import { isBoolean, isFunction, kebabCase } from 'lodash';
+import { RulesRecord } from './RuleRecord';
+import { isFunction, kebabCase } from 'lodash';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const compile = (rule: RuleRecord): Linter.RulesRecord => Object.entries(rule).reduce((compiledRules, ruleEntry): Linter.RulesRecord => {
+const compile = (rule: RulesRecord): Linter.RulesRecord => Object.entries(rule).reduce((compiledRules, ruleEntry): Linter.RulesRecord => {
   const [ ruleKey, ruleValue ] = ruleEntry;
-
-  const compiledKey = kebabCase(ruleKey);
 
   if (isFunction(ruleValue)) {
     return {
@@ -14,7 +12,10 @@ const compile = (rule: RuleRecord): Linter.RulesRecord => Object.entries(rule).r
       ...compile(ruleValue())
     };
   }
-  const compiledValue = isBoolean(ruleValue) && !ruleValue ? 'off' : [ 'error' ];
+
+  ruleKey.split('/');
+  const compiledKey = kebabCase(ruleKey);
+  const compiledValue = ruleValue === false ? 'off' : [ 'error', ...ruleValue ];
 
   return {
     ...compiledRules,

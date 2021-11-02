@@ -8,10 +8,12 @@
 //   core: [ ... ],
 //   typescript: [ ... ]
 // },
-type ConfigFunction = () => RuleRecord;
-type RuleConfig = boolean | any[] | ConfigFunction;
-type RuleRecord = Record<string, RuleConfig>;
+type ConfigFunction = () => RulesRecord;
+type RuleConfig = false | any[] | ConfigFunction;
+type RulesKey = string;
+
+type RulesRecord = Record<RulesKey, RuleConfig>;
 
 export type {
-  RuleRecord
+  RulesRecord
 };

@@ -1,10 +1,10 @@
 import { assert } from 'assertthat';
 import { compile } from '../../lib/ruleCompiler';
-import { RuleRecord } from '../../lib/RuleRecord';
+import { RulesRecord } from '../../lib/RuleRecord';
 
 suite('rulesCompiler', (): void => {
   test('compiles a rule with a  boolean to a deactivated rule.', async (): Promise<void> => {
-    const rule: RuleRecord = {
+    const rule: RulesRecord = {
       eqeqeq: false
     };
 
@@ -14,7 +14,7 @@ suite('rulesCompiler', (): void => {
   });
 
   test('converts the given camelCased key to kebab-case.', async (): Promise<void> => {
-    const rule: RuleRecord = {
+    const rule: RulesRecord = {
       noBraces: false
     };
 
@@ -23,8 +23,20 @@ suite('rulesCompiler', (): void => {
     assert.that(result['no-braces']).is.not.undefined();
   });
 
+  test('leaves plugin-names in tact when converting.', async (): Promise<void> => {
+    const rule: RulesRecord = {
+      'unicorn/noBraces': false
+    };
+
+    const result = compile(rule);
+
+    assert.that(result).is.equalTo({
+      'unicorn/noBraces': 'off'
+    });
+  });
+
   test('compiles a rule with an empty array to a rule with ["error"].', async (): Promise<void> => {
-    const rule: RuleRecord = {
+    const rule: RulesRecord = {
       eqeqeq: []
     };
 
@@ -35,30 +47,45 @@ suite('rulesCompiler', (): void => {
     assert.that(actualRule[0]).is.equalTo('error');
   });
 
-  test('compiles a rule with a function by using the functions return value.', async (): Promise<void> => {
-    const rule: RuleRecord = {
-      eqeqeq (): RuleRecord {
+  test('compiles a rule with an array configuration to a rule with ["error", ...configurations].', async (): Promise<void> => {
+    const customConfig = {
+      test: 'value'
+    };
+    const rule: RulesRecord = {
+      eqeqeq: [ 'always', customConfig ]
+    };
+
+    const result = compile(rule);
+    const actualRule = result.eqeqeq as any[];
+
+    assert.that(actualRule.length).is.equalTo(3);
+    assert.that(actualRule).is.equalTo([ 'error', 'always', customConfig ]);
+  });
+
+  test('compiles a rule with a function to a rule compiling the functions return value.', async (): Promise<void> => {
+    const rule: RulesRecord = {
+      eqeqeq (): RulesRecord {
         return {
-          yoda: false
+          indent: false
         };
       }
     };
 
-    const { eqeqeq, yoda } = compile(rule);
+    const { eqeqeq, indent } = compile(rule);
 
-    assert.that(yoda).is.equalTo('off');
+    assert.that(indent).is.equalTo('off');
     assert.that(eqeqeq).is.undefined();
   });
 
   test('compiles all given rules of the RulesRecord.', async (): Promise<void> => {
-    const rule: RuleRecord = {
+    const rule: RulesRecord = {
       eqeqeq: [],
-      yoda: false
+      indent: false
     };
 
-    const { eqeqeq, yoda } = compile(rule);
+    const { eqeqeq, indent } = compile(rule);
 
     assert.that(eqeqeq).is.not.undefined();
-    assert.that(yoda).is.not.undefined();
+    assert.that(indent).is.not.undefined();
   });
 });
