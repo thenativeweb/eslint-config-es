@@ -1,27 +1,36 @@
+import { BetterRulesRecord } from './BetterRuleRecord';
 import { Linter } from 'eslint';
-import { RulesRecord } from './RuleRecord';
 import { isFunction, kebabCase } from 'lodash';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const compile = (rule: RulesRecord): Linter.RulesRecord => Object.entries(rule).reduce((compiledRules, ruleEntry): Linter.RulesRecord => {
-  const [ ruleKey, ruleValue ] = ruleEntry;
+const compileRuleName = (ruleName: string): string => {
+  if (ruleName.includes('/')) {
+    const [ plugin, rawRuleName ] = ruleName.split('/');
 
-  if (isFunction(ruleValue)) {
-    return {
-      ...compiledRules,
-      ...compile(ruleValue())
-    };
+    return `${plugin}/${kebabCase(rawRuleName)}`;
   }
 
-  ruleKey.split('/');
-  const compiledKey = kebabCase(ruleKey);
-  const compiledValue = ruleValue === false ? 'off' : [ 'error', ...ruleValue ];
+  return kebabCase(ruleName);
+};
 
-  return {
-    ...compiledRules,
-    [compiledKey]: compiledValue
-  };
-}, {});
+const compile = (rule: BetterRulesRecord): Linter.RulesRecord =>
+  Object.entries(rule).reduce((compiledRules, ruleEntry): Linter.RulesRecord => {
+    const [ ruleName, ruleConfig ] = ruleEntry;
+
+    if (isFunction(ruleConfig)) {
+      return {
+        ...compiledRules,
+        ...compile(ruleConfig({ name: ruleName }))
+      };
+    }
+
+    const compiledRuleName = compileRuleName(ruleName);
+    const compiledValue = ruleConfig === false ? 'off' : [ 'error', ...ruleConfig ];
+
+    return {
+      ...compiledRules,
+      [compiledRuleName]: compiledValue
+    };
+  }, {});
 
 export {
   compile
