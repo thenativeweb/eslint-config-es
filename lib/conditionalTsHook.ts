@@ -36,7 +36,7 @@ const createConditionalTsHook = ({ language }: { language: Language}): Condition
     return function ({ ruleName }): BetterRulesRecord {
       return {
         [ruleName]: false,
-        [`@eslint-typescript/${ruleName}`]: typescript
+        [`@typescript-eslint/${ruleName}`]: typescript
       };
     };
   };

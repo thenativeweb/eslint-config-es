@@ -1,4 +1,5 @@
 import { compile } from './betterRules';
+import { createSharedRulesFor } from './rules/tsJsShared';
 import { esLintCore } from './rules/base';
 import { extended } from './rules/extended';
 import { isInstalled } from './isInstalled';
@@ -44,7 +45,8 @@ let rules: Linter.RulesRecord = compile({
   ...esLintCore,
   ...extended,
   ...mochaRules,
-  ...unicorn
+  ...unicorn,
+  ...createSharedRulesFor({ language: 'javascript' })
 });
 
 const fixReactEs6Rule = (reactRulesRecord: Linter.RulesRecord): Linter.RulesRecord =>
@@ -76,7 +78,8 @@ const overrides = [
     globals: { ...globals, NodeJS: true },
     plugins: [ ...plugins, '@typescript-eslint' ],
     rules: compile({
-      ...typescript
+      ...typescript,
+      ...createSharedRulesFor({ language: 'typescript' })
     })
   }
 ];

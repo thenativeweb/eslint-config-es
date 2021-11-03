@@ -24,8 +24,7 @@ const createSharedRulesFor = ({ language }: { language: Language}): BetterRulesR
 
       return {
         camelcase: false,
-        namingConvention: [
-          [],
+        '@typescript-eslint/namingConvention': [
           {
             selector: [ 'variableLike', 'memberLike' ],
             format: [ 'strictCamelCase', 'StrictPascalCase' ],
@@ -153,7 +152,7 @@ const createSharedRulesFor = ({ language }: { language: Language}): BetterRulesR
     }),
     noUnusedVars: useConditionalTs({
       core: [{
-        args: 'afterUsed',
+        args: 'after-used',
         caughtErrors: 'all',
         vars: 'all',
         ignoreRestSiblings: false

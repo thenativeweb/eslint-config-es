@@ -28,7 +28,7 @@ suite('conditionalTsHook', (): void => {
 
     assert.that(result).is.equalTo({
       testRule: false,
-      '@eslint-typescript/testRule': [ 'always' ]
+      '@typescript-eslint/testRule': [ 'always' ]
     });
   });
 
@@ -55,7 +55,7 @@ suite('conditionalTsHook', (): void => {
 
     assert.that(result).is.equalTo({
       testRule: false,
-      '@eslint-typescript/testRule': []
+      '@typescript-eslint/testRule': []
     });
   });
 
@@ -70,7 +70,7 @@ suite('conditionalTsHook', (): void => {
 
     assert.that(compileResult).is.equalTo({
       'test-rule': 'off',
-      '@eslint-typescript/test-rule': [ 'error', 'always' ]
+      '@typescript-eslint/test-rule': [ 'error', 'always' ]
     });
   });
 });
