@@ -1,4 +1,4 @@
-import { BetterRulesRecord } from './BetterRuleRecord';
+import { BetterRulesRecord } from './BetterRulesRecord';
 import { Linter } from 'eslint';
 import { isFunction, kebabCase } from 'lodash';
 

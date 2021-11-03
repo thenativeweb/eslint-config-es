@@ -1,12 +1,12 @@
-import { compile } from './lib/betterRules/compile';
-import { esLintCore } from './lib/rules/base';
-import { extended } from './lib/rules/extended';
-import { isInstalled } from './lib/isInstalled';
-import { mochaRules } from './lib/rules/mocha';
+import { compile } from './betterRules';
+import { esLintCore } from './rules/base';
+import { extended } from './rules/extended';
+import { isInstalled } from './isInstalled';
+import { mochaRules } from './rules/mocha';
 import path from 'path';
-import { react } from './lib/rules/react';
-import { typescript } from './lib/rules/typescript';
-import { unicorn } from './lib/rules/unicorn';
+import { react } from './rules/react';
+import { typescript } from './rules/typescript';
+import { unicorn } from './rules/unicorn';
 
 const parserOptions = {
   sourceType: 'script',

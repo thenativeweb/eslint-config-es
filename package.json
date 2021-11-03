@@ -26,11 +26,15 @@
     {
       "name": "Henning Storck",
       "email": "henning@slightlyblack.com"
+    },
+    {
+      "name": "David Losert",
+      "email": "david.losert@gmx.de"
     }
   ],
   "private": false,
-  "main": "build/node.js",
-  "types": "build/node.d.ts",
+  "main": "build/lib/defaultConfig.js",
+  "types": "build/lib/defaultConfig.d.ts",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "4.7.0",
     "@typescript-eslint/parser": "4.7.0",
@@ -49,8 +53,8 @@
     "semantic-release-configuration": "1.0.25"
   },
   "scripts": {
-    "build": "npx roboter build",
-    "analyse": "npm run build && npx eslint --config build/node.js *.ts lib/**/*.ts test/**/*.ts"
+    "analyse": "npm run build && npx eslint --config ./node.js *.js 'lib/**/*.ts' 'test/**/*.ts'",
+    "build": "npx roboter build"
   },
   "repository": {
     "type": "git",

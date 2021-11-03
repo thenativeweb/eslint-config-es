@@ -1,4 +1,4 @@
-import { BetterRulesRecord } from './BetterRuleRecord';
+import { BetterRulesRecord } from './BetterRulesRecord';
 import { curry, mapKeys } from 'lodash';
 
 const usePlugin = curry(

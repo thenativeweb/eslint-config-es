@@ -1,5 +1,5 @@
 import { assert } from 'assertthat';
-import { BetterRulesRecord } from '../../../lib/betterRules/BetterRuleRecord';
+import { BetterRulesRecord } from '../../../lib/betterRules/BetterRulesRecord';
 import { compile } from '../../../lib/betterRules/compile';
 
 suite('rulesCompiler', (): void => {

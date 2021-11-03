@@ -1,4 +1,4 @@
-import { BetterRulesRecord } from '../betterRules/BetterRuleRecord';
+import { BetterRulesRecord } from '../betterRules/BetterRulesRecord';
 import { usePlugin } from '../betterRules/usePlugin';
 
 const mochaRules: BetterRulesRecord = usePlugin('mocha')({

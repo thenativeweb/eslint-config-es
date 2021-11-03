@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "declaration": true,
     "esModuleInterop": true,
+    "isolatedModules": true,
     "lib": [ "esnext" ],
     "module": "commonjs",
     "outDir": "build",
@@ -11,8 +12,6 @@
     "target": "es2019"
   },
   "include": [
-    "./node.ts",
-    "./browser.ts",
     "./lib/**/*.ts",
     "./test/**/*.ts"
   ],
