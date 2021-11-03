@@ -51,10 +51,63 @@ If you want to override any rules, you can do so in your configuration file.
 
 ## Running quality assurance
 
-Since this module is required by [roboter](https://www.npmjs.com/package/roboter), it can not use roboter to build itself. Hence you have to use `npm` for that.
-
-To analyse the source code run the following command:
+To analyse the source code of the repository itself, run the following command:
 
 ```shell
 $ npm run analyse
 ```
+
+**Note: As we switched this library to TypeScript which is not natively supported by ESLint, this command will execute a build before analysing to actually generate the necessary rules in JavaScript.**
+
+## Better ESLint Rules
+
+This package has a built-in library that allows defining ESLint-Rules in a more strict but (what we think) better and intuitive format.
+
+A basic example looks like this:
+
+```typescript
+const betterRules: BetterRulesRecord = {
+  camelcase: false, // compiles to "camelcase: 'off'"
+  forDirection: [], // compiles to "for-direction: 'error'"
+  noParens: [ 'always', { otherConfig: 'value' } ], // compiles to "no-parens: [ 'error', 'always', {otherConfig: 'value' } ]"
+  noContinue: ({ ruleName }): BetterRulesRecord => ({
+    [`unicorn/${ruleName}`]: []
+  }); // compiles to "'unicorn/no-continue': 'error'"
+}
+
+// Then you can compile it with the compile function
+import { compile } from './betterRules';
+const compiledESLintRules = compile(betterRules);
+export {
+  rules: compiledESLintRules
+}
+```
+
+### Differences to normal ESLint Rules
+
+There are now only three accepted configuration-values for a rule:
+
+1. `false` for turning it off.
+2. a (possible empty) Array `[]` to turn it on and configure it.
+3. a function `({ ruleName }) => BetterRulesRecord` to allow for more dynamic rules (explained later).
+
+There are two more main differences:
+
+1. Rules are now in **camelCase**.
+2. **error** is the only and the default severity for all rules.
+
+### Function Configuration
+
+The function configuration allows you to easily define more dynamic rules. This is especially useful if you work with plugins that might overwrite core-rules.
+
+### But why?
+
+1. Turn Rules off with `false` rather than with a string `'off'` as it is easier to distinguish.
+2. Turn Rules on with a (possible) empty Array-configuration `[]`. This streamlines the configuration.
+3. Only allow `errors` and make them the default. We do not see a value in ESLint-Warnings, as warnings tend to get ignored.
+4. Accept functions as configuration and work with their return arguments. This is a powerful addition as it allows for a more dynamic rules-definition as seen in the section below.
+
+In order for the above to work with eslint, you have to compile it:
+
+1. All rules `error` by default - so no need to explicitly set it every time.
+2. Instead of 'off'
