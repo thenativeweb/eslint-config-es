@@ -1,5 +1,3 @@
-'use strict';
-
 const react = {
   'react/boolean-prop-naming': 'off',
   'react/button-has-type': 'off',
@@ -91,6 +89,7 @@ const react = {
   'react/jsx-max-props-per-line': 'off',
   'react/jsx-no-bind': [ 'error', {
     ignoreRefs: false,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     ignoreDOMComponents: false,
     allowArrowFunctions: true,
     allowBind: false,
@@ -124,6 +123,6 @@ const react = {
   'react/jsx-wrap-multilines': 'error'
 };
 
-module.exports = {
+export {
   react
 };

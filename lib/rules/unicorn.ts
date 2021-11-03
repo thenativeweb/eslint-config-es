@@ -1,5 +1,3 @@
-'use strict';
-
 const unicorn = {
   'unicorn/better-regex': [ 'error', { sortCharacterClasses: true }],
   'unicorn/catch-error-name': [ 'error', { name: 'ex', ignore: [ '^ex([A-Z0-9].*)?$' ]}],
@@ -97,6 +95,6 @@ const unicorn = {
   'unicorn/throw-new-error': 'error'
 };
 
-module.exports = {
+export {
   unicorn
 };

@@ -1,6 +1,4 @@
-'use strict';
-
-const node = require('./node');
+import * as node from './node';
 
 const env = {
   ...node.env,

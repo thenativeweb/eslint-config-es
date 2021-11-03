@@ -1,5 +1,3 @@
-'use strict';
-
 const esLintCore = {
   'accessor-pairs': [ 'error', {
     getWithoutSet: false,
@@ -56,6 +54,7 @@ const esLintCore = {
   'no-extra-parens': [ 'error', 'all', {
     conditionalAssign: false,
     enforceForArrowConditionals: false,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     ignoreJSX: 'all',
     nestedBinaryExpressions: false,
     returnAssign: false
@@ -86,6 +85,7 @@ const esLintCore = {
   'no-magic-numbers': 'off',
   'no-misleading-character-class': 'error',
   'no-multi-spaces': [ 'error', {
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     ignoreEOLComments: false,
     exceptions: {
       BinaryExpression: false,
@@ -231,7 +231,7 @@ const esLintCore = {
   'id-denylist': 'off',
   'id-length': [ 'error', {
     min: 2,
-    max: Number.infinity,
+    max: Number.POSITIVE_INFINITY,
     properties: 'always',
     exceptions: [ '_', 'i', 'j', 't', 'x', 'y', 'z' ]
   }],
@@ -240,6 +240,7 @@ const esLintCore = {
   indent: [ 'error', 2, {
     SwitchCase: 1,
     VariableDeclarator: { var: 2, let: 2, const: 3 },
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     outerIIFEBody: 1,
     MemberExpression: 1,
     FunctionDeclaration: { parameters: 1, body: 1 },
@@ -319,6 +320,7 @@ const esLintCore = {
   'no-mixed-operators': 'error',
   'no-mixed-spaces-and-tabs': 'error',
   'no-multi-assign': 'error',
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   'no-multiple-empty-lines': [ 'error', { max: 1, maxEOF: 1, maxBOF: 0 }],
   'no-negated-condition': 'off',
 
@@ -457,6 +459,6 @@ const esLintCore = {
   'yield-star-spacing': [ 'error', { before: true, after: true }]
 };
 
-module.exports = {
+export {
   esLintCore
 };

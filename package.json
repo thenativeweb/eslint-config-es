@@ -29,8 +29,8 @@
     }
   ],
   "private": false,
-  "main": "node.js",
-  "types": "build/lib/index.d.ts",
+  "main": "build/node.js",
+  "types": "build/node.d.ts",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "4.7.0",
     "@typescript-eslint/parser": "4.7.0",
@@ -49,7 +49,8 @@
     "semantic-release-configuration": "1.0.25"
   },
   "scripts": {
-    "analyse": "npx eslint --config node.js *.js lib/**/*.js"
+    "build": "npx roboter build",
+    "analyse": "npm run build && npx eslint --config build/node.js *.ts lib/**/*.ts test/**/*.ts"
   },
   "repository": {
     "type": "git",

@@ -11,6 +11,8 @@
     "target": "es2019"
   },
   "include": [
+    "./node.ts",
+    "./browser.ts",
     "./lib/**/*.ts",
     "./test/**/*.ts"
   ],

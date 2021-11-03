@@ -1,5 +1,3 @@
-'use strict';
-
 const typescript = {
   '@typescript-eslint/adjacent-overload-signatures': 'error',
   '@typescript-eslint/array-type': [ 'error', { default: 'array' }],
@@ -54,6 +52,7 @@ const typescript = {
   '@typescript-eslint/indent': [ 'error', 2, {
     SwitchCase: 1,
     VariableDeclarator: { var: 2, let: 2, const: 3 },
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     outerIIFEBody: 1,
     MemberExpression: 1,
     FunctionDeclaration: { parameters: 1, body: 1 },
@@ -115,6 +114,7 @@ const typescript = {
   '@typescript-eslint/no-extra-parens': [ 'error', 'all', {
     conditionalAssign: false,
     enforceForArrowConditionals: false,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     ignoreJSX: 'all',
     nestedBinaryExpressions: false,
     returnAssign: false
@@ -168,6 +168,7 @@ const typescript = {
   '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
   '@typescript-eslint/no-unnecessary-condition': [ 'error', {
     allowConstantLoopConditions: false,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false
   }],
   '@typescript-eslint/no-unnecessary-qualifier': 'error',
@@ -242,6 +243,6 @@ const typescript = {
   '@typescript-eslint/unified-signatures': 'error'
 };
 
-module.exports = {
+export {
   typescript
 };

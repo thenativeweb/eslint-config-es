@@ -1,15 +1,12 @@
-'use strict';
-
-const path = require('path');
-
-const isInstalled = require('./lib/isInstalled');
-
-const { esLintCore } = require('./lib/rules/base');
-const { extended } = require('./lib/rules/extended');
-const { mochaRules } = require('./lib/rules/mocha');
-const { react } = require('./lib/rules/react');
-const { typescript } = require('./lib/rules/typescript');
-const { unicorn } = require('./lib/rules/unicorn');
+import { compile } from './lib/betterRules/compile';
+import { esLintCore } from './lib/rules/base';
+import { extended } from './lib/rules/extended';
+import { isInstalled } from './lib/isInstalled';
+import { mochaRules } from './lib/rules/mocha';
+import path from 'path';
+import { react } from './lib/rules/react';
+import { typescript } from './lib/rules/typescript';
+import { unicorn } from './lib/rules/unicorn';
 
 const parserOptions = {
   sourceType: 'script',
@@ -36,13 +33,15 @@ const settings = {};
 
 if (isInstalled('react')) {
   plugins.push('react');
+
+  // @ts-expect-error react is actuall set by the plugin
   settings.react = { version: 'detect' };
 }
 
 let rules = {
   ...esLintCore,
   ...extended,
-  ...mochaRules,
+  ...compile(mochaRules),
   ...unicorn
 };
 
@@ -62,6 +61,7 @@ const overrides = [
       sourceType: 'module',
       project: path.join('.', 'tsconfig.json')
     },
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     globals: { ...globals, NodeJS: true },
     plugins: [ ...plugins, '@typescript-eslint' ],
     rules: {
@@ -70,7 +70,7 @@ const overrides = [
   }
 ];
 
-module.exports = {
+export {
   parserOptions,
   env,
   globals,
