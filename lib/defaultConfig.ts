@@ -2,6 +2,8 @@ import { compile } from './betterRules';
 import { esLintCore } from './rules/base';
 import { extended } from './rules/extended';
 import { isInstalled } from './isInstalled';
+import { Linter } from 'eslint';
+import { mapKeys } from 'lodash';
 import { mochaRules } from './rules/mocha';
 import path from 'path';
 import { react } from './rules/react';
@@ -38,17 +40,26 @@ if (isInstalled('react')) {
   settings.react = { version: 'detect' };
 }
 
-let rules = {
+let rules: Linter.RulesRecord = compile({
   ...esLintCore,
   ...extended,
-  ...compile(mochaRules),
+  ...mochaRules,
   ...unicorn
-};
+});
+
+const fixReactEs6Rule = (reactRulesRecord: Linter.RulesRecord): Linter.RulesRecord =>
+  mapKeys(reactRulesRecord, (value, key): string => {
+    if (key === 'react/prefer-es-6-class') {
+      return 'react/prefer-es6-class';
+    }
+
+    return key;
+  });
 
 if (plugins.includes('react')) {
   rules = {
     ...rules,
-    ...react
+    ...fixReactEs6Rule(compile(react))
   };
 }
 
@@ -64,9 +75,9 @@ const overrides = [
     // eslint-disable-next-line @typescript-eslint/naming-convention
     globals: { ...globals, NodeJS: true },
     plugins: [ ...plugins, '@typescript-eslint' ],
-    rules: {
+    rules: compile({
       ...typescript
-    }
+    })
   }
 ];
 

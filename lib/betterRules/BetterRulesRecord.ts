@@ -2,12 +2,14 @@ interface ConfigFunctionArgs {
   ruleName: string;
 }
 
-type ConfigFunction = (args: ConfigFunctionArgs) => BetterRulesRecord;
-type BetterRuleConfig = false | any[] | ConfigFunction;
+type BetterRulesConfigFunction = (args: ConfigFunctionArgs) => BetterRulesRecord;
+type BetterRulesConfig = false | any[] | BetterRulesConfigFunction;
 type BetterRulesKey = string;
 
-type BetterRulesRecord = Record<BetterRulesKey, BetterRuleConfig>;
+type BetterRulesRecord = Record<BetterRulesKey, BetterRulesConfig>;
 
 export type {
-  BetterRulesRecord
+  BetterRulesRecord,
+  BetterRulesConfig,
+  BetterRulesConfigFunction
 };
