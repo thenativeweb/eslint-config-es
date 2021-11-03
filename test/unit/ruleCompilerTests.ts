@@ -80,9 +80,9 @@ suite('rulesCompiler', (): void => {
   test('when given a function, passes the name of the rule as argument to the function.', async (): Promise<void> => {
     let called = false;
     const rule: BetterRulesRecord = {
-      noBraces ({ name }): BetterRulesRecord {
+      noBraces ({ ruleName }): BetterRulesRecord {
         called = true;
-        assert.that(name).is.equalTo('noBraces');
+        assert.that(ruleName).is.equalTo('noBraces');
 
         return {
           noBraces: false

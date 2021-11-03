@@ -1,5 +1,5 @@
 interface ConfigFunctionArgs {
-  name: string;
+  ruleName: string;
 }
 
 type ConfigFunction = (args: ConfigFunctionArgs) => BetterRulesRecord;

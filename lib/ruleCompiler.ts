@@ -19,7 +19,7 @@ const compile = (rule: BetterRulesRecord): Linter.RulesRecord =>
     if (isFunction(ruleConfig)) {
       return {
         ...compiledRules,
-        ...compile(ruleConfig({ name: ruleName }))
+        ...compile(ruleConfig({ ruleName }))
       };
     }
 
