@@ -1,6 +1,6 @@
-import { BetterRulesRecord } from './BetterRulesRecord';
 import { kebabCase } from 'lodash';
 import { Linter } from 'eslint';
+import { BetterRulesEntry, BetterRulesRecord } from './BetterRulesRecord';
 
 const compileRuleName = (ruleName: string): string => {
   if (ruleName.includes('/')) {
@@ -12,18 +12,26 @@ const compileRuleName = (ruleName: string): string => {
   return kebabCase(ruleName);
 };
 
-const compile = (rule: BetterRulesRecord): Linter.RulesRecord =>
-  Object.entries(rule).reduce((compiledRules, ruleRecord): Linter.RulesRecord => {
-    const [ ruleName, ruleEntry ] = ruleRecord;
+const compileRuleEntry = (ruleEntry: BetterRulesEntry): Linter.RuleEntry => {
+  if (ruleEntry === false) {
+    return 'off';
+  }
 
+  return [ 'error', ...ruleEntry ];
+};
+
+const compile = (rule: BetterRulesRecord): Linter.RulesRecord => {
+  const compiledRules: Linter.RulesRecord = {};
+
+  for (const [ ruleName, ruleEntry ] of Object.entries(rule)) {
     const compiledRuleName = compileRuleName(ruleName);
-    const compiledRuleEntry = ruleEntry === false ? 'off' : [ 'error', ...ruleEntry ];
+    const compiledRuleEntry = compileRuleEntry(ruleEntry);
 
-    return {
-      ...compiledRules,
-      [compiledRuleName]: compiledRuleEntry
-    };
-  }, {});
+    compiledRules[compiledRuleName] = compiledRuleEntry;
+  }
+
+  return compiledRules;
+};
 
 export {
   compile

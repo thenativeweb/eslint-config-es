@@ -25,24 +25,23 @@ const splitEntries = (pickEntry: PickRuleEntries): IndividualEntries => {
   return pickEntry;
 };
 
-const pickRulesFor = ({ language }: { language: Language }, rulePickArgs: PickRuleRecord): BetterRulesRecord =>
-  Object.entries(rulePickArgs).reduce((currentRules: BetterRulesRecord, currentRulePick): BetterRulesRecord => {
-    const [ ruleName, pickEntry ] = currentRulePick;
+const pickRulesFor = ({ language }: { language: Language }, rulePickArgs: PickRuleRecord): BetterRulesRecord => {
+  const pickedRules: BetterRulesRecord = {};
+
+  for (const [ ruleName, pickEntry ] of Object.entries(rulePickArgs)) {
     const { core, typeScript } = splitEntries(pickEntry);
 
     if (language === 'javaScript') {
-      return {
-        ...currentRules,
-        [ruleName]: core
-      };
+      pickedRules[ruleName] = core;
+      continue;
     }
 
-    return {
-      ...currentRules,
-      [ruleName]: false,
-      [`@typescript-eslint/${ruleName}`]: typeScript
-    };
-  }, {});
+    pickedRules[ruleName] = false;
+    pickedRules[`@typescript-eslint/${ruleName}`] = typeScript;
+  }
+
+  return pickedRules;
+};
 
 export {
   pickRulesFor
