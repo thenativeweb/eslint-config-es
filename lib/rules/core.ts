@@ -172,6 +172,9 @@ const coreRules: BetterRulesRecord = {
   noMultiStr: [],
   nonblockStatementBodyPosition: [ 'below' ],
   noNegatedCondition: false,
+
+  // The noNestedTernary rule is superseded by the unicorn/noNestedTernary
+  // rule.
   noNestedTernary: false,
   noNew: [],
   noNewFunc: [],
@@ -187,6 +190,8 @@ const coreRules: BetterRulesRecord = {
   noPathConcat: [],
   noPlusplus: [{ allowForLoopAfterthoughts: true }],
   noProcessEnv: [],
+
+  // The noProcessExit rule is superseded by the unicorn/noProcessExit rule.
   noProcessExit: false,
   noPromiseExecutorReturn: false,
   noProto: [],
@@ -286,6 +291,9 @@ const coreRules: BetterRulesRecord = {
     destructuring: 'any',
     ignoreReadBeforeAssign: true
   }],
+
+  // Arrays are disabled here because of the unicorn/noUnreadableArrayDestructuring
+  // rule.
   preferDestructuring: [
     { array: false, object: true },
     { enforceForRenamedProperties: false }
@@ -347,12 +355,3 @@ const coreRules: BetterRulesRecord = {
 export {
   coreRules
 };
-
-// Arrays are disabled here because of the unicorn/noUnreadableArrayDestructuring
-// rule.
-// preferDestructuring: [
-
-// The noNestedTernary rule is superseded by the unicorn/noNestedTernary
-// rule.
-
-// The noProcessExit rule is superseded by the unicorn/noProcessExit rule.
