@@ -9,7 +9,7 @@ import {
   extended,
   mochaRules,
   react,
-  typescript,
+  typeScript,
   unicorn
 } from './rules';
 
@@ -83,7 +83,7 @@ const overrides = [
     globals: { ...globals, NodeJS: true },
     plugins: [ ...plugins, '@typescript-eslint' ],
     rules: compile({
-      ...typescript,
+      ...typeScript,
       ...createSharedRulesFor({ language: 'typeScript' })
     })
   }

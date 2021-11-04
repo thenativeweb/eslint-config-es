@@ -3,7 +3,7 @@ import { createSharedRulesFor } from './sharedCoreTypeScript';
 import { extended } from './extended';
 import { mochaRules } from './mocha';
 import { react } from './react';
-import { typescript } from './typeScript';
+import { typeScript } from './typeScript';
 import { unicorn } from './unicorn';
 
 export {
@@ -12,6 +12,6 @@ export {
   extended,
   mochaRules,
   react,
-  typescript,
+  typeScript,
   unicorn
 };
