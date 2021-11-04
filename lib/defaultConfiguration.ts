@@ -13,7 +13,7 @@ import {
   unicorn
 } from './rules';
 
-const parserOptions = {
+const parserOptions: Linter.ParserOptions = {
   sourceType: 'script',
 
   // eslint-disable-next-line unicorn/numeric-separators-style
@@ -70,7 +70,7 @@ if (plugins.includes('react')) {
   };
 }
 
-const overrides = [
+const overrides: Linter.ConfigOverride[] = [
   {
     files: [ '*.ts', '*.tsx' ],
     parser: '@typescript-eslint/parser',
