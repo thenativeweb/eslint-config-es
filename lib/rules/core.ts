@@ -14,7 +14,9 @@ const coreRules: BetterRulesRecord = {
   blockScopedVar: [],
   blockSpacing: [ 'always' ],
   callbackReturn: [[ 'callback', 'next' ]],
-  capitalizedComments: [ 'always', { ignoreInlineComments: false, ignoreConsecutiveComments: true }],
+  capitalizedComments: [ 'always', {
+    ignoreInlineComments: false, ignoreConsecutiveComments: true
+  }],
   classMethodsUseThis: [{ exceptMethods: []}],
   commaDangle: [ 'never' ],
   commaStyle: [ 'last' ],
@@ -26,7 +28,6 @@ const coreRules: BetterRulesRecord = {
   curly: [ 'all' ],
   defaultCase: [],
   defaultCaseLast: [],
-  defaultParamLast: [],
   dotLocation: [ 'object' ],
   eolLast: [ 'always' ],
   eqeqeq: [ 'always' ],
@@ -178,6 +179,7 @@ const coreRules: BetterRulesRecord = {
   noNewRequire: [],
   noNewSymbol: [],
   noNewWrappers: [],
+  noNonoctalDecimalEscape: [],
   noObjCalls: [],
   noOctal: [],
   noOctalEscape: [],
@@ -204,7 +206,6 @@ const coreRules: BetterRulesRecord = {
   noSelfCompare: [],
   noSequences: [],
   noSetterReturn: [],
-  noShadow: [{ builtinGlobals: false, hoist: 'functions', allow: []}],
   noShadowRestrictedNames: [],
   noSparseArrays: [],
   noSync: [{ allowAtRootLevel: false }],
@@ -232,6 +233,7 @@ const coreRules: BetterRulesRecord = {
   noUnreachableLoop: [],
   noUnsafeFinally: [],
   noUnsafeNegation: [],
+  noUnsafeOptionalChaining: [{ disallowArithmeticOperators: true }],
   noUnusedExpressions: [{
     allowShortCircuit: false,
     allowTernary: false,

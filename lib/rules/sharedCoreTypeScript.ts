@@ -42,6 +42,9 @@ const createSharedRulesFor = ({ language }: { language: Language}): BetterRulesR
         core: [{ before: false, after: true }],
         typeScript: []
       },
+      defaultParamLast: {
+        shared: []
+      },
       dotNotation: {
         core: [{ allowKeywords: true }],
         typeScript: [{
@@ -145,6 +148,9 @@ const createSharedRulesFor = ({ language }: { language: Language}): BetterRulesR
       noMagicNumbers: {
         shared: false
       },
+      noShadow: {
+        shared: [{ builtinGlobals: false, hoist: 'functions', allow: []}]
+      },
       noUnusedVars: {
         core: [{
           args: 'after-used',
@@ -168,6 +174,9 @@ const createSharedRulesFor = ({ language }: { language: Language}): BetterRulesR
       }]},
       noUselessConstructor: {
         shared: []
+      },
+      objectCurlySpacing: {
+        shared: [ 'always', { objectsInObjects: false, arraysInObjects: false }]
       },
       requireAwait: {
         shared: false

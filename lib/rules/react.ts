@@ -85,10 +85,14 @@ const react = usePlugin('react', {
     checkLocalVariables: false
   }],
   jsxIndent: [ 2 ],
-  jsxIndentProps: [ 2 ],
-  jsxKey: [{ checkFragmentShorthand: true }],
+  jsxIndentProps: [{ indentMode: 2, ignoreTernaryOperator: false }],
+  jsxKey: [{
+    checkFragmentShorthand: true,
+    checkKeyMustBeforeSpread: true
+  }],
   jsxMaxDepth: false,
   jsxMaxPropsPerLine: false,
+  jsxNewline: false,
   jsxNoBind: [{
     ignoreRefs: false,
     // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -98,11 +102,13 @@ const react = usePlugin('react', {
     allowFunctions: false
   }],
   jsxNoCommentTextnodes: [],
+  jsxNoConstructedContextValues: [],
   jsxNoDuplicateProps: [{ ignoreCase: true }],
   jsxNoLiterals: false,
   jsxNoTargetBlank: [{
     allowReferrer: false,
-    enforceDynamicLinks: 'always'
+    enforceDynamicLinks: 'always',
+    warnOnSpreadAttributes: true
   }],
   jsxNoUndef: [{ allowGlobals: false }],
   jsxNoUselessFragment: [],

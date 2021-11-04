@@ -17,7 +17,7 @@ const parserOptions = {
   sourceType: 'script',
 
   // eslint-disable-next-line unicorn/numeric-separators-style
-  ecmaVersion: 2021,
+  ecmaVersion: 12,
   ecmaFeatures: {
     globalReturn: false,
     impliedStrict: false,
@@ -33,7 +33,7 @@ const env = {
 
 const globals = {};
 
-const plugins = [ 'extended', 'mocha', 'unicorn' ];
+const plugins = [ 'eslint-comments', 'extended', 'mocha', 'unicorn' ];
 const settings = {};
 
 if (isInstalled('react')) {
