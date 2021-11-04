@@ -1,6 +1,6 @@
 import { BetterRulesRecord } from './BetterRulesRecord';
+import { kebabCase } from 'lodash';
 import { Linter } from 'eslint';
-import { isFunction, kebabCase } from 'lodash';
 
 const compileRuleName = (ruleName: string): string => {
   if (ruleName.includes('/')) {
@@ -15,13 +15,6 @@ const compileRuleName = (ruleName: string): string => {
 const compile = (rule: BetterRulesRecord): Linter.RulesRecord =>
   Object.entries(rule).reduce((compiledRules, ruleRecord): Linter.RulesRecord => {
     const [ ruleName, ruleEntry ] = ruleRecord;
-
-    if (isFunction(ruleEntry)) {
-      return {
-        ...compiledRules,
-        ...compile(ruleEntry({ ruleName }))
-      };
-    }
 
     const compiledRuleName = compileRuleName(ruleName);
     const compiledRuleEntry = ruleEntry === false ? 'off' : [ 'error', ...ruleEntry ];

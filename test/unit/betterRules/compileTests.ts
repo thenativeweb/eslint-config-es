@@ -62,39 +62,6 @@ suite('rulesCompiler', (): void => {
     assert.that(actualRule).is.equalTo([ 'error', 'always', customConfig ]);
   });
 
-  test('when given a function, compiles the return value of that function.', async (): Promise<void> => {
-    const rule: BetterRulesRecord = {
-      eqeqeq (): BetterRulesRecord {
-        return {
-          indent: false
-        };
-      }
-    };
-
-    const { eqeqeq, indent } = compile(rule);
-
-    assert.that(indent).is.equalTo('off');
-    assert.that(eqeqeq).is.undefined();
-  });
-
-  test('when given a function, passes the name of the rule as argument to the function.', async (): Promise<void> => {
-    let called = false;
-    const rule: BetterRulesRecord = {
-      noBraces ({ ruleName }): BetterRulesRecord {
-        called = true;
-        assert.that(ruleName).is.equalTo('noBraces');
-
-        return {
-          noBraces: false
-        };
-      }
-    };
-
-    compile(rule);
-
-    assert.that(called).is.true();
-  });
-
   test('compiles multiple given rules of the RulesRecord.', async (): Promise<void> => {
     const rule: BetterRulesRecord = {
       eqeqeq: [],
