@@ -1,5 +1,6 @@
 import { usePlugin } from '../betterRules';
-const react = usePlugin('react')({
+
+const react = usePlugin('react', {
   booleanPropNaming: false,
   buttonHasType: false,
   defaultPropsMatchPropTypes: false,

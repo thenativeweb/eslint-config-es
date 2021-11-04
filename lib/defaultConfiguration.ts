@@ -1,15 +1,17 @@
 import { compile } from './betterRules';
-import { createSharedRulesFor } from './rules/tsJsShared';
-import { esLintCore } from './rules/base';
-import { extended } from './rules/extended';
 import { isInstalled } from './isInstalled';
 import { Linter } from 'eslint';
 import { mapKeys } from 'lodash';
-import { mochaRules } from './rules/mocha';
 import path from 'path';
-import { react } from './rules/react';
-import { typescript } from './rules/typescript';
-import { unicorn } from './rules/unicorn';
+import {
+  coreRules,
+  createSharedRulesFor,
+  extended,
+  mochaRules,
+  react,
+  typescript,
+  unicorn
+} from './rules';
 
 const parserOptions = {
   sourceType: 'script',
@@ -42,13 +44,16 @@ if (isInstalled('react')) {
 }
 
 let rules: Linter.RulesRecord = compile({
-  ...esLintCore,
+  ...coreRules,
   ...extended,
   ...mochaRules,
   ...unicorn,
-  ...createSharedRulesFor({ language: 'javascript' })
+  ...createSharedRulesFor({ language: 'javaScript' })
 });
 
+// The ruleName of "react/prefer-es6-class" is wrongly converted to kebab-case
+// as lodash's kebab function treats the "6" as its own word, resulting in prefer-es-6-class.
+// The workaround below fixes this.
 const fixReactEs6Rule = (reactRulesRecord: Linter.RulesRecord): Linter.RulesRecord =>
   mapKeys(reactRulesRecord, (value, key): string => {
     if (key === 'react/prefer-es-6-class') {
@@ -79,7 +84,7 @@ const overrides = [
     plugins: [ ...plugins, '@typescript-eslint' ],
     rules: compile({
       ...typescript,
-      ...createSharedRulesFor({ language: 'typescript' })
+      ...createSharedRulesFor({ language: 'typeScript' })
     })
   }
 ];

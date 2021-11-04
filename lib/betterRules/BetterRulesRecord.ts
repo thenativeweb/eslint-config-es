@@ -1,15 +1,16 @@
-interface ConfigFunctionArgs {
+interface EntryFunctionArgs {
   ruleName: string;
 }
 
-type BetterRulesConfigFunction = (args: ConfigFunctionArgs) => BetterRulesRecord;
-type BetterRulesConfig = false | any[] | BetterRulesConfigFunction;
+type BetterRulesEntryFunction = (args: EntryFunctionArgs) => BetterRulesRecord;
+type BetterRulesEntry = false | any[] | BetterRulesEntryFunction;
 type BetterRulesKey = string;
 
-type BetterRulesRecord = Record<BetterRulesKey, BetterRulesConfig>;
+// This is named "BetterRulesRecord" because we replace the ESLint Type Linter.RulesRecord
+type BetterRulesRecord = Record<BetterRulesKey, BetterRulesEntry>;
 
 export type {
   BetterRulesRecord,
-  BetterRulesConfig,
-  BetterRulesConfigFunction
+  BetterRulesEntry,
+  BetterRulesEntryFunction
 };

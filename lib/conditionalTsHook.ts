@@ -1,49 +1,52 @@
-import { BetterRulesConfig, BetterRulesConfigFunction, BetterRulesRecord } from './betterRules/BetterRulesRecord';
-
-type Language = 'javascript' | 'typescript';
+import { Language } from './Language';
+import { BetterRulesEntry, BetterRulesEntryFunction, BetterRulesRecord } from './betterRules/BetterRulesRecord';
 
 interface SplitArgs {
-  core: BetterRulesConfig;
-  typescript: BetterRulesConfig;
+  core: BetterRulesEntry;
+  typeScript: BetterRulesEntry;
 }
 interface CombinedArgs {
-  both: BetterRulesConfig;
+  both: BetterRulesEntry;
 }
 
 type ConditionalHookArgs = SplitArgs | CombinedArgs;
 
-type ConditionalTsHook = (args: ConditionalHookArgs) => BetterRulesConfigFunction;
+type ConditionalTsHook = (args: ConditionalHookArgs) => BetterRulesEntryFunction;
 
 const splitConfigsFrom = (args: ConditionalHookArgs): SplitArgs => {
   if ('both' in args) {
     return {
       core: args.both,
-      typescript: args.both
+      typeScript: args.both
     };
   }
 
   return args;
 };
 
-const createConditionalTsHook = ({ language }: { language: Language}): ConditionalTsHook => {
-  const useConditionalTs = function (args: ConditionalHookArgs): BetterRulesConfigFunction {
-    const { core, typescript } = splitConfigsFrom(args);
+const createOverrideFor = ({ language }: { language: Language}): ConditionalTsHook => {
+  const overrideBaseWhenTypeScript = function (args: ConditionalHookArgs): BetterRulesEntryFunction {
+    const { core, typeScript } = splitConfigsFrom(args);
 
-    if (language === 'javascript') {
+    if (language === 'javaScript') {
       return ({ ruleName }): BetterRulesRecord => ({ [ruleName]: core });
     }
 
     return function ({ ruleName }): BetterRulesRecord {
       return {
         [ruleName]: false,
-        [`@typescript-eslint/${ruleName}`]: typescript
+        [`@typescript-eslint/${ruleName}`]: typeScript
       };
     };
   };
 
-  return useConditionalTs;
+  return overrideBaseWhenTypeScript;
 };
 
 export {
-  createConditionalTsHook
+  createOverrideFor
+};
+
+export type {
+  ConditionalHookArgs
 };

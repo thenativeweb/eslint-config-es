@@ -1,6 +1,6 @@
 import { BetterRulesRecord } from '../betterRules';
 
-const esLintCore: BetterRulesRecord = {
+const coreRules: BetterRulesRecord = {
   accessorPairs: [{
     getWithoutSet: false,
     setWithoutGet: true,
@@ -98,11 +98,7 @@ const esLintCore: BetterRulesRecord = {
   noPrototypeBuiltins: [],
   noRedeclare: [{ builtinGlobals: true }],
   noRegexSpaces: [],
-
-  // We disabled this rule since it doesn't make sense to say that we disallow
-  // some properties, but then not provide any disallowed properties. But we
-  // wanted to keep this line to show that we thought about this rule.
-  // 'noRestrictedProperties': [  {}],
+  noRestrictedProperties: false,
   noReturnAssign: [ 'always' ],
   noReturnAwait: false,
   noScriptUrl: [],
@@ -384,5 +380,5 @@ const esLintCore: BetterRulesRecord = {
 };
 
 export {
-  esLintCore
+  coreRules
 };

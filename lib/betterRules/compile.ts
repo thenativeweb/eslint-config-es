@@ -13,22 +13,22 @@ const compileRuleName = (ruleName: string): string => {
 };
 
 const compile = (rule: BetterRulesRecord): Linter.RulesRecord =>
-  Object.entries(rule).reduce((compiledRules, ruleEntry): Linter.RulesRecord => {
-    const [ ruleName, ruleConfig ] = ruleEntry;
+  Object.entries(rule).reduce((compiledRules, ruleRecord): Linter.RulesRecord => {
+    const [ ruleName, ruleEntry ] = ruleRecord;
 
-    if (isFunction(ruleConfig)) {
+    if (isFunction(ruleEntry)) {
       return {
         ...compiledRules,
-        ...compile(ruleConfig({ ruleName }))
+        ...compile(ruleEntry({ ruleName }))
       };
     }
 
     const compiledRuleName = compileRuleName(ruleName);
-    const compiledValue = ruleConfig === false ? 'off' : [ 'error', ...ruleConfig ];
+    const compiledRuleEntry = ruleEntry === false ? 'off' : [ 'error', ...ruleEntry ];
 
     return {
       ...compiledRules,
-      [compiledRuleName]: compiledValue
+      [compiledRuleName]: compiledRuleEntry
     };
   }, {});
 

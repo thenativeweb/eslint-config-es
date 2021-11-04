@@ -1,6 +1,6 @@
-import { BetterRulesRecord, usePlugin } from '../betterRules';
+import { usePlugin } from '../betterRules';
 
-const extended: BetterRulesRecord = usePlugin('extended')({
+const extended = usePlugin('extended', {
   // eslint-disable-next-line extended/consistent-err-names
   consistentErrNames: [ 'prefix' ]
 });

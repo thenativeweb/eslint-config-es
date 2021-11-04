@@ -1,7 +1,7 @@
 import * as betterRules from './betterRules';
-import * as defaultConfig from './defaultConfig';
+import * as defaultConfiguration from './defaultConfiguration';
 
 export {
   betterRules,
-  defaultConfig
+  defaultConfiguration
 };

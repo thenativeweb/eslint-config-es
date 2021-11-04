@@ -1,6 +1,6 @@
 import { usePlugin } from '../betterRules';
 
-const typescript = usePlugin('@typescript-eslint')({
+const typescript = usePlugin('@typescript-eslint', {
   adjacentOverloadSignatures: [],
   arrayType: [{ default: 'array' }],
   awaitThenable: [],

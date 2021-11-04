@@ -1,7 +1,6 @@
-import { BetterRulesRecord } from '../betterRules/BetterRulesRecord';
 import { usePlugin } from '../betterRules/usePlugin';
 
-const mochaRules: BetterRulesRecord = usePlugin('mocha')({
+const mochaRules = usePlugin('mocha', {
   handleDoneCallback: [{ ignoreSkipped: false }],
   maxTopLevelSuites: [{ limit: 1 }],
   noAsyncDescribe: [],

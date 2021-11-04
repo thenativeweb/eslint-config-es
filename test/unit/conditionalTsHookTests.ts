@@ -1,13 +1,13 @@
 import { assert } from 'assertthat';
 import { compile } from '../../lib/betterRules';
-import { createConditionalTsHook } from '../../lib/conditionalTsHook';
+import { createOverrideFor } from '../../lib/conditionalTsHook';
 
 suite('conditionalTsHook', (): void => {
-  test('when language is javascript, returns only the config for the core-rule.', async (): Promise<void> => {
-    const jsHook = createConditionalTsHook({ language: 'javascript' });
+  test('when language is javaScript, returns only the config for the core-rule.', async (): Promise<void> => {
+    const jsHook = createOverrideFor({ language: 'javaScript' });
     const configFunction = jsHook({
       core: [],
-      typescript: [ 'always' ]
+      typeScript: [ 'always' ]
     });
 
     const result = configFunction({ ruleName: 'testRule' });
@@ -17,11 +17,11 @@ suite('conditionalTsHook', (): void => {
     });
   });
 
-  test('when language is typescript, turns off the core rule and adds typescript-config.', async (): Promise<void> => {
-    const tsHook = createConditionalTsHook({ language: 'typescript' });
+  test('when language is typeScript, turns off the core rule and adds typeScript-config.', async (): Promise<void> => {
+    const tsHook = createOverrideFor({ language: 'typeScript' });
     const configFunction = tsHook({
       core: [],
-      typescript: [ 'always' ]
+      typeScript: [ 'always' ]
     });
 
     const result = configFunction({ ruleName: 'testRule' });
@@ -32,8 +32,8 @@ suite('conditionalTsHook', (): void => {
     });
   });
 
-  test('when given language javascript and a config with "both", uses it as core-config.', async (): Promise<void> => {
-    const jsHook = createConditionalTsHook({ language: 'javascript' });
+  test('when given language javaScript and a config with "both", uses it as core-config.', async (): Promise<void> => {
+    const jsHook = createOverrideFor({ language: 'javaScript' });
     const configFunction = jsHook({
       both: []
     });
@@ -45,8 +45,8 @@ suite('conditionalTsHook', (): void => {
     });
   });
 
-  test('when given language typescript and a config with "both", uses it to turn of core-rule and to config typescript.', async (): Promise<void> => {
-    const tsHook = createConditionalTsHook({ language: 'typescript' });
+  test('when given language typeScript and a config with "both", uses it to turn of core-rule and to config typeScript.', async (): Promise<void> => {
+    const tsHook = createOverrideFor({ language: 'typeScript' });
     const configFunction = tsHook({
       both: []
     });
@@ -60,11 +60,11 @@ suite('conditionalTsHook', (): void => {
   });
 
   test('when given to compile-function of betteRules, produces correct eslint rule.', async (): Promise<void> => {
-    const tsHook = createConditionalTsHook({ language: 'typescript' });
+    const tsHook = createOverrideFor({ language: 'typeScript' });
     const compileResult = compile({
       testRule: tsHook({
         core: [],
-        typescript: [ 'always' ]
+        typeScript: [ 'always' ]
       })
     });
 

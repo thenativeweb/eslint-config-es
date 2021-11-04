@@ -1,6 +1,6 @@
-import { BetterRulesRecord, usePlugin } from '../betterRules';
+import { usePlugin } from '../betterRules';
 
-const unicorn: BetterRulesRecord = usePlugin('unicorn')({
+const unicorn = usePlugin('unicorn', {
   betterRegex: [{ sortCharacterClasses: true }],
   catchErrorName: [{ name: 'ex', ignore: [ '^ex([AZ0-9].*)?$' ]}],
   consistentFunctionScoping: [],

@@ -1,63 +1,60 @@
 import { BetterRulesRecord } from '../betterRules';
-import { createConditionalTsHook } from '../conditionalTsHook';
+import { createOverrideFor } from '../conditionalTsHook';
+import { Language } from '../Language';
 
-type Language = 'typescript' | 'javascript';
 const createSharedRulesFor = ({ language }: { language: Language}): BetterRulesRecord => {
-  const useConditionalTs = createConditionalTsHook({ language });
+  const overrideBaseWhenTypeScript = createOverrideFor({ language });
+
+  // CamelCase is a corner case - as for typescript, we only want it for javascript,
+  // but for typescript we want it deactivated and replaced by namingConvention
+  const camelCaseRule: BetterRulesRecord = language === 'javaScript' ?
+    {
+      camelcase: [{
+        properties: 'always',
+        ignoreDestructuring: false,
+        ignoreImports: false,
+        allow: []
+      }]
+    } :
+    {
+      camelcase: false,
+      '@typescript-eslint/namingConvention': [
+        {
+          selector: [ 'variableLike', 'memberLike' ],
+          format: [ 'strictCamelCase', 'StrictPascalCase' ],
+          filter: { regex: '^__html$', match: false }
+        },
+        {
+          selector: [ 'typeLike' ],
+          format: [ 'StrictPascalCase' ]
+        },
+        {
+          selector: [ 'typeParameter' ],
+          format: [ 'StrictPascalCase' ],
+          prefix: [ 'T' ]
+        }
+      ]
+    };
 
   return {
-    braceStyle: useConditionalTs({ both: [ '1tbs', { allowSingleLine: false }]}),
+    ...camelCaseRule,
+    braceStyle: overrideBaseWhenTypeScript({ both: [ '1tbs', { allowSingleLine: false }]}),
 
-    // Camlescase is a corner case - as for typescript, we only want it for javascript,
-    // but for typescript we want it deactivated and replcaed by namingConvention
-    camelcase (): BetterRulesRecord {
-      if (language === 'javascript') {
-        return {
-          camelcase: [{
-            properties: 'always',
-            ignoreDestructuring: false,
-            ignoreImports: false,
-            allow: []
-          }]
-        };
-      }
-
-      return {
-        camelcase: false,
-        '@typescript-eslint/namingConvention': [
-          {
-            selector: [ 'variableLike', 'memberLike' ],
-            format: [ 'strictCamelCase', 'StrictPascalCase' ],
-            filter: { regex: '^__html$', match: false }
-          },
-          {
-            selector: [ 'typeLike' ],
-            format: [ 'StrictPascalCase' ]
-          },
-          {
-            selector: [ 'typeParameter' ],
-            format: [ 'StrictPascalCase' ],
-            prefix: [ 'T' ]
-          }
-        ]
-
-      };
-    },
-    commaSpacing: useConditionalTs({
+    commaSpacing: overrideBaseWhenTypeScript({
       core: [{ before: false, after: true }],
-      typescript: []
+      typeScript: []
     }),
-    dotNotation: useConditionalTs({
+    dotNotation: overrideBaseWhenTypeScript({
       core: [{ allowKeywords: true }],
-      typescript: [{
+      typeScript: [{
         allowKeywords: true,
         allowPrivateClassPropertyAccess: false
       }]
     }),
-    funcCallSpacing: useConditionalTs({
+    funcCallSpacing: overrideBaseWhenTypeScript({
       both: [ 'never' ]
     }),
-    indent: useConditionalTs({
+    indent: overrideBaseWhenTypeScript({
       core: [ 2, {
         SwitchCase: 1,
         VariableDeclarator: { var: 2, let: 2, const: 3 },
@@ -91,7 +88,7 @@ const createSharedRulesFor = ({ language }: { language: Language}): BetterRulesR
         ],
         ignoreComments: false
       }],
-      typescript: [ 2, {
+      typeScript: [ 2, {
         SwitchCase: 1,
         VariableDeclarator: { var: 2, let: 2, const: 3 },
         // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -108,29 +105,29 @@ const createSharedRulesFor = ({ language }: { language: Language}): BetterRulesR
         ignoreComments: false
       }]
     }),
-    keywordSpacing: useConditionalTs({
+    keywordSpacing: overrideBaseWhenTypeScript({
       both: [{ before: true, after: true }]
     }),
-    linesBetweenClassMembers: useConditionalTs({
+    linesBetweenClassMembers: overrideBaseWhenTypeScript({
       core: [ 'always', {
         exceptAfterSingleLine: false
       }],
-      typescript: [ 'always', {
+      typeScript: [ 'always', {
         exceptAfterSingleLine: false,
         exceptAfterOverload: false
       }]
     }),
-    noArrayConstructor: useConditionalTs({
+    noArrayConstructor: overrideBaseWhenTypeScript({
       both: []
     }),
-    noDupeClassMembers: useConditionalTs({
+    noDupeClassMembers: overrideBaseWhenTypeScript({
       both: []
     }),
-    noEmptyFunction: useConditionalTs({
+    noEmptyFunction: overrideBaseWhenTypeScript({
       core: [{ allow: []}],
-      typescript: []
+      typeScript: []
     }),
-    noExtraParens: useConditionalTs({ both: [ 'all', {
+    noExtraParens: overrideBaseWhenTypeScript({ both: [ 'all', {
       conditionalAssign: false,
       enforceForArrowConditionals: false,
       // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -138,53 +135,53 @@ const createSharedRulesFor = ({ language }: { language: Language}): BetterRulesR
       nestedBinaryExpressions: false,
       returnAssign: false
     }]}),
-    noExtraSemi: useConditionalTs({
+    noExtraSemi: overrideBaseWhenTypeScript({
       both: []
     }),
-    noLoopFunc: useConditionalTs({
+    noLoopFunc: overrideBaseWhenTypeScript({
       both: []
     }),
-    noLossOfPrecision: useConditionalTs({
+    noLossOfPrecision: overrideBaseWhenTypeScript({
       both: []
     }),
-    noMagicNumbers: useConditionalTs({
+    noMagicNumbers: overrideBaseWhenTypeScript({
       both: false
     }),
-    noUnusedVars: useConditionalTs({
+    noUnusedVars: overrideBaseWhenTypeScript({
       core: [{
         args: 'after-used',
         caughtErrors: 'all',
         vars: 'all',
         ignoreRestSiblings: false
       }],
-      typescript: [{ vars: 'all' }]
+      typeScript: [{ vars: 'all' }]
     }),
-    noUseBeforeDefine: useConditionalTs({ core: [{
+    noUseBeforeDefine: overrideBaseWhenTypeScript({ core: [{
       functions: true,
       classes: true,
       variables: true
     }],
-    typescript: [{
+    typeScript: [{
       functions: true,
       classes: true,
       enums: true,
       variables: true,
       typedefs: true
     }]}),
-    noUselessConstructor: useConditionalTs({
+    noUselessConstructor: overrideBaseWhenTypeScript({
       both: []
     }),
-    requireAwait: useConditionalTs({
+    requireAwait: overrideBaseWhenTypeScript({
       both: false
     }),
-    semi: useConditionalTs({
+    semi: overrideBaseWhenTypeScript({
       both: [ 'always', { omitLastInOneLineBlock: false }]
     }),
-    spaceBeforeFunctionParen: useConditionalTs({
+    spaceBeforeFunctionParen: overrideBaseWhenTypeScript({
       core: [ 'always' ],
-      typescript: []
+      typeScript: []
     }),
-    spaceInfixOps: useConditionalTs({
+    spaceInfixOps: overrideBaseWhenTypeScript({
       both: [{ int32Hint: false }]
     })
   };
