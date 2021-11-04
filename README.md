@@ -4,13 +4,13 @@ eslint-config-es contains a strict ESLint configuration for ES2015+ and TypeScri
 
 ## Status
 
-| Category         | Status                                                                                                        |
-| ---------------- | ------------------------------------------------------------------------------------------------------------- |
-| Version          | [![npm](https://img.shields.io/npm/v/eslint-config-es)](https://www.npmjs.com/package/eslint-config-es)       |
-| Dependencies     | ![David](https://img.shields.io/david/thenativeweb/eslint-config-es)                                          |
-| Dev dependencies | ![David](https://img.shields.io/david/dev/thenativeweb/eslint-config-es)                                      |
-| Build            | ![GitHub Actions](https://github.com/thenativeweb/eslint-config-es/workflows/Release/badge.svg?branch=master) |
-| License          | ![GitHub](https://img.shields.io/github/license/thenativeweb/eslint-config-es)                                |
+| Category         | Status                                                                                                      |
+| ---------------- | ----------------------------------------------------------------------------------------------------------- |
+| Version          | [![npm](https://img.shields.io/npm/v/eslint-config-es)](https://www.npmjs.com/package/eslint-config-es)     |
+| Dependencies     | ![David](https://img.shields.io/david/thenativeweb/eslint-config-es)                                        |
+| Dev dependencies | ![David](https://img.shields.io/david/dev/thenativeweb/eslint-config-es)                                    |
+| Build            | ![GitHub Actions](https://github.com/thenativeweb/eslint-config-es/workflows/Release/badge.svg?branch=main) |
+| License          | ![GitHub](https://img.shields.io/github/license/thenativeweb/eslint-config-es)                              |
 
 ## Installation
 
@@ -23,6 +23,7 @@ The following additional ESLint plugins are included by default, so you don't ha
 
 | Plugin                                                                                             | Automatically enabled |
 | -------------------------------------------------------------------------------------------------- | --------------------- |
+| [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments)       | Yes                   |
 | [eslint-plugin-extended](https://www.npmjs.com/package/eslint-plugin-extended)                     | Yes                   |
 | [eslint-plugin-mocha](https://www.npmjs.com/package/eslint-plugin-mocha)                           | Yes                   |
 | [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)                           | No                    |
@@ -47,14 +48,14 @@ To use one of those configurations, create a `.eslintrc.json` file in your proje
 
 Alternatively, you may also use `es/browser`.
 
-If you want to override any rules, you can do so in your configuration file.
+If you want to override any rules, you can do so in your configuration file. For details on how to do this, e.g. to get an explanation on how to enable or disable specific rules, see the [ESLint documentation on extending configuration files](https://eslint.org/docs/user-guide/configuring/configuration-files#extending-configuration-files).
 
 ## Running quality assurance
 
-To analyse the source code of the repository itself, run the following command:
+To run quality assurance for this module use [roboter](https://www.npmjs.com/package/roboter):
 
 ```shell
-$ npm run analyse
+$ npx roboter
 ```
 
 **Note: As we switched this library to TypeScript which is not natively supported by ESLint, this command will execute a build before analysing to actually generate the necessary rules in JavaScript.**

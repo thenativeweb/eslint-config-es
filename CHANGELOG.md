@@ -1,3 +1,598 @@
+# [3.31.0](https://github.com/thenativeweb/eslint-config-es/compare/3.30.15...3.31.0) (2021-10-29)
+
+
+### Features
+
+* Bump dependencies. ([#431](https://github.com/thenativeweb/eslint-config-es/issues/431)) ([77914df](https://github.com/thenativeweb/eslint-config-es/commit/77914dfbc8032bad9292e365ebafd4678d4b3f02))
+
+## [3.30.15](https://github.com/thenativeweb/eslint-config-es/compare/3.30.14...3.30.15) (2021-08-26)
+
+
+### Bug Fixes
+
+* disable unicorn/require-post-message-target-origin ([#404](https://github.com/thenativeweb/eslint-config-es/issues/404)) ([9500768](https://github.com/thenativeweb/eslint-config-es/commit/9500768c109ca095e22677853c7319c3c10877f8))
+
+## [3.30.14](https://github.com/thenativeweb/eslint-config-es/compare/3.30.13...3.30.14) (2021-08-26)
+
+
+### Bug Fixes
+
+* set a valid `parserOptions.ecmaVersion` ([#403](https://github.com/thenativeweb/eslint-config-es/issues/403)) ([0024415](https://github.com/thenativeweb/eslint-config-es/commit/0024415daf039ecb2d4939964f87621b6c4b21df))
+
+## [3.30.13](https://github.com/thenativeweb/eslint-config-es/compare/3.30.12...3.30.13) (2021-08-19)
+
+
+### Bug Fixes
+
+* disable unicorn-top-level-await ([#399](https://github.com/thenativeweb/eslint-config-es/issues/399)) ([0fd4411](https://github.com/thenativeweb/eslint-config-es/commit/0fd4411672962a70231c6073c654abb0ae5071c0))
+
+## [3.30.12](https://github.com/thenativeweb/eslint-config-es/compare/3.30.11...3.30.12) (2021-08-16)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 34.0.1 to 35.0.0 ([#396](https://github.com/thenativeweb/eslint-config-es/issues/396)) ([080b405](https://github.com/thenativeweb/eslint-config-es/commit/080b405dcb6d659fa721b9c493e0c657d8ea3890))
+
+## [3.30.11](https://github.com/thenativeweb/eslint-config-es/compare/3.30.10...3.30.11) (2021-08-16)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.28.5 to 4.29.1 ([#397](https://github.com/thenativeweb/eslint-config-es/issues/397)) ([42990d7](https://github.com/thenativeweb/eslint-config-es/commit/42990d74294dd6bcfc24ffd12ea23e171e024565))
+
+## [3.30.10](https://github.com/thenativeweb/eslint-config-es/compare/3.30.9...3.30.10) (2021-08-16)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.29.0 to 4.29.1 ([#398](https://github.com/thenativeweb/eslint-config-es/issues/398)) ([5f7cddb](https://github.com/thenativeweb/eslint-config-es/commit/5f7cddb62b4461ffa48599fb291c8abc1832caf6))
+
+## [3.30.9](https://github.com/thenativeweb/eslint-config-es/compare/3.30.8...3.30.9) (2021-08-09)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.28.5 to 4.29.0 ([#394](https://github.com/thenativeweb/eslint-config-es/issues/394)) ([5f6aa88](https://github.com/thenativeweb/eslint-config-es/commit/5f6aa88270a6865e4f4e1b043b6b22b6285df320))
+
+## [3.30.8](https://github.com/thenativeweb/eslint-config-es/compare/3.30.7...3.30.8) (2021-08-06)
+
+
+### Bug Fixes
+
+* Enhance documentation. ([#393](https://github.com/thenativeweb/eslint-config-es/issues/393)) ([b287b7e](https://github.com/thenativeweb/eslint-config-es/commit/b287b7ee06d242eebd16428a5d6d4113d7cdabcf))
+
+## [3.30.7](https://github.com/thenativeweb/eslint-config-es/compare/3.30.6...3.30.7) (2021-08-02)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.28.4 to 4.28.5 ([#389](https://github.com/thenativeweb/eslint-config-es/issues/389)) ([4a371bb](https://github.com/thenativeweb/eslint-config-es/commit/4a371bb353326ce551703197cd1c2989bf7b2cfa))
+
+## [3.30.6](https://github.com/thenativeweb/eslint-config-es/compare/3.30.5...3.30.6) (2021-08-02)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.28.4 to 4.28.5 ([#388](https://github.com/thenativeweb/eslint-config-es/issues/388)) ([84dce82](https://github.com/thenativeweb/eslint-config-es/commit/84dce821c441d138d8513bb5e99653558ad94dc4))
+
+## [3.30.5](https://github.com/thenativeweb/eslint-config-es/compare/3.30.4...3.30.5) (2021-07-26)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.28.3 to 4.28.4 ([#387](https://github.com/thenativeweb/eslint-config-es/issues/387)) ([2fc5177](https://github.com/thenativeweb/eslint-config-es/commit/2fc517713a3d9a32421e68b3903550005f064c7d))
+
+## [3.30.4](https://github.com/thenativeweb/eslint-config-es/compare/3.30.3...3.30.4) (2021-07-26)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.28.3 to 4.28.4 ([#386](https://github.com/thenativeweb/eslint-config-es/issues/386)) ([7f4438d](https://github.com/thenativeweb/eslint-config-es/commit/7f4438d4773c7e0a624e122d9ad7957ecbe31c17))
+
+## [3.30.3](https://github.com/thenativeweb/eslint-config-es/compare/3.30.2...3.30.3) (2021-07-19)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.28.2 to 4.28.3 ([#384](https://github.com/thenativeweb/eslint-config-es/issues/384)) ([24f928c](https://github.com/thenativeweb/eslint-config-es/commit/24f928c89cfe3accdf2c1484804e7859013a9a54))
+
+## [3.30.2](https://github.com/thenativeweb/eslint-config-es/compare/3.30.1...3.30.2) (2021-07-19)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.28.2 to 4.28.3 ([#385](https://github.com/thenativeweb/eslint-config-es/issues/385)) ([0a588d0](https://github.com/thenativeweb/eslint-config-es/commit/0a588d027bf541d08fd425475334367a93000e23))
+
+## [3.30.1](https://github.com/thenativeweb/eslint-config-es/compare/3.30.0...3.30.1) (2021-07-12)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.28.1 to 4.28.2 ([#382](https://github.com/thenativeweb/eslint-config-es/issues/382)) ([e3e6fbe](https://github.com/thenativeweb/eslint-config-es/commit/e3e6fbe8147f6386511ae47d59a03f852c799842))
+
+# [3.30.0](https://github.com/thenativeweb/eslint-config-es/compare/3.29.11...3.30.0) (2021-07-11)
+
+
+### Features
+
+* Update dependencies, support latest EcmaScript. ([efa11e6](https://github.com/thenativeweb/eslint-config-es/commit/efa11e606865aabed39084dc2cc42b957082d9c9))
+
+## [3.29.11](https://github.com/thenativeweb/eslint-config-es/compare/3.29.10...3.29.11) (2021-07-05)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.28.0 to 4.28.1 ([#375](https://github.com/thenativeweb/eslint-config-es/issues/375)) ([e8c09e1](https://github.com/thenativeweb/eslint-config-es/commit/e8c09e1994884d66b7da8a4ec2a9bd85fc67488a))
+
+## [3.29.10](https://github.com/thenativeweb/eslint-config-es/compare/3.29.9...3.29.10) (2021-06-28)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.26.0 to 4.28.0 ([#374](https://github.com/thenativeweb/eslint-config-es/issues/374)) ([3e604c4](https://github.com/thenativeweb/eslint-config-es/commit/3e604c40249696d640038f03c2b5e4ce04f0cf66))
+
+## [3.29.9](https://github.com/thenativeweb/eslint-config-es/compare/3.29.8...3.29.9) (2021-06-10)
+
+
+### Bug Fixes
+
+* bump normalize-url from 6.0.0 to 6.0.1 ([#365](https://github.com/thenativeweb/eslint-config-es/issues/365)) ([c1910b8](https://github.com/thenativeweb/eslint-config-es/commit/c1910b843bafb40c0d2cf3e688356aca525432b0))
+
+## [3.29.8](https://github.com/thenativeweb/eslint-config-es/compare/3.29.7...3.29.8) (2021-06-08)
+
+
+### Bug Fixes
+
+* bump trim-newlines from 3.0.0 to 3.0.1 ([#364](https://github.com/thenativeweb/eslint-config-es/issues/364)) ([67aea55](https://github.com/thenativeweb/eslint-config-es/commit/67aea55d8dd630a38654eedda7ef7702ee703980))
+
+## [3.29.7](https://github.com/thenativeweb/eslint-config-es/compare/3.29.6...3.29.7) (2021-06-07)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.25.0 to 4.26.0 ([#361](https://github.com/thenativeweb/eslint-config-es/issues/361)) ([0b593aa](https://github.com/thenativeweb/eslint-config-es/commit/0b593aa364f0fc545ad9bc5f57e6e46feabb21d3))
+
+## [3.29.6](https://github.com/thenativeweb/eslint-config-es/compare/3.29.5...3.29.6) (2021-06-07)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.25.0 to 4.26.0 ([#362](https://github.com/thenativeweb/eslint-config-es/issues/362)) ([56002b5](https://github.com/thenativeweb/eslint-config-es/commit/56002b5022818afd3e0c39b6a9849287ba425200))
+
+## [3.29.5](https://github.com/thenativeweb/eslint-config-es/compare/3.29.4...3.29.5) (2021-05-31)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-mocha from 8.1.0 to 9.0.0 ([#356](https://github.com/thenativeweb/eslint-config-es/issues/356)) ([26108a8](https://github.com/thenativeweb/eslint-config-es/commit/26108a87f65f351bc234d13f94a59849ed975fba))
+
+## [3.29.4](https://github.com/thenativeweb/eslint-config-es/compare/3.29.3...3.29.4) (2021-05-31)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-react from 7.23.2 to 7.24.0 ([#358](https://github.com/thenativeweb/eslint-config-es/issues/358)) ([94c9fa9](https://github.com/thenativeweb/eslint-config-es/commit/94c9fa9f0d8113d1204dc779e906c46f2edeb5a9))
+
+## [3.29.3](https://github.com/thenativeweb/eslint-config-es/compare/3.29.2...3.29.3) (2021-05-31)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.24.0 to 4.25.0 ([#359](https://github.com/thenativeweb/eslint-config-es/issues/359)) ([e483903](https://github.com/thenativeweb/eslint-config-es/commit/e48390366261a0e2edeca8b47f3b79630b09f57f))
+
+## [3.29.2](https://github.com/thenativeweb/eslint-config-es/compare/3.29.1...3.29.2) (2021-05-25)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.23.0 to 4.25.0 ([#354](https://github.com/thenativeweb/eslint-config-es/issues/354)) ([1f6d118](https://github.com/thenativeweb/eslint-config-es/commit/1f6d1185f5b7c4dc677ee1d1aaadbe2c71d57c08))
+
+## [3.29.1](https://github.com/thenativeweb/eslint-config-es/compare/3.29.0...3.29.1) (2021-05-25)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.23.0 to 4.24.0 ([#353](https://github.com/thenativeweb/eslint-config-es/issues/353)) ([cf85a14](https://github.com/thenativeweb/eslint-config-es/commit/cf85a14f937de0108d11d1dd0813529f845509c4))
+
+# [3.29.0](https://github.com/thenativeweb/eslint-config-es/compare/3.28.34...3.29.0) (2021-05-17)
+
+
+### Features
+
+* Introduce checking ESLint comments. ([#349](https://github.com/thenativeweb/eslint-config-es/issues/349)) ([fa4af08](https://github.com/thenativeweb/eslint-config-es/commit/fa4af08fa2018d65154bc30c2c19d8581f207805))
+
+## [3.28.34](https://github.com/thenativeweb/eslint-config-es/compare/3.28.33...3.28.34) (2021-05-17)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 31.0.0 to 32.0.1 ([#345](https://github.com/thenativeweb/eslint-config-es/issues/345)) ([d0bb58b](https://github.com/thenativeweb/eslint-config-es/commit/d0bb58bb58106724e392301c845edfb22e7109a0))
+
+## [3.28.33](https://github.com/thenativeweb/eslint-config-es/compare/3.28.32...3.28.33) (2021-05-17)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.22.1 to 4.23.0 ([#346](https://github.com/thenativeweb/eslint-config-es/issues/346)) ([693d0aa](https://github.com/thenativeweb/eslint-config-es/commit/693d0aa826ff422831c5fb87b4f3eb431a24d459))
+
+## [3.28.32](https://github.com/thenativeweb/eslint-config-es/compare/3.28.31...3.28.32) (2021-05-17)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.22.1 to 4.23.0 ([#347](https://github.com/thenativeweb/eslint-config-es/issues/347)) ([e44be7f](https://github.com/thenativeweb/eslint-config-es/commit/e44be7f54f60bdba50f325fdf06e079bca46e208))
+
+## [3.28.31](https://github.com/thenativeweb/eslint-config-es/compare/3.28.30...3.28.31) (2021-05-17)
+
+
+### Bug Fixes
+
+* Disable ESLint's built-in rule default-param-last in TypeScript context. ([#348](https://github.com/thenativeweb/eslint-config-es/issues/348)) ([8a14463](https://github.com/thenativeweb/eslint-config-es/commit/8a14463b09d18e8e8950b4b9dffc021bbd09609b))
+
+## [3.28.30](https://github.com/thenativeweb/eslint-config-es/compare/3.28.29...3.28.30) (2021-05-10)
+
+
+### Bug Fixes
+
+* bump hosted-git-info from 2.8.5 to 2.8.9 ([#343](https://github.com/thenativeweb/eslint-config-es/issues/343)) ([45cd151](https://github.com/thenativeweb/eslint-config-es/commit/45cd1512545be925ca746d8bdb68ef288f309b3b))
+
+## [3.28.29](https://github.com/thenativeweb/eslint-config-es/compare/3.28.28...3.28.29) (2021-05-06)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.22.0 to 4.22.1 ([#341](https://github.com/thenativeweb/eslint-config-es/issues/341)) ([7810d56](https://github.com/thenativeweb/eslint-config-es/commit/7810d568fd5025910e1934644409afecabfdeb4c))
+
+## [3.28.28](https://github.com/thenativeweb/eslint-config-es/compare/3.28.27...3.28.28) (2021-05-06)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.22.0 to 4.22.1 ([#340](https://github.com/thenativeweb/eslint-config-es/issues/340)) ([3a3fb66](https://github.com/thenativeweb/eslint-config-es/commit/3a3fb66e2ce83037c9d56ec2097d48c193bd3f6f))
+
+## [3.28.27](https://github.com/thenativeweb/eslint-config-es/compare/3.28.26...3.28.27) (2021-04-27)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 29.0.0 to 31.0.0 ([#338](https://github.com/thenativeweb/eslint-config-es/issues/338)) ([744d8af](https://github.com/thenativeweb/eslint-config-es/commit/744d8af1b369e19b6e6084f4e98f5a6ecc6dc12b))
+
+## [3.28.26](https://github.com/thenativeweb/eslint-config-es/compare/3.28.25...3.28.26) (2021-04-11)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-react from 7.23.1 to 7.23.2 ([#332](https://github.com/thenativeweb/eslint-config-es/issues/332)) ([ba7c395](https://github.com/thenativeweb/eslint-config-es/commit/ba7c3958ba3b9663c9def7bf32c29401e46ddd2e))
+
+## [3.28.25](https://github.com/thenativeweb/eslint-config-es/compare/3.28.24...3.28.25) (2021-03-29)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.19.0 to 4.20.0 ([#327](https://github.com/thenativeweb/eslint-config-es/issues/327)) ([5134261](https://github.com/thenativeweb/eslint-config-es/commit/5134261945c1ea581473294dd46ccb23ec125a06))
+
+## [3.28.24](https://github.com/thenativeweb/eslint-config-es/compare/3.28.23...3.28.24) (2021-03-25)
+
+
+### Bug Fixes
+
+* Migrate from master to main. ([#325](https://github.com/thenativeweb/eslint-config-es/issues/325)) ([37835fe](https://github.com/thenativeweb/eslint-config-es/commit/37835fe09f133f149727f82805654be0ce05cc76))
+
+## [3.28.23](https://github.com/thenativeweb/eslint-config-es/compare/3.28.22...3.28.23) (2021-03-24)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-react from 7.23.0 to 7.23.1 ([#323](https://github.com/thenativeweb/eslint-config-es/issues/323)) ([b9f1f29](https://github.com/thenativeweb/eslint-config-es/commit/b9f1f29716ff70b0317532c1d267f11a021b44c7))
+
+## [3.28.22](https://github.com/thenativeweb/eslint-config-es/compare/3.28.21...3.28.22) (2021-03-23)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-react from 7.22.0 to 7.23.0 ([#322](https://github.com/thenativeweb/eslint-config-es/issues/322)) ([df8c701](https://github.com/thenativeweb/eslint-config-es/commit/df8c701c8c4d23d39e3676b0fb234e407b632292))
+
+## [3.28.21](https://github.com/thenativeweb/eslint-config-es/compare/3.28.20...3.28.21) (2021-03-23)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 28.0.2 to 29.0.0 ([#318](https://github.com/thenativeweb/eslint-config-es/issues/318)) ([131b6fa](https://github.com/thenativeweb/eslint-config-es/commit/131b6fad16d6e631589aee64a27c8a563c4ea1c9))
+
+## [3.28.20](https://github.com/thenativeweb/eslint-config-es/compare/3.28.19...3.28.20) (2021-03-23)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.18.0 to 4.19.0 ([#320](https://github.com/thenativeweb/eslint-config-es/issues/320)) ([e3b7db1](https://github.com/thenativeweb/eslint-config-es/commit/e3b7db16f6a1727ef743d0486a906d9747963b70))
+
+## [3.28.19](https://github.com/thenativeweb/eslint-config-es/compare/3.28.18...3.28.19) (2021-03-23)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.18.0 to 4.19.0 ([#319](https://github.com/thenativeweb/eslint-config-es/issues/319)) ([d056c5d](https://github.com/thenativeweb/eslint-config-es/commit/d056c5d741afc576ac10323f5292897acc93d200))
+
+## [3.28.18](https://github.com/thenativeweb/eslint-config-es/compare/3.28.17...3.28.18) (2021-03-19)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.17.0 to 4.18.0 ([#317](https://github.com/thenativeweb/eslint-config-es/issues/317)) ([b09527b](https://github.com/thenativeweb/eslint-config-es/commit/b09527b11f523f0851ea88230897d01c315e764a))
+
+## [3.28.17](https://github.com/thenativeweb/eslint-config-es/compare/3.28.16...3.28.17) (2021-03-19)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.17.0 to 4.18.0 ([#316](https://github.com/thenativeweb/eslint-config-es/issues/316)) ([9e67eeb](https://github.com/thenativeweb/eslint-config-es/commit/9e67eeb241b894de1af43628e309d2f920edb4ae))
+
+## [3.28.16](https://github.com/thenativeweb/eslint-config-es/compare/3.28.15...3.28.16) (2021-03-09)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.16.1 to 4.17.0 ([#313](https://github.com/thenativeweb/eslint-config-es/issues/313)) ([540e9e3](https://github.com/thenativeweb/eslint-config-es/commit/540e9e38b3797b99acfb5278136b2f15cbe5c726))
+
+## [3.28.15](https://github.com/thenativeweb/eslint-config-es/compare/3.28.14...3.28.15) (2021-03-09)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.16.1 to 4.17.0 ([#314](https://github.com/thenativeweb/eslint-config-es/issues/314)) ([59857aa](https://github.com/thenativeweb/eslint-config-es/commit/59857aa0c818e0b3f73b203d40cd2eb1d52a2168))
+
+## [3.28.14](https://github.com/thenativeweb/eslint-config-es/compare/3.28.13...3.28.14) (2021-03-05)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-mocha from 8.0.0 to 8.1.0 ([#312](https://github.com/thenativeweb/eslint-config-es/issues/312)) ([5f917ec](https://github.com/thenativeweb/eslint-config-es/commit/5f917ec34a3b812833921d8d83e69d939f177cdf))
+
+## [3.28.13](https://github.com/thenativeweb/eslint-config-es/compare/3.28.12...3.28.13) (2021-03-02)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.15.2 to 4.16.1 ([#309](https://github.com/thenativeweb/eslint-config-es/issues/309)) ([4435501](https://github.com/thenativeweb/eslint-config-es/commit/443550124653301e10ca155c726403f7d85706af))
+
+## [3.28.12](https://github.com/thenativeweb/eslint-config-es/compare/3.28.11...3.28.12) (2021-03-02)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.15.2 to 4.16.0 ([#306](https://github.com/thenativeweb/eslint-config-es/issues/306)) ([7c73790](https://github.com/thenativeweb/eslint-config-es/commit/7c73790a2c0303117ea88b44f94f730a257abb09))
+
+## [3.28.11](https://github.com/thenativeweb/eslint-config-es/compare/3.28.10...3.28.11) (2021-03-01)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.15.2 to 4.16.0 ([#307](https://github.com/thenativeweb/eslint-config-es/issues/307)) ([0b21873](https://github.com/thenativeweb/eslint-config-es/commit/0b218739f142e517496022be23b54044938e5bc2))
+
+## [3.28.10](https://github.com/thenativeweb/eslint-config-es/compare/3.28.9...3.28.10) (2021-02-23)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.15.1 to 4.15.2 ([#302](https://github.com/thenativeweb/eslint-config-es/issues/302)) ([6ef585b](https://github.com/thenativeweb/eslint-config-es/commit/6ef585b6da516566d390ff1e23f9568dcfb668d7))
+
+## [3.28.9](https://github.com/thenativeweb/eslint-config-es/compare/3.28.8...3.28.9) (2021-02-23)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.15.1 to 4.15.2 ([#301](https://github.com/thenativeweb/eslint-config-es/issues/301)) ([e4dcbc2](https://github.com/thenativeweb/eslint-config-es/commit/e4dcbc295a621837847e2d3f9c9d587fed2ca829))
+
+## [3.28.8](https://github.com/thenativeweb/eslint-config-es/compare/3.28.7...3.28.8) (2021-02-15)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.15.0 to 4.15.1 ([#298](https://github.com/thenativeweb/eslint-config-es/issues/298)) ([0a68d5a](https://github.com/thenativeweb/eslint-config-es/commit/0a68d5a9705bc4735330f54a024555170e9caeda))
+
+## [3.28.7](https://github.com/thenativeweb/eslint-config-es/compare/3.28.6...3.28.7) (2021-02-15)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.15.0 to 4.15.1 ([#299](https://github.com/thenativeweb/eslint-config-es/issues/299)) ([9e0ba07](https://github.com/thenativeweb/eslint-config-es/commit/9e0ba0738e6f4f473ec70be627cb170e700045eb))
+
+## [3.28.6](https://github.com/thenativeweb/eslint-config-es/compare/3.28.5...3.28.6) (2021-02-15)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 28.0.0 to 28.0.1 ([#296](https://github.com/thenativeweb/eslint-config-es/issues/296)) ([6bbb28a](https://github.com/thenativeweb/eslint-config-es/commit/6bbb28ad25d1f3dd827b428bbc68e18ed180e08c))
+
+## [3.28.5](https://github.com/thenativeweb/eslint-config-es/compare/3.28.4...3.28.5) (2021-02-10)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 27.0.0 to 28.0.0 ([#293](https://github.com/thenativeweb/eslint-config-es/issues/293)) ([e83ec8b](https://github.com/thenativeweb/eslint-config-es/commit/e83ec8b86b225f2a94ac641a3ce7e6ab957f2612))
+
+## [3.28.4](https://github.com/thenativeweb/eslint-config-es/compare/3.28.3...3.28.4) (2021-02-09)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 26.0.1 to 27.0.0 ([#281](https://github.com/thenativeweb/eslint-config-es/issues/281)) ([3906bb2](https://github.com/thenativeweb/eslint-config-es/commit/3906bb2b77238b31487bd8680eced6115c5a6980))
+
+## [3.28.3](https://github.com/thenativeweb/eslint-config-es/compare/3.28.2...3.28.3) (2021-02-09)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.13.0 to 4.15.0 ([#290](https://github.com/thenativeweb/eslint-config-es/issues/290)) ([aa021f3](https://github.com/thenativeweb/eslint-config-es/commit/aa021f3e7bb2a237734ecd5b5d8adff9f95f2edb))
+
+## [3.28.2](https://github.com/thenativeweb/eslint-config-es/compare/3.28.1...3.28.2) (2021-02-08)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.14.2 to 4.15.0 ([#289](https://github.com/thenativeweb/eslint-config-es/issues/289)) ([dff5b6d](https://github.com/thenativeweb/eslint-config-es/commit/dff5b6d92eb1f277c690bfeaf463b5158387abec))
+
+## [3.28.1](https://github.com/thenativeweb/eslint-config-es/compare/3.28.0...3.28.1) (2021-02-01)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.14.1 to 4.14.2 ([#287](https://github.com/thenativeweb/eslint-config-es/issues/287)) ([637c204](https://github.com/thenativeweb/eslint-config-es/commit/637c20458816a78d742f5ef771f9d0fd98d49d8d))
+
+# [3.28.0](https://github.com/thenativeweb/eslint-config-es/compare/3.27.7...3.28.0) (2021-01-27)
+
+
+### Features
+
+* Disable unicorn/prefer-ternary temporarily. ([#285](https://github.com/thenativeweb/eslint-config-es/issues/285)) ([8ae4324](https://github.com/thenativeweb/eslint-config-es/commit/8ae43244ba5fbabac7897891e2977f1ead3235be))
+
+## [3.27.7](https://github.com/thenativeweb/eslint-config-es/compare/3.27.6...3.27.7) (2021-01-27)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.14.0 to 4.14.1 ([#282](https://github.com/thenativeweb/eslint-config-es/issues/282)) ([f5e434f](https://github.com/thenativeweb/eslint-config-es/commit/f5e434f4aabf88340cce843346841a97f5b7896f))
+
+## [3.27.6](https://github.com/thenativeweb/eslint-config-es/compare/3.27.5...3.27.6) (2021-01-18)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.13.0 to 4.14.0 ([#279](https://github.com/thenativeweb/eslint-config-es/issues/279)) ([64572e0](https://github.com/thenativeweb/eslint-config-es/commit/64572e02af5b99efc7179cf46b729062b8323602))
+
+## [3.27.5](https://github.com/thenativeweb/eslint-config-es/compare/3.27.4...3.27.5) (2021-01-13)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 26.0.0 to 26.0.1 ([#275](https://github.com/thenativeweb/eslint-config-es/issues/275)) ([de9503a](https://github.com/thenativeweb/eslint-config-es/commit/de9503adb961cb4a1a2df02b9ea31838be2d8927))
+
+## [3.27.4](https://github.com/thenativeweb/eslint-config-es/compare/3.27.3...3.27.4) (2021-01-12)
+
+
+### Bug Fixes
+
+* bump eslint-plugin-unicorn from 25.0.1 to 26.0.0 ([#272](https://github.com/thenativeweb/eslint-config-es/issues/272)) ([cacc281](https://github.com/thenativeweb/eslint-config-es/commit/cacc281e5dd9d727c38f663628a231273a20dbdf))
+
+## [3.27.3](https://github.com/thenativeweb/eslint-config-es/compare/3.27.2...3.27.3) (2021-01-11)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.12.0 to 4.13.0 ([#274](https://github.com/thenativeweb/eslint-config-es/issues/274)) ([14d5eca](https://github.com/thenativeweb/eslint-config-es/commit/14d5eca7c8bfe58170143e6f670c5b3c040de91e))
+
+## [3.27.2](https://github.com/thenativeweb/eslint-config-es/compare/3.27.1...3.27.2) (2021-01-11)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.12.0 to 4.13.0 ([#273](https://github.com/thenativeweb/eslint-config-es/issues/273)) ([dbdb288](https://github.com/thenativeweb/eslint-config-es/commit/dbdb28811992540e5fad9ac48e8b6ea580ceb791))
+
+## [3.27.1](https://github.com/thenativeweb/eslint-config-es/compare/3.27.0...3.27.1) (2021-01-07)
+
+
+### Bug Fixes
+
+* Disable rule temporarily. ([f7c087f](https://github.com/thenativeweb/eslint-config-es/commit/f7c087fc12e270ec7ca59d1644dd68e2f8c5c00d))
+
+# [3.27.0](https://github.com/thenativeweb/eslint-config-es/compare/3.26.15...3.27.0) (2021-01-07)
+
+
+### Features
+
+* Update dependencies and introduce a few new rules. ([3e87786](https://github.com/thenativeweb/eslint-config-es/commit/3e8778637b060b9e423b888ed6424c13d06d53ea))
+
+## [3.26.15](https://github.com/thenativeweb/eslint-config-es/compare/3.26.14...3.26.15) (2021-01-04)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.11.1 to 4.12.0 ([#271](https://github.com/thenativeweb/eslint-config-es/issues/271)) ([6cc2cc0](https://github.com/thenativeweb/eslint-config-es/commit/6cc2cc091961c13cd24c4e1879b0c4029f1c1229))
+
+## [3.26.14](https://github.com/thenativeweb/eslint-config-es/compare/3.26.13...3.26.14) (2021-01-04)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.11.0 to 4.11.1 ([#264](https://github.com/thenativeweb/eslint-config-es/issues/264)) ([f190957](https://github.com/thenativeweb/eslint-config-es/commit/f190957ca7329c1127b47a5edcabf38abeb2602e))
+
+## [3.26.13](https://github.com/thenativeweb/eslint-config-es/compare/3.26.12...3.26.13) (2020-12-28)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.10.0 to 4.11.0 ([#261](https://github.com/thenativeweb/eslint-config-es/issues/261)) ([d4083af](https://github.com/thenativeweb/eslint-config-es/commit/d4083aff87347a121dd78542af133c44b7bf4386))
+
+## [3.26.12](https://github.com/thenativeweb/eslint-config-es/compare/3.26.11...3.26.12) (2020-12-14)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.9.1 to 4.10.0 ([#257](https://github.com/thenativeweb/eslint-config-es/issues/257)) ([0dd309b](https://github.com/thenativeweb/eslint-config-es/commit/0dd309b60b8c12ae5c7551be72816f4bdc7715e3))
+
+## [3.26.11](https://github.com/thenativeweb/eslint-config-es/compare/3.26.10...3.26.11) (2020-12-07)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.9.0 to 4.9.1 ([#254](https://github.com/thenativeweb/eslint-config-es/issues/254)) ([b8d1c47](https://github.com/thenativeweb/eslint-config-es/commit/b8d1c47661084be3b61178680dca6077dbe911c8))
+
+## [3.26.10](https://github.com/thenativeweb/eslint-config-es/compare/3.26.9...3.26.10) (2020-12-07)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.9.0 to 4.9.1 ([#255](https://github.com/thenativeweb/eslint-config-es/issues/255)) ([264785e](https://github.com/thenativeweb/eslint-config-es/commit/264785e449760b35236d1942b5e1314cf949bc85))
+
+## [3.26.9](https://github.com/thenativeweb/eslint-config-es/compare/3.26.8...3.26.9) (2020-11-30)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.8.2 to 4.9.0 ([#252](https://github.com/thenativeweb/eslint-config-es/issues/252)) ([f174ba5](https://github.com/thenativeweb/eslint-config-es/commit/f174ba517244cbfe3921c5b2cda27ebcebccbd59))
+
+## [3.26.8](https://github.com/thenativeweb/eslint-config-es/compare/3.26.7...3.26.8) (2020-11-30)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.8.2 to 4.9.0 ([#251](https://github.com/thenativeweb/eslint-config-es/issues/251)) ([31b2da1](https://github.com/thenativeweb/eslint-config-es/commit/31b2da1eb94059b714207c337c13251675faef95))
+
+## [3.26.7](https://github.com/thenativeweb/eslint-config-es/compare/3.26.6...3.26.7) (2020-11-24)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.8.1 to 4.8.2 ([#250](https://github.com/thenativeweb/eslint-config-es/issues/250)) ([cec05e3](https://github.com/thenativeweb/eslint-config-es/commit/cec05e3c8e2fc2bc4e20707140b1f02b6c345525))
+
+## [3.26.6](https://github.com/thenativeweb/eslint-config-es/compare/3.26.5...3.26.6) (2020-11-23)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.8.1 to 4.8.2 ([#249](https://github.com/thenativeweb/eslint-config-es/issues/249)) ([08405e3](https://github.com/thenativeweb/eslint-config-es/commit/08405e3139349973ec8cd3dae4db5d5ce7a1580a))
+
+## [3.26.5](https://github.com/thenativeweb/eslint-config-es/compare/3.26.4...3.26.5) (2020-11-17)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/parser from 4.7.0 to 4.8.1 ([#243](https://github.com/thenativeweb/eslint-config-es/issues/243)) ([5962938](https://github.com/thenativeweb/eslint-config-es/commit/596293837740a6431c295fe5ba826872b71ec390))
+
+## [3.26.4](https://github.com/thenativeweb/eslint-config-es/compare/3.26.3...3.26.4) (2020-11-17)
+
+
+### Bug Fixes
+
+* bump @typescript-eslint/eslint-plugin from 4.7.0 to 4.8.1 ([#242](https://github.com/thenativeweb/eslint-config-es/issues/242)) ([754899e](https://github.com/thenativeweb/eslint-config-es/commit/754899e3eab624adc013a1990426f4bc4b5af1e3))
+
+## [3.26.3](https://github.com/thenativeweb/eslint-config-es/compare/3.26.2...3.26.3) (2020-11-16)
+
+
+### Bug Fixes
+
+* Fixed no-shadow rule for typescript causing errors with enums ([#239](https://github.com/thenativeweb/eslint-config-es/issues/239)) ([15e2e83](https://github.com/thenativeweb/eslint-config-es/commit/15e2e8305b705b0857bed7ddbf47325f683084bc))
+
 ## [3.26.2](https://github.com/thenativeweb/eslint-config-es/compare/3.26.1...3.26.2) (2020-11-09)
 
 
