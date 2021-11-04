@@ -25,11 +25,11 @@ const splitEntries = (pickEntry: PickRuleEntries): IndividualEntries => {
   return pickEntry;
 };
 
-const pickRulesFor = ({ language }: { language: Language }, rulePickArgs: PickRuleRecord): BetterRulesRecord => {
+const pickRulesFor = ({ language }: { language: Language }, pickRuleRecord: PickRuleRecord): BetterRulesRecord => {
   const pickedRules: BetterRulesRecord = {};
 
-  for (const [ ruleName, pickEntry ] of Object.entries(rulePickArgs)) {
-    const { core, typeScript } = splitEntries(pickEntry);
+  for (const [ ruleName, pickRuleEntry ] of Object.entries(pickRuleRecord)) {
+    const { core, typeScript } = splitEntries(pickRuleEntry);
 
     if (language === 'javaScript') {
       pickedRules[ruleName] = core;
