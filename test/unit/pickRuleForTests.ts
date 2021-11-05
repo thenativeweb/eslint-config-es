@@ -1,5 +1,5 @@
 import { assert } from 'assertthat';
-import { PickRuleRecord, pickRulesFor } from '../../lib/pickRuleFor';
+import { PickRuleRecord, pickRulesFor } from '../../lib/pickRulesFor';
 
 suite('pickRuleFor', (): void => {
   test('for language javascript, picks the core rule and converts it to a BetterRuleRecord.', async (): Promise<void> => {

@@ -1,6 +1,6 @@
 import { BetterRulesRecord } from '../betterRules';
 import { Language } from '../Language';
-import { pickRulesFor } from '../pickRuleFor';
+import { pickRulesFor } from '../pickRulesFor';
 
 const createSharedRulesFor = ({ language }: { language: Language }): BetterRulesRecord => {
   // CamelCase is a corner case - as for typescript, we only want it for javascript,
