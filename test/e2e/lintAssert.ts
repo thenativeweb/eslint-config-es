@@ -11,10 +11,10 @@ const lintAssert = (actual: ESLint.LintResult[]): LintAssert => ({
         message.ruleId === ruleName));
 
     if (!isContaining) {
-      throw new Error(`Rule ${ruleName} not found in Lint-Result. Actual Lint-Result was: ${JSON.stringify(actual, null, 2)}`);
+      throw new Error(`Rule ${ruleName} not found in Lint-Result. Actual Lint-Result was: \n${JSON.stringify(actual, null, 2)}`);
     }
 
-    return true;
+    return false;
   }
 });
 
