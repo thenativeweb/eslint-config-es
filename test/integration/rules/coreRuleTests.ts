@@ -1,5 +1,5 @@
 import { assertLint } from '../assertLint';
-import { lintJavaScript } from '../esLintTester';
+import { lintJavaScript, lintJsx } from '../esLintTester';
 
 suite('coreRules', (): void => {
   test('camelcase.', async (): Promise<void> => {
@@ -32,5 +32,19 @@ suite('coreRules', (): void => {
 
     assertLint(notPassing).notContainsError('prefer-destructuring');
     assertLint(notPassing).containsError('unicorn/no-unreadable-array-destructuring');
+  });
+
+  test('no-underscore-dangle.', async (): Promise<void> => {
+    const result = await lintJavaScript('const _notAllowed = true');
+
+    assertLint(result).containsError('no-underscore-dangle');
+  });
+
+  test('no-underscore-dangle: allows for __html in jsx.', async (): Promise<void> => {
+    const result = await lintJsx(`
+      <div dangerouslySetInnerHTML={{__html: '<p>Hello World</p>'}} />
+    `);
+
+    assertLint(result).notContainsError('no-underscore-dangle');
   });
 });
