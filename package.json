@@ -55,7 +55,8 @@
   },
   "scripts": {
     "analyse": "npm run build && npx eslint --config ./node.js *.js 'lib/**/*.ts' 'test/**/*.ts'",
-    "build": "npx roboter build"
+    "build": "npx roboter build",
+    "roboter": "npm run build && npx roboter"
   },
   "repository": {
     "type": "git",
