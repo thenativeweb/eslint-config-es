@@ -16,8 +16,6 @@ import {
 
 const parserOptions: Linter.ParserOptions = {
   sourceType: 'script',
-
-  // eslint-disable-next-line unicorn/numeric-separators-style
   ecmaVersion: 12,
   ecmaFeatures: {
     globalReturn: false,
