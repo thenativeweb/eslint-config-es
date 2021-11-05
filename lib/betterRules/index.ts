@@ -1,10 +1,10 @@
 import { BetterRulesRecord } from './BetterRulesRecord';
 import { compile } from './compile';
-import { usePlugin } from './usePlugin';
+import { withPlugin } from './withPlugin';
 
 export {
   compile,
-  usePlugin
+  withPlugin
 };
 
 export type {

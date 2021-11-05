@@ -4,6 +4,7 @@ import { extended } from './extended';
 import { importRules } from './import';
 import { mochaRules } from './mocha';
 import { react } from './react';
+import { reactHooks } from './reactHooks';
 import { sharedCoreTypescript } from './sharedCoreTypescript';
 import { sharedImportTypescript } from './sharedImportTypescript';
 import { typescript } from './typescript';
@@ -18,6 +19,7 @@ export {
   sharedImportTypescript,
   mochaRules,
   react,
+  reactHooks,
   typescript,
   unicorn
 };

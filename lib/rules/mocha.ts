@@ -1,6 +1,6 @@
-import { usePlugin } from '../betterRules/usePlugin';
+import { withPlugin } from '../betterRules/withPlugin';
 
-const mochaRules = usePlugin('mocha', {
+const mochaRules = withPlugin('mocha', {
   handleDoneCallback: [{ ignoreSkipped: false }],
   maxTopLevelSuites: [{ limit: 1 }],
   noAsyncDescribe: [],
