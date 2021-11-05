@@ -107,11 +107,7 @@ const unicorn = usePlugin('unicorn', {
   preferRegexpTest: [],
   preferSetHas: [],
   preferSpread: [],
-
-  // TODO[2021-11-01] This should be [], unfortunately `replaceAll` is only
-  // available in Node.js 15.x, so we have to wait until 16 LTS
-  // to be able to enable this rule.
-  preferStringReplaceAll: false,
+  preferStringReplaceAll: [],
   preferStringSlice: [],
   preferStringStartsEndsWith: [],
   preferStringTrimStartEnd: [],
@@ -120,6 +116,7 @@ const unicorn = usePlugin('unicorn', {
   // expressions using await/throw/yield as well. We have opened an issue to try
   // to remedy this: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1079
   preferTernary: false,
+
   preferTopLevelAwait: false,
   preferTypeError: false,
   preventAbbreviations: false,
