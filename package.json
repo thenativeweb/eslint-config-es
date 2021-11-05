@@ -33,8 +33,8 @@
     }
   ],
   "private": false,
-  "main": "build/lib/defaultConfig.js",
-  "types": "build/lib/defaultConfig.d.ts",
+  "main": "build/lib/index.js",
+  "types": "build/lib/index.d.ts",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
