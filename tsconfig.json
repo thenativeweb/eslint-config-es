@@ -14,7 +14,7 @@
   "include": [
     "./lib/**/*.ts",
     "./test/**/*.ts",
-    "test/e2e/dummyTs/dummyTsx.tsx"
+    "test/integration/dummyTs/dummyTsx.tsx"
   ],
   "exclude": [
     "./build"
