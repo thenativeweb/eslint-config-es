@@ -3,7 +3,7 @@ import { BetterRulesRecord } from '../../../lib/betterRules/BetterRulesRecord';
 import { compile } from '../../../lib/betterRules/compile';
 
 suite('rulesCompiler', (): void => {
-  test('compiles a rule with a  boolean to a deactivated rule.', async (): Promise<void> => {
+  test('compiles a rule with a boolean to a deactivated rule.', async (): Promise<void> => {
     const rule: BetterRulesRecord = {
       eqeqeq: false
     };
