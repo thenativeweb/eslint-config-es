@@ -4,6 +4,7 @@ import { Linter } from 'eslint';
 import { mapKeys } from 'lodash';
 import path from 'path';
 import {
+  comments,
   coreRules,
   createSharedRulesFor,
   extended,
@@ -44,6 +45,7 @@ if (isInstalled('react')) {
 }
 
 let rules: Linter.RulesRecord = compile({
+  ...comments,
   ...coreRules,
   ...extended,
   ...mochaRules,
