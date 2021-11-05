@@ -23,7 +23,7 @@ suite('rulesCompiler', (): void => {
     assert.that(result['no-braces']).is.not.undefined();
   });
 
-  test('leaves plugin-names in tact when converting.', async (): Promise<void> => {
+  test('leaves plugin-names intact when converting.', async (): Promise<void> => {
     const rule: BetterRulesRecord = {
       '@eslint-typescript/noBraces': false
     };
