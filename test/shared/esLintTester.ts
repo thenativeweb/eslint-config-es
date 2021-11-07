@@ -3,7 +3,7 @@ import path from 'path';
 import * as defaultConfiguration from '../../lib/defaultConfiguration';
 
 const esLintTester = new ESLint({
-  baseConfig: defaultConfig,
+  baseConfig: defaultConfiguration,
   useEslintrc: false
 });
 
