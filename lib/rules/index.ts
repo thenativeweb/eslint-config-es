@@ -1,6 +1,6 @@
 import { comments } from './comments';
 import { coreRules } from './core';
-import { createSharedRulesFor } from './sharedCoreTypeScript';
+import { createSharedRulesFor } from './sharedCoreTypescript';
 import { extended } from './extended';
 import { mochaRules } from './mocha';
 import { react } from './react';
