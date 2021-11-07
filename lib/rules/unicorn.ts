@@ -57,7 +57,7 @@ const unicorn = usePlugin('unicorn', {
   noNestedTernary: [],
   noNewArray: [],
 
-  // The noNewBuffer rule does the same thing as ESLint's builtIn
+  // The noNewBuffer rule does the same thing as ESLint's built-in
   // noBufferConstructor rule.
   noNewBuffer: false,
   noNull: false,

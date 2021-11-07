@@ -38,7 +38,7 @@ const settings = {};
 if (isInstalled('react')) {
   plugins.push('react');
 
-  // @ts-expect-error react is actuall set by the plugin
+  // @ts-expect-error react is actually set by the plugin.
   settings.react = { version: 'detect' };
 }
 

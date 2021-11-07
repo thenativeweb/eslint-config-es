@@ -3,8 +3,8 @@ import { Language } from '../Language';
 import { pickRulesFor } from '../pickRulesFor';
 
 const createSharedRulesFor = ({ language }: { language: Language }): BetterRulesRecord => {
-  // CamelCase is a corner case - as for typescript, we only want it for javascript,
-  // but for typescript we want it deactivated and replaced by namingConvention
+  // camelCase is a corner case - as for TypeScript, we only want it for JavaScript,
+  // but for TypeScript we want it deactivated and replaced by namingConvention
   const specialCamelCaseRule: BetterRulesRecord = language === 'javaScript' ?
     {
       camelcase: [{
