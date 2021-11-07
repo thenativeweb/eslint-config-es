@@ -1,5 +1,5 @@
 'use strict';
 
-const defaultEslintConfiguration = require('./build/lib/defaultConfiguration');
+const defaultConfiguration = require('./build/lib/defaultConfiguration');
 
-module.exports = defaultEslintConfiguration;
+module.exports = defaultConfiguration;
