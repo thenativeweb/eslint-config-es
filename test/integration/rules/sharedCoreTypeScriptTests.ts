@@ -1,5 +1,5 @@
-import { assertLint } from '../assertLint';
-import { lintJavaScript, lintTsx, lintTypeScript } from '../esLintTester';
+import { assertLint } from '../../shared/assertLint';
+import { lintJavaScript, lintTsx, lintTypeScript } from '../../shared/esLintTester';
 
 suite('sharedCoreTypeScript', (): void => {
   test('naming-convention: replaces camelcase from core.', async (): Promise<void> => {

@@ -1,5 +1,5 @@
-import { assertLint } from '../assertLint';
-import { lintJavaScript } from '../esLintTester';
+import { assertLint } from '../../shared/assertLint';
+import { lintJavaScript } from '../../shared/esLintTester';
 
 suite('mocha/', (): void => {
   test('valid-suite-description: must not end with a dot.', async (): Promise<void> => {

@@ -1,5 +1,5 @@
-import { assertLint } from '../assertLint';
-import { lintJavaScript, lintJsx } from '../esLintTester';
+import { assertLint } from '../../shared/assertLint';
+import { lintJavaScript, lintJsx } from '../../shared/esLintTester';
 
 suite('coreRules', (): void => {
   test('camelcase.', async (): Promise<void> => {

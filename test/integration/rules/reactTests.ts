@@ -1,5 +1,5 @@
-import { assertLint } from '../assertLint';
-import { lintJavaScript, lintJsx, lintTsx } from '../esLintTester';
+import { assertLint } from '../../shared/assertLint';
+import { lintJavaScript, lintJsx, lintTsx } from '../../shared/esLintTester';
 
 suite('react/', (): void => {
   test('jsx-fragments: Short <></> form is not allowed.', async (): Promise<void> => {

@@ -1,5 +1,5 @@
-import { assertLint } from '../assertLint';
-import { lintJavaScript, lintTypeScript } from '../esLintTester';
+import { assertLint } from '../../shared/assertLint';
+import { lintJavaScript, lintTypeScript } from '../../shared/esLintTester';
 
 suite('@typescript-eslint/', (): void => {
   test('consistentTypeDefinitions: defaults to interfaces.', async (): Promise<void> => {

@@ -1,5 +1,5 @@
-import { assertLint } from '../assertLint';
-import { lintJavaScript } from '../esLintTester';
+import { assertLint } from '../../shared/assertLint';
+import { lintJavaScript } from '../../shared/esLintTester';
 
 suite('unicorn/', (): void => {
   test('expiring-todo-comments.', async (): Promise<void> => {

@@ -1,5 +1,5 @@
-import { assertLint } from '../assertLint';
-import { lintJavaScript } from '../esLintTester';
+import { assertLint } from '../../shared/assertLint';
+import { lintJavaScript } from '../../shared/esLintTester';
 
 suite('eslint-comments/', (): void => {
   test('no-unused-disable.', async (): Promise<void> => {
