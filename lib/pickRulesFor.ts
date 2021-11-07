@@ -3,7 +3,7 @@ import { BetterRulesEntry, BetterRulesRecord } from './betterRules/BetterRulesRe
 
 interface IndividualEntries {
   core: BetterRulesEntry;
-  typeScript: BetterRulesEntry;
+  typescript: BetterRulesEntry;
 }
 
 interface SharedEntry {
@@ -18,7 +18,7 @@ const splitEntries = (pickEntry: PickRuleEntries): IndividualEntries => {
   if ('shared' in pickEntry) {
     return {
       core: pickEntry.shared,
-      typeScript: pickEntry.shared
+      typescript: pickEntry.shared
     };
   }
 
@@ -29,15 +29,15 @@ const pickRulesFor = ({ language }: { language: Language }, pickRuleRecord: Pick
   const pickedRules: BetterRulesRecord = {};
 
   for (const [ ruleName, pickRuleEntry ] of Object.entries(pickRuleRecord)) {
-    const { core, typeScript } = splitEntries(pickRuleEntry);
+    const { core, typescript } = splitEntries(pickRuleEntry);
 
-    if (language === 'javaScript') {
+    if (language === 'javascript') {
       pickedRules[ruleName] = core;
       continue;
     }
 
     pickedRules[ruleName] = false;
-    pickedRules[`@typescript-eslint/${ruleName}`] = typeScript;
+    pickedRules[`@typescript-eslint/${ruleName}`] = typescript;
   }
 
   return pickedRules;

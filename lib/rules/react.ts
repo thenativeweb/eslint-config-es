@@ -11,65 +11,14 @@ const react = usePlugin('react', {
   forbidElements: false,
   forbidPropTypes: false,
   forbidForeignPropTypes: false,
-  jsxCurlyNewline: [{
-    multiline: 'consistent',
-    singleline: 'consistent'
-  }],
-  noAccessStateInSetstate: [],
-  noArrayIndexKey: [],
-  noChildrenProp: [],
-  noDanger: false,
-  noDangerWithChildren: [],
-  noDeprecated: [],
-  noDidMountSetState: [],
-  noDidUpdateSetState: [],
-  noDirectMutationState: [],
-  noFindDomNode: [],
-  noIsMounted: [],
-  noMultiComp: false,
-  noRedundantShouldComponentUpdate: [],
-  noRenderReturnValue: [],
-  noSetState: false,
-  noStringRefs: [{ noTemplateLiterals: true }],
-  noThisInSfc: [],
-  noTypos: [],
-  noUnescapedEntities: [],
-  noUnknownProperty: [],
-  noUnsafe: false,
-  noUnusedPropTypes: [],
-  noUnusedState: [],
-  noWillUpdateSetState: [],
-  preferEs6Class: [ 'always' ],
-  preferReadOnlyProps: false,
-  preferStatelessFunction: [{
-    ignorePureComponents: false
-  }],
-  propTypes: false,
-  reactInJsxScope: [],
-  requireDefaultProps: false,
-  requireOptimization: false,
-  requireRenderReturn: [],
-  selfClosingComp: [{
-    component: true,
-    html: true
-  }],
-  sortComp: [],
-  sortPropTypes: [{
-    callbacksLast: true,
-    ignoreCase: true,
-    requiredFirst: true,
-    sortShapeProp: true,
-    noSortAlphabetically: false
-  }],
-  stateInConstructor: [ 'always' ],
-  staticPropertyPlacement: false,
-  stylePropObject: [],
-  voidDomElementsNoChildren: [],
-
   jsxBooleanValue: [ 'always' ],
   jsxChildElementSpacing: [],
   jsxClosingBracketLocation: [ 'tag-aligned' ],
   jsxClosingTagLocation: [],
+  jsxCurlyNewline: [{
+    multiline: 'consistent',
+    singleline: 'consistent'
+  }],
   jsxCurlySpacing: [{
     when: 'always',
     spacing: { objectLiterals: 'never' }
@@ -128,7 +77,57 @@ const react = usePlugin('react', {
   }],
   jsxUsesReact: [],
   jsxUsesVars: [],
-  jsxWrapMultilines: []
+  jsxWrapMultilines: [],
+  noAccessStateInSetstate: [],
+  noArrayIndexKey: [],
+  noChildrenProp: [],
+  noDanger: false,
+  noDangerWithChildren: [],
+  noDeprecated: [],
+  noDidMountSetState: [],
+  noDidUpdateSetState: [],
+  noDirectMutationState: [],
+  noFindDomNode: [],
+  noIsMounted: [],
+  noMultiComp: false,
+  noRedundantShouldComponentUpdate: [],
+  noRenderReturnValue: [],
+  noSetState: false,
+  noStringRefs: [{ noTemplateLiterals: true }],
+  noThisInSfc: [],
+  noTypos: [],
+  noUnescapedEntities: [],
+  noUnknownProperty: [],
+  noUnsafe: false,
+  noUnusedPropTypes: [],
+  noUnusedState: [],
+  noWillUpdateSetState: [],
+  preferEs6Class: [ 'always' ],
+  preferReadOnlyProps: false,
+  preferStatelessFunction: [{
+    ignorePureComponents: false
+  }],
+  propTypes: false,
+  reactInJsxScope: [],
+  requireDefaultProps: false,
+  requireOptimization: false,
+  requireRenderReturn: [],
+  selfClosingComp: [{
+    component: true,
+    html: true
+  }],
+  sortComp: [],
+  sortPropTypes: [{
+    callbacksLast: true,
+    ignoreCase: true,
+    requiredFirst: true,
+    sortShapeProp: true,
+    noSortAlphabetically: false
+  }],
+  stateInConstructor: [ 'always' ],
+  staticPropertyPlacement: false,
+  stylePropObject: [],
+  voidDomElementsNoChildren: []
 });
 
 export {

@@ -1,6 +1,6 @@
 import { BetterRulesRecord, usePlugin } from '../betterRules';
 
-const typeScript: BetterRulesRecord = {
+const typescript: BetterRulesRecord = {
   ...usePlugin('unicorn', {
     // This rule is already enforced via the type system and produces false-positives.
     requirePostMessageTargetOrigin: false
@@ -158,5 +158,5 @@ const typeScript: BetterRulesRecord = {
 };
 
 export {
-  typeScript
+  typescript
 };

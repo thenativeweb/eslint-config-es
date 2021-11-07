@@ -3,9 +3,9 @@ import { Language } from '../Language';
 import { pickRulesFor } from '../pickRulesFor';
 
 const createSharedRulesFor = ({ language }: { language: Language }): BetterRulesRecord => {
-  // camelCase is a corner case - as for TypeScript, we only want it for JavaScript,
+  // CamelCase is a corner case - as for TypeScript, we only want it for JavaScript,
   // but for TypeScript we want it deactivated and replaced by namingConvention
-  const specialCamelCaseRule: BetterRulesRecord = language === 'javaScript' ?
+  const specialCamelCaseRule: BetterRulesRecord = language === 'javascript' ?
     {
       camelcase: [{
         properties: 'always',
@@ -40,14 +40,14 @@ const createSharedRulesFor = ({ language }: { language: Language }): BetterRules
       braceStyle: { shared: [ '1tbs', { allowSingleLine: false }]},
       commaSpacing: {
         core: [{ before: false, after: true }],
-        typeScript: []
+        typescript: []
       },
       defaultParamLast: {
         shared: []
       },
       dotNotation: {
         core: [{ allowKeywords: true }],
-        typeScript: [{
+        typescript: [{
           allowKeywords: true,
           allowPrivateClassPropertyAccess: false
         }]
@@ -89,7 +89,7 @@ const createSharedRulesFor = ({ language }: { language: Language }): BetterRules
           ],
           ignoreComments: false
         }],
-        typeScript: [ 2, {
+        typescript: [ 2, {
           SwitchCase: 1,
           VariableDeclarator: { var: 2, let: 2, const: 3 },
           // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -113,7 +113,7 @@ const createSharedRulesFor = ({ language }: { language: Language }): BetterRules
         core: [ 'always', {
           exceptAfterSingleLine: false
         }],
-        typeScript: [ 'always', {
+        typescript: [ 'always', {
           exceptAfterSingleLine: false,
           exceptAfterOverload: false
         }]
@@ -126,7 +126,7 @@ const createSharedRulesFor = ({ language }: { language: Language }): BetterRules
       },
       noEmptyFunction: {
         core: [{ allow: []}],
-        typeScript: []
+        typescript: []
       },
       noExtraParens: { shared: [ 'all', {
         conditionalAssign: false,
@@ -158,14 +158,14 @@ const createSharedRulesFor = ({ language }: { language: Language }): BetterRules
           vars: 'all',
           ignoreRestSiblings: false
         }],
-        typeScript: [{ vars: 'all' }]
+        typescript: [{ vars: 'all' }]
       },
       noUseBeforeDefine: { core: [{
         functions: true,
         classes: true,
         variables: true
       }],
-      typeScript: [{
+      typescript: [{
         functions: true,
         classes: true,
         enums: true,
@@ -186,7 +186,7 @@ const createSharedRulesFor = ({ language }: { language: Language }): BetterRules
       },
       spaceBeforeFunctionParen: {
         core: [ 'always' ],
-        typeScript: []
+        typescript: []
       },
       spaceInfixOps: {
         shared: [{ int32Hint: false }]

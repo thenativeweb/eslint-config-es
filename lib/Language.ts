@@ -1,4 +1,4 @@
-type Language = 'typeScript' | 'javaScript';
+type Language = 'typescript' | 'javascript';
 
 export type {
   Language

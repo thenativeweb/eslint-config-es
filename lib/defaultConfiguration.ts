@@ -10,13 +10,17 @@ import {
   extended,
   mochaRules,
   react,
-  typeScript,
+  typescript,
   unicorn
 } from './rules';
 
 const parserOptions: Linter.ParserOptions = {
   sourceType: 'script',
-  ecmaVersion: 12,
+
+  // @ts-expect-error This is a bug in the ESLint-Typings
+  // A string "latest" is actually allowed (the types only specify numbers)
+  // see: https://eslint.org/docs/user-guide/configuring/language-options#specifying-parser-options
+  ecmaVersion: 'latest',
   ecmaFeatures: {
     globalReturn: false,
     impliedStrict: false,
@@ -48,7 +52,7 @@ let rules: Linter.RulesRecord = compile({
   ...extended,
   ...mochaRules,
   ...unicorn,
-  ...createSharedRulesFor({ language: 'javaScript' })
+  ...createSharedRulesFor({ language: 'javascript' })
 });
 
 // The ruleName of "react/prefer-es6-class" is wrongly converted to kebab-case
@@ -83,8 +87,8 @@ const overrides: Linter.ConfigOverride[] = [
     globals: { ...globals, NodeJS: true },
     plugins: [ ...plugins, '@typescript-eslint' ],
     rules: compile({
-      ...typeScript,
-      ...createSharedRulesFor({ language: 'typeScript' })
+      ...typescript,
+      ...createSharedRulesFor({ language: 'typescript' })
     })
   }
 ];
