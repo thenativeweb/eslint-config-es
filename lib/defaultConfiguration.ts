@@ -8,6 +8,7 @@ import {
   coreRules,
   createSharedRulesFor,
   extended,
+  importRules,
   mochaRules,
   react,
   typescript,
@@ -38,7 +39,7 @@ const env = {
 
 const globals = {};
 
-const plugins = [ 'eslint-comments', 'extended', 'mocha', 'unicorn' ];
+const plugins = [ 'eslint-comments', 'extended', 'import', 'mocha', 'unicorn' ];
 const settings = {};
 
 if (isInstalled('react')) {
@@ -48,10 +49,12 @@ if (isInstalled('react')) {
   settings.react = { version: 'detect' };
 }
 
+// eslint-disable-next-line import/no-mutable-exports
 let rules: Linter.RulesRecord = compile({
   ...comments,
   ...coreRules,
   ...extended,
+  ...importRules,
   ...mochaRules,
   ...unicorn,
   ...createSharedRulesFor({ language: 'javascript' })
@@ -76,10 +79,29 @@ if (plugins.includes('react')) {
   };
 }
 
+// This import config is necessary to make eslint-plugin-import work
+// Import config taken from https://github.com/import-js/eslint-plugin-import/blob/main/config/typescript.js
+const allExtensions = [ '.ts', '.tsx', '.js', '.jsx' ];
+const pluginImportSettings: Linter.BaseConfig['settings'] = {
+  'import/extensions': allExtensions,
+  'import/external-module-folders': [ 'node_modules', 'node_modules/@types' ],
+  'import/parsers': {
+    '@typescript-eslint/parser': [ '.ts', '.tsx' ]
+  },
+  'import/resolver': {
+    node: {
+      extensions: allExtensions
+    }
+  }
+};
+
 const overrides: Linter.ConfigOverride[] = [
   {
     files: [ '*.ts', '*.tsx' ],
     parser: '@typescript-eslint/parser',
+    settings: {
+      ...pluginImportSettings
+    },
     parserOptions: {
       ...parserOptions,
       sourceType: 'module',
