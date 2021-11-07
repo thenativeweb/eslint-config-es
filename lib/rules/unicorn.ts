@@ -116,7 +116,6 @@ const unicorn = usePlugin('unicorn', {
   // expressions using await/throw/yield as well. We have opened an issue to try
   // to remedy this: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1079
   preferTernary: false,
-
   preferTopLevelAwait: false,
   preferTypeError: false,
   preventAbbreviations: false,
