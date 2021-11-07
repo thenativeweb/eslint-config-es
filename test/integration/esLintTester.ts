@@ -1,6 +1,6 @@
 import { ESLint } from 'eslint';
 import path from 'path';
-import * as defaultConfig from '../../lib/defaultConfiguration';
+import * as defaultConfiguration from '../../lib/defaultConfiguration';
 
 const esLintTester = new ESLint({
   baseConfig: defaultConfig,
