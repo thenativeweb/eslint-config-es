@@ -1,7 +1,7 @@
 import { assertLint } from '../../shared/assertLint';
 import { lintJavaScript, lintJsx, lintTsx } from '../../shared/esLintTester';
 
-suite('react/', function (): void {
+suite('react/', (): void => {
   test('jsx-fragments: Short <></> form is not allowed.', async (): Promise<void> => {
     const result = await lintJsx(`<><MyComponent /></>`);
 
@@ -9,13 +9,12 @@ suite('react/', function (): void {
   });
 
   test('linting also works in tsx files.', async (): Promise<void> => {
-    // Testing TSX can take a while on CI
-    this.timeout(5_000);
-
     const result = await lintTsx(`<><MyComponent /></>`);
 
     assertLint(result).containsError('react/jsx-fragments');
-  });
+
+  // Testing TSX can take a while on CI, so we raise the timeout here
+  }).timeout(5_000);
 
   test('jsx-filename-extension: Do not allow jsx in js files.', async (): Promise<void> => {
     const result = await lintJavaScript(`<MyComponent />`);
