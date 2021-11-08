@@ -17,6 +17,8 @@ import {
 const parserOptions: Linter.ParserOptions = {
   sourceType: 'script',
 
+  // TODO [@types/eslint@>=7.28.3] The ts-expect-error can be removed once our
+  // PR gets merged: https://github.com/DefinitelyTyped/DefinitelyTyped/pull/57037
   // @ts-expect-error This is a bug in the ESLint-Typings
   // A string "latest" is actually allowed (the types only specify numbers)
   // see: https://eslint.org/docs/user-guide/configuring/language-options#specifying-parser-options
