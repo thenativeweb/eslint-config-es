@@ -6,7 +6,6 @@ const importRules = usePlugin('import', {
 
   dynamicImportChunkname: false,
 
-  // Review: It's either this rule or "noDefaultExport" - what shall we pick?
   export: [],
   exportsLast: [],
 
@@ -30,16 +29,8 @@ const importRules = usePlugin('import', {
   // Review: What about AMD Imports? Are they allowed?
   noAmd: false,
 
-  // Review: Not needed if we dissallow default exports (could be problematic with storybook)
-  noAnonymousDefaultExport: [{
-    allowArray: false,
-    allowArrowFunction: false,
-    allowAnonymousClass: false,
-    allowAnonymousFunction: false,
-    allowCallExpression: false,
-    allowLiteral: false,
-    allowObject: false
-  }],
+  // Not needed as we have enabled noDefaultExport anyways
+  noAnonymousDefaultExport: false,
   noCommonjs: false,
 
   // Review: this rule can slow down linting on large projects - do we want it?
@@ -48,7 +39,6 @@ const importRules = usePlugin('import', {
     ignoreExternal: false
   }],
 
-  // Review: Do we want to prevent default exports? If so remove noAnonymousDefaultExports above
   noDefaultExport: [],
   noDeprecated: [],
 
