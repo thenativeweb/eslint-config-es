@@ -2,7 +2,7 @@ import { assert } from 'assertthat';
 import { BetterRulesRecord } from '../../../lib/betterRules/BetterRulesRecord';
 import { compile } from '../../../lib/betterRules/compile';
 
-suite('rulesCompiler', (): void => {
+suite('compile', (): void => {
   test('compiles a rule with a boolean to a deactivated rule.', async (): Promise<void> => {
     const rule: BetterRulesRecord = {
       eqeqeq: false

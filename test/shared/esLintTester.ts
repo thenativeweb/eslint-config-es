@@ -7,7 +7,7 @@ const esLintTester = new ESLint({
   useEslintrc: false
 });
 
-const lintJavaScript = async (codeString: string): Promise<ESLint.LintResult[]> =>
+const lintJavascript = async (codeString: string): Promise<ESLint.LintResult[]> =>
   esLintTester.lintText(codeString, {
     filePath: 'testFile.js'
   });
@@ -17,7 +17,7 @@ const lintJsx = async (codeString: string): Promise<ESLint.LintResult[]> =>
     filePath: 'testFile.jsx'
   });
 
-const lintTypeScript = async (codeString: string): Promise<ESLint.LintResult[]> =>
+const lintTypescript = async (codeString: string): Promise<ESLint.LintResult[]> =>
   esLintTester.lintText(codeString, {
     filePath: path.join(__dirname, 'dummyTs', 'dummy.ts')
   });
@@ -28,8 +28,8 @@ const lintTsx = async (codeString: string): Promise<ESLint.LintResult[]> =>
   });
 
 export {
-  lintJavaScript,
-  lintTypeScript,
+  lintJavascript,
+  lintTypescript,
   lintJsx,
   lintTsx
 };

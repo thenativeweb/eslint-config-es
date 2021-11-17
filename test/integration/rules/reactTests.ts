@@ -1,5 +1,5 @@
 import { assertLint } from '../../shared/assertLint';
-import { lintJavaScript, lintJsx, lintTsx } from '../../shared/esLintTester';
+import { lintJavascript, lintJsx, lintTsx } from '../../shared/esLintTester';
 
 suite('react/', (): void => {
   test('jsx-fragments: Short <></> form is not allowed.', async (): Promise<void> => {
@@ -17,7 +17,7 @@ suite('react/', (): void => {
   }).timeout(5_000);
 
   test('jsx-filename-extension: Do not allow jsx in js files.', async (): Promise<void> => {
-    const result = await lintJavaScript(`<MyComponent />`);
+    const result = await lintJavascript(`<MyComponent />`);
 
     assertLint(result).containsError('react/jsx-filename-extension');
   });

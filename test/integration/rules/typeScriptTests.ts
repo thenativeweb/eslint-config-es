@@ -1,9 +1,9 @@
 import { assertLint } from '../../shared/assertLint';
-import { lintJavaScript, lintTypeScript } from '../../shared/esLintTester';
+import { lintJavascript, lintTypescript } from '../../shared/esLintTester';
 
 suite('@typescript-eslint/', (): void => {
   test('consistentTypeDefinitions: defaults to interfaces.', async (): Promise<void> => {
-    const result = await lintTypeScript(`
+    const result = await lintTypescript(`
       type test = {
         property: string
       };
@@ -13,12 +13,12 @@ suite('@typescript-eslint/', (): void => {
   });
 
   test('unicorn/require-post-message-target-origin: is deactivated for typescript files to avoid false-positives.', async (): Promise<void> => {
-    const passing = await lintTypeScript(`window.postMessage('myMessage');`);
+    const passing = await lintTypescript(`window.postMessage('myMessage');`);
 
     assertLint(passing).notContainsError('unicorn/require-post-message-target-origin');
 
     // Test the occurnce of the error here - in case we remove it from unicorn we can remove it here in typesscript
-    const notPassing = await lintJavaScript(`window.postMessage('myMessage');`);
+    const notPassing = await lintJavascript(`window.postMessage('myMessage');`);
 
     assertLint(notPassing).containsError('unicorn/require-post-message-target-origin');
   });

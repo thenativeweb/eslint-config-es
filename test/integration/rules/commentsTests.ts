@@ -1,9 +1,9 @@
 import { assertLint } from '../../shared/assertLint';
-import { lintJavaScript } from '../../shared/esLintTester';
+import { lintJavascript } from '../../shared/esLintTester';
 
 suite('eslint-comments/', (): void => {
   test('no-unused-disable.', async (): Promise<void> => {
-    const result = await lintJavaScript(`
+    const result = await lintJavascript(`
       // eslint-disable-next-line no-console
       const notAConsoleStatement = '';
     `);
