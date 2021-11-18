@@ -4,12 +4,10 @@ import { usePlugin } from '../betterRules';
 const importRules = usePlugin('import', {
   default: [],
 
+  // This rule only makes sense in projects that use webpack
   dynamicImportChunkname: false,
-
   export: [],
   exportsLast: [],
-
-  // Review: Do we want to allow imports with file extensions?
   extensions: [ 'never' ],
   first: [],
   groupExports: [],
@@ -17,38 +15,23 @@ const importRules = usePlugin('import', {
   // Deprecated rule, superseded by 'first'
   importsFirst: false,
   maxDependencies: false,
-
-  // This rule is actually not necessary for typescript - lets see if we remove it
   named: [],
   namespace: [],
-
-  // Review: Do we want more than 1 line here?
-  newlineAfterImport: [],
+  newlineAfterImport: [{ count: 1 }],
   noAbsolutePath: [],
+  noAmd: [],
+  noAnonymousDefaultExport: [],
 
-  // Review: What about AMD Imports? Are they allowed?
-  noAmd: false,
+  // Todo [2021-11-18]: Move to sharedImportTypescript
+  // Error for TypeScript, Okay for JavaScript
+  noCommonjs: [],
 
-  // Not needed as we have enabled noDefaultExport anyways
-  noAnonymousDefaultExport: false,
-  noCommonjs: false,
-
-  // Review: this rule can slow down linting on large projects - do we want it?
-  noCycle: [{
-    maxDepth: undefined,
-    ignoreExternal: false
-  }],
-
+  // This rule is computational expensive and might slow down our IDEs, so we keep it off
+  noCycle: false,
   noDefaultExport: [],
   noDeprecated: [],
-
-  // Review: Almost same as core/no-duplicate-imports - but detects if imports point to same file. Do we want it or leave it to core?
-  noDuplicates: false,
-
-  // Review: Note sure if tnw uses this?
-  noDynamicRequire: false,
-
-  // Review: This rule enabled would prevent importing eslint in this package (as it ise a peer dependency of roboter). This is something Hannes would fix - than we can think about enabling it?
+  noDuplicates: [],
+  noDynamicRequire: [],
   noExtraneousDependencies: false,
   noImportModuleExports: [],
 
@@ -61,42 +44,31 @@ const importRules = usePlugin('import', {
   noNamedExport: false,
   noNamespace: false,
   noNodejsModules: false,
-
-  // Review: Not sure about this one - we use it at a client sometimes
-  noRelativePackages: false,
-
-  // Review: Tried this rule - its very strict and fails in this repo. Recommend not to use it (even though it sounds quite nice)
+  noRelativePackages: [],
   noRelativeParentImports: false,
   noRestrictedPaths: false,
   noSelfImport: [],
+  noUnassignedImport: [],
+  noUnresolved: [{
+    commonjs: true,
+    amd: true,
+    caseSensitive: true,
+    caseSensitiveStrict: true
+  }],
 
-  // Review: Maybe useful with exceptions (like for importing .css in react)?
-  noUnassignedImport: false,
-  noUnresolved: [{ commonjs: true, amd: true }],
-
-  // Review: Currently unusable, as non-found files in `ignoreExports` will actually crash the eslint process - so we have no way of defining some common paths (e.g. index.{js|ts}) that do not exit outside
-  // of this repository.
+  // Currently unusable, as non-found files in `ignoreExports` will actually
+  // crash the eslint process - so we have no way of defining some common paths
+  // (e.g. index.{js|ts}) that do not exit outside of this repository.
   // Also see: https://github.com/import-js/eslint-plugin-import/issues/2128
-  // Maybe we can use it once that was fixed?
   noUnusedModules: false,
-
-  // Review: This is what the config might look like
-  // [{
-  //   missingExports: true,
-  //   unusedExports: true,
-  //   ignoreExports: [
-  //     './lib/index.ts',
-  //     './test/**'
-  //   ]
-  // }],
   noUselessPathSegments: [],
-  noWebpackLoaderSyntax: false,
+  noWebpackLoaderSyntax: [],
 
-  // Review: Ordering does not support sorting by single- and multi exports like the core-features does
+  // Ordering does not support sorting by single- and multi exports like the core-features does
   // It works by assining groups - which I guess is not what we want
   order: false,
   preferDefaultEport: false,
-  unambiguous: false
+  unambiguous: []
 });
 
 export {

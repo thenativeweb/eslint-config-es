@@ -12,4 +12,5 @@ const env = {
   worker: true
 };
 
+// eslint-disable-next-line import/no-commonjs
 module.exports = { ...defaultConfiguration, env };
