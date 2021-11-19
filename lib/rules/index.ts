@@ -1,17 +1,21 @@
 import { comments } from './comments';
 import { coreRules } from './core';
-import { createSharedRulesFor } from './sharedCoreTypescript';
 import { extended } from './extended';
+import { importRules } from './import';
 import { mochaRules } from './mocha';
 import { react } from './react';
+import { sharedCoreTypescript } from './sharedCoreTypescript';
+import { sharedImportTypescript } from './sharedImportTypescript';
 import { typescript } from './typescript';
 import { unicorn } from './unicorn';
 
 export {
   comments,
   coreRules,
-  createSharedRulesFor,
+  sharedCoreTypescript,
   extended,
+  importRules,
+  sharedImportTypescript,
   mochaRules,
   react,
   typescript,
