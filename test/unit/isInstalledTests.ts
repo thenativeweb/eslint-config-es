@@ -7,6 +7,6 @@ suite('isInstalled', (): void => {
   });
 
   test('returns false if the package is not installed.', async (): Promise<void> => {
-    assert.that(isInstalled('not_existing_npm_package')).is.true();
+    assert.that(isInstalled('not_existing_npm_package')).is.false();
   });
 });
