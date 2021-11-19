@@ -1,5 +1,5 @@
-import { assertLint } from '../assertLint';
-import { lintJsx } from '../esLintTester';
+import { assertLint } from '../../shared/assertLint';
+import { lintJsx } from '../../shared/esLintTester';
 
 suite('react-hooks/', (): void => {
   test('rules-of-hooks.', async (): Promise<void> => {
