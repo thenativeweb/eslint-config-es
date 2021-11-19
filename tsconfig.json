@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "lib": [ "esnext" ],
+    "module": "commonjs",
+    "outDir": "build",
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "es2019"
+  },
+  "include": [
+    "./lib/**/*.ts",
+    "./test/**/*.ts",
+    "./test/shared/dummyTs/dummyTsx.tsx"
+  ],
+  "exclude": [
+    "./build"
+  ]
+}

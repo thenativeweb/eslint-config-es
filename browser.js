@@ -1,9 +1,9 @@
 'use strict';
 
-const node = require('./node');
+const defaultConfiguration = require('./build/lib/defaultConfiguration');
 
 const env = {
-  ...node.env,
+  ...defaultConfiguration.env,
 
   browser: true,
   commonjs: true,
@@ -12,4 +12,4 @@ const env = {
   worker: true
 };
 
-module.exports = { ...node, env };
+module.exports = { ...defaultConfiguration, env };

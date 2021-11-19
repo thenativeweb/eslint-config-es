@@ -26,26 +26,38 @@
     {
       "name": "Henning Storck",
       "email": "henning@slightlyblack.com"
+    },
+    {
+      "name": "David Losert",
+      "email": "david.losert@gmx.de"
     }
   ],
   "private": false,
-  "main": "node.js",
-  "types": "",
+  "main": "build/lib/index.js",
+  "types": "build/lib/index.d.ts",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "5.2.0",
-    "@typescript-eslint/parser": "5.2.0",
+    "@typescript-eslint/eslint-plugin": "5.3.0",
+    "@typescript-eslint/parser": "5.3.0",
     "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-extended": "0.2.0",
     "eslint-plugin-mocha": "9.0.0",
     "eslint-plugin-react": "7.26.1",
-    "eslint-plugin-unicorn": "37.0.1"
+    "eslint-plugin-unicorn": "37.0.1",
+    "lodash": "4.17.21"
   },
   "devDependencies": {
+    "@types/eslint": "7.28.2",
+    "@types/lodash": "4.14.176",
+    "assertthat": "6.3.14",
     "react": "17.0.2",
-    "roboter": "12.3.0",
+    "roboter": "12.5.0",
     "semantic-release-configuration": "2.0.5"
   },
-  "scripts": {},
+  "scripts": {
+    "analyse": "npm run build && npx eslint --config ./node.js *.js 'lib/**/*.ts' 'test/**/*.ts'",
+    "build": "npx roboter build",
+    "roboter": "npm run build && npx roboter"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/thenativeweb/eslint-config-es.git"

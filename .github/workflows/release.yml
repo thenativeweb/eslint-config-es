@@ -19,6 +19,9 @@ jobs:
     - name: Install dependencies
       run: |
         npm install
+    - name: Build
+      run: |
+        npx roboter build
     - name: Run roboter
       run: |
         npx roboter
@@ -26,4 +29,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN_ADMIN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN_ADMIN }}
-      run: npx semantic-release
+      # Build again as `npx roboter` cleans the build directory
+      run: |
+        npx roboter build
+        npx semantic-release
