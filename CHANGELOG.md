@@ -1,3 +1,10 @@
+# [4.1.0](https://github.com/thenativeweb/eslint-config-es/compare/4.0.1...4.1.0) (2021-11-19)
+
+
+### Features
+
+* Just a release. ([#449](https://github.com/thenativeweb/eslint-config-es/issues/449)) ([8128965](https://github.com/thenativeweb/eslint-config-es/commit/812896549feea033dc0f2fb62921c435bfe76df5))
+
 ## [4.0.1](https://github.com/thenativeweb/eslint-config-es/compare/4.0.0...4.0.1) (2021-11-19)
 
 
