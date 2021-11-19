@@ -5,7 +5,8 @@ const isInstalled = function (...names: string[]): boolean {
 
   for (const name of names) {
     try {
-      import(name);
+      // eslint-disable-next-line @typescript-eslint/no-require-imports, global-require
+      require(name);
     } catch {
       return false;
     }
