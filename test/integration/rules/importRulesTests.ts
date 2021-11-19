@@ -14,7 +14,7 @@ suite('import/', (): void => {
     `);
 
     assertLint(result).containsError('import/export');
-  });
+  }).timeout(5_000);
 
   test('no-unresolved: works with require.', async (): Promise<void> => {
     const result = await lintJavascript(`const notExist = require('doesNotExist');`);
