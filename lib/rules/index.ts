@@ -5,6 +5,7 @@ import { importRules } from './import';
 import { mochaRules } from './mocha';
 import { react } from './react';
 import { sharedCoreTypescript } from './sharedCoreTypescript';
+import { sharedImportTypescript } from './sharedImportTypescript';
 import { typescript } from './typescript';
 import { unicorn } from './unicorn';
 
@@ -14,6 +15,7 @@ export {
   sharedCoreTypescript,
   extended,
   importRules,
+  sharedImportTypescript,
   mochaRules,
   react,
   typescript,

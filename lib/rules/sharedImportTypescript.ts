@@ -1,10 +1,11 @@
-import { BetterRulesRecord } from '../betterRules';
 import { Language } from '../Language';
-import { pickRulesFor } from '../pickRulesFor';
+import { BetterRulesRecord, usePlugin } from '../betterRules';
 
-const sharedImportTypescript = ({ language }: { language: Language }): BetterRulesRecord => ({
-  ...pickRulesFor({ language }, {})
-});
+const sharedImportTypescript = ({ language }: { language: Language }): BetterRulesRecord =>
+  usePlugin('import',
+    {
+      noCommonjs: language === 'javascript' ? false : []
+    });
 
 export {
   sharedImportTypescript

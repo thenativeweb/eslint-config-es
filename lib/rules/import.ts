@@ -22,10 +22,6 @@ const importRules = usePlugin('import', {
   noAmd: [],
   noAnonymousDefaultExport: [],
 
-  // Todo [2021-11-18]: Move to sharedImportTypescript
-  // Error for TypeScript, Okay for JavaScript
-  noCommonjs: [],
-
   // This rule is computational expensive and might slow down our IDEs, so we keep it off
   noCycle: false,
   noDefaultExport: [],

@@ -11,6 +11,7 @@ import {
   mochaRules,
   react,
   sharedCoreTypescript,
+  sharedImportTypescript,
   typescript,
   unicorn
 } from './rules';
@@ -57,7 +58,8 @@ let rules: Linter.RulesRecord = compile({
   ...importRules,
   ...mochaRules,
   ...unicorn,
-  ...sharedCoreTypescript({ language: 'javascript' })
+  ...sharedCoreTypescript({ language: 'javascript' }),
+  ...sharedImportTypescript({ language: 'javascript' })
 });
 
 // The ruleName of "react/prefer-es6-class" is wrongly converted to kebab-case
@@ -112,7 +114,8 @@ const overrides: Linter.ConfigOverride[] = [
     plugins: [ ...plugins, '@typescript-eslint' ],
     rules: compile({
       ...typescript,
-      ...sharedCoreTypescript({ language: 'typescript' })
+      ...sharedCoreTypescript({ language: 'typescript' }),
+      ...sharedImportTypescript({ language: 'typescript' })
     })
   }
 ];
