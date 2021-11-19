@@ -1,8 +1,6 @@
 import { assertLint } from '../../shared/assertLint';
-import path from 'path';
 import { lintJavascript, lintTypescript } from '../../shared/esLintTester';
 
-path.join('test');
 suite('import/', (): void => {
   test('export: reports duplicate export identifiers.', async (): Promise<void> => {
     const result = await lintTypescript(`
