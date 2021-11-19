@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/thenativeweb/eslint-config-es/compare/4.0.0...4.0.1) (2021-11-19)
+
+
+### Bug Fixes
+
+* IsInstalled does not throw uncaught promise rejections anymore. ([#447](https://github.com/thenativeweb/eslint-config-es/issues/447)) ([cfcc4c4](https://github.com/thenativeweb/eslint-config-es/commit/cfcc4c40add3ae6eb3caf86e9b0e817a6f482ee6))
+
 # [4.0.0](https://github.com/thenativeweb/eslint-config-es/compare/3.31.0...4.0.0) (2021-11-19)
 
 
