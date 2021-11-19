@@ -1,3 +1,16 @@
+# [4.0.0](https://github.com/thenativeweb/eslint-config-es/compare/3.31.0...4.0.0) (2021-11-19)
+
+
+### Features
+
+* Restructure code; Migrate to TypeScript ([#433](https://github.com/thenativeweb/eslint-config-es/issues/433)) ([b8d7442](https://github.com/thenativeweb/eslint-config-es/commit/b8d7442b0bddee23d08f73f438092df85a5e4558))
+
+
+### BREAKING CHANGES
+
+* - `main` does not export the config anymore. You have to explicitly extend `es/node` or `es/browser`
+- Add some new rules
+
 # [3.31.0](https://github.com/thenativeweb/eslint-config-es/compare/3.30.15...3.31.0) (2021-10-29)
 
 
