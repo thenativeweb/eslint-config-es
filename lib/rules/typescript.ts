@@ -1,12 +1,12 @@
-import { BetterRulesRecord, usePlugin } from '../betterRules';
+import { BetterRulesRecord, withPlugin } from '../betterRules';
 
 const typescript: BetterRulesRecord = {
-  ...usePlugin('unicorn', {
+  ...withPlugin('unicorn', {
     // This rule is already enforced via the type system and produces false-positives.
     requirePostMessageTargetOrigin: false
   }),
 
-  ...usePlugin('@typescript-eslint', {
+  ...withPlugin('@typescript-eslint', {
     adjacentOverloadSignatures: [],
     arrayType: [{ default: 'array' }],
     awaitThenable: [],

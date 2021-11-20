@@ -10,6 +10,7 @@ import {
   importRules,
   mochaRules,
   react,
+  reactHooks,
   sharedCoreTypescript,
   sharedImportTypescript,
   typescript,
@@ -45,6 +46,7 @@ const settings = {};
 
 if (isInstalled('react')) {
   plugins.push('react');
+  plugins.push('react-hooks');
 
   // @ts-expect-error react is actually set by the plugin.
   settings.react = { version: 'detect' };
@@ -77,7 +79,8 @@ const fixReactEs6Rule = (reactRulesRecord: Linter.RulesRecord): Linter.RulesReco
 if (plugins.includes('react')) {
   rules = {
     ...rules,
-    ...fixReactEs6Rule(compile(react))
+    ...fixReactEs6Rule(compile(react)),
+    ...compile(reactHooks)
   };
 }
 

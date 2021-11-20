@@ -1,6 +1,6 @@
-import { usePlugin } from '../betterRules';
+import { withPlugin } from '../betterRules';
 
-const comments = usePlugin('eslint-comments', {
+const comments = withPlugin('eslint-comments', {
   disableEnablePair: [],
   noAggregatingEnable: [],
   noDuplicateDisable: [],

@@ -1,7 +1,7 @@
-import { usePlugin } from '../betterRules';
+import { withPlugin } from '../betterRules';
 
 // Can not name it 'import' as this is a reserved keyword
-const importRules = usePlugin('import', {
+const importRules = withPlugin('import', {
   default: [],
 
   // This rule only makes sense in projects that use webpack

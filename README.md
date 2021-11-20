@@ -96,14 +96,14 @@ const compiledESLintRules = betterRules.compile(betterRulesRecord);
 2. Rules are now in **camelCase**.
 3. **error** is the default and only for all rules.
 
-### UsePlugin-Hook
+### withPlugin-Hook
 
-You can use the `usePlugin` hook to avoid having to put plugin-rules in quotes (`'react/test-rule'`) like this:
+You can use the `withPlugin` hook to avoid having to put plugin-rules in quotes (`'react/test-rule'`) like this:
 
 ```typescript
 import { betterRules } from 'eslint-config-es'
 
-const reactRules: BetterRulesRecord = betterRules.usePlugin('react', {
+const reactRules: BetterRulesRecord = betterRules.withPlugin('react', {
   booleanPropNaming: false
 });
 ```
@@ -118,7 +118,7 @@ const weirdMix: BetterRulesRecord = {
 };
 
 const betterDefiniton: BetterRulesRecord = 
-  betterRules.usePlugin('@typescript-eslint', {
+  betterRules.withPlugin('@typescript-eslint', {
     arrayType: []
   };
 ```

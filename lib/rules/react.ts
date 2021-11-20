@@ -1,6 +1,6 @@
-import { usePlugin } from '../betterRules';
+import { withPlugin } from '../betterRules';
 
-const react = usePlugin('react', {
+const react = withPlugin('react', {
   booleanPropNaming: false,
   buttonHasType: false,
   defaultPropsMatchPropTypes: false,
