@@ -1,8 +1,8 @@
 import { Language } from '../Language';
-import { BetterRulesRecord, usePlugin } from '../betterRules';
+import { BetterRulesRecord, withPlugin } from '../betterRules';
 
 const sharedImportTypescript = ({ language }: { language: Language }): BetterRulesRecord =>
-  usePlugin('import',
+  withPlugin('import',
     {
       noCommonjs: language === 'javascript' ? false : []
     });
