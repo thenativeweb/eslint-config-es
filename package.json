@@ -36,6 +36,15 @@
   "main": "build/lib/index.js",
   "types": "build/lib/index.d.ts",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "5.3.0",
+    "@typescript-eslint/parser": "5.4.0",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-extended": "0.2.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-mocha": "9.0.0",
+    "eslint-plugin-react": "7.27.1",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "eslint-plugin-unicorn": "37.0.1",
     "lodash": "4.17.21"
   },
   "devDependencies": {
@@ -45,17 +54,6 @@
     "react": "17.0.2",
     "roboter": "12.7.0",
     "semantic-release-configuration": "2.0.7"
-  },
-  "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "5.3.0",
-    "@typescript-eslint/parser": "5.4.0",
-    "eslint-plugin-eslint-comments": "3.2.0",
-    "eslint-plugin-extended": "0.2.0",
-    "eslint-plugin-import": "2.25.2",
-    "eslint-plugin-mocha": "9.0.0",
-    "eslint-plugin-react": "7.27.1",
-    "eslint-plugin-react-hooks": "4.2.0",
-    "eslint-plugin-unicorn": "37.0.1"
   },
   "scripts": {
     "analyse": "npm run build && npx eslint --config ./node.js *.js 'lib/**/*.ts' 'test/**/*.ts'",
