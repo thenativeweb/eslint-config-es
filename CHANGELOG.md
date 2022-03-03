@@ -1,3 +1,10 @@
+# [4.2.0](https://github.com/thenativeweb/eslint-config-es/compare/4.1.0...4.2.0) (2022-03-03)
+
+
+### Features
+
+* allow explicitly typed function expressions ([#468](https://github.com/thenativeweb/eslint-config-es/issues/468)) ([d39aad7](https://github.com/thenativeweb/eslint-config-es/commit/d39aad7d3110ca16d646bc1f3a7c35e82db42741))
+
 # [4.1.0](https://github.com/thenativeweb/eslint-config-es/compare/4.0.1...4.1.0) (2021-11-19)
 
 
