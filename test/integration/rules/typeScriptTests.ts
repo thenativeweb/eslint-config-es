@@ -12,6 +12,34 @@ suite('@typescript-eslint/', (): void => {
     assertLint(result).containsError('@typescript-eslint/consistent-type-definitions');
   });
 
+  test('explicitFunctionReturnType: allows for explicitly typed functions.', async (): Promise<void> => {
+    let result = await lintTypescript(`
+      type ExplicitType = () => number;
+      
+      const test: ExplicitType = () => 3; 
+    `);
+
+    assertLint(result).notContainsError('@typescript-eslint/explicit-function-return-type');
+
+    result = await lintTypescript(`
+      const numberer = function (fn: (first: number, second: number) => number): number {
+        return fn(2, 2);
+      };
+      
+      const foobar = numberer((first, second) => first * second);
+    `);
+
+    assertLint(result).notContainsError('@typescript-eslint/explicit-function-return-type');
+  });
+
+  test('explicitFunctionReturnType: still requires explicit return types on function declarations.', async (): Promise<void> => {
+    const result = await lintTypescript(`    
+      const test = () => 3; 
+    `);
+
+    assertLint(result).containsError('@typescript-eslint/explicit-function-return-type');
+  });
+
   test('unicorn/require-post-message-target-origin: is deactivated for typescript files to avoid false-positives.', async (): Promise<void> => {
     const passing = await lintTypescript(`window.postMessage('myMessage');`);
 

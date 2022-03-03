@@ -37,7 +37,7 @@ const typescript: BetterRulesRecord = {
     defaultParamLast: [],
     explicitFunctionReturnType: [{
       allowExpressions: false,
-      allowTypedFunctionExpressions: false,
+      allowTypedFunctionExpressions: true,
       allowHigherOrderFunctions: false
     }],
     explicitMemberAccessibility: [{
