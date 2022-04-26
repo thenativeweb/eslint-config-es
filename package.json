@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@types/eslint": "8.4.1",
-    "@types/lodash": "4.14.181",
+    "@types/lodash": "4.14.182",
     "assertthat": "6.5.2",
     "react": "18.0.0",
     "roboter": "13.1.0",
