@@ -43,7 +43,7 @@
     "@types/lodash": "4.14.182",
     "assertthat": "6.5.2",
     "react": "18.2.0",
-    "roboter": "13.2.0",
+    "roboter": "13.2.1",
     "semantic-release-configuration": "2.0.7"
   },
   "peerDependencies": {
